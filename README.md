@@ -1,8 +1,7 @@
-# React + Vite
+# مشروع شباب قادرون
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## عن المؤسسة
+هي مؤسسة مجتمع مدني شبابية تطوعية مشهرة برقم 11492 لسنة 2022 بوزارة التضامن الإجتماعي
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## تعريف الكيان
+ أحد الكيانات الشبابية بوزارة الشباب والرياضة وعضو الجمعية العمومية لإتحاد الكيانات الشبابية بوزارة الشباب والرياضة. تحت رعاية معالي وزير الشباب والرياضة أ.د أشرف صبحي
