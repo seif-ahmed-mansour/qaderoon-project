@@ -4,10 +4,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-
-
-        </Routes>
+        <Routes></Routes>
       </BrowserRouter>
     </>
   );
