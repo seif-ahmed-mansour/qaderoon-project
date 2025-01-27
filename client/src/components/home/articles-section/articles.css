@@ -1,6 +1,7 @@
 .articles-cont {
   height: 100%;
   position: relative;
+  background-image: url("../../../../public/images/articles-section-image.png");
 }
 
 .background {
@@ -23,28 +24,20 @@
 }
 
 .article-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1; /* Ensures the content appears above the background image */
-  padding: 0 20px; /* Optional, adds some padding around the text */
+  position: relative;
+  padding: 20px;
 }
 @media (min-width: 640px) {
-  
 }
 
 @media (min-width: 768px) {
-  
 }
 
 @media (min-width: 1024px) {
 }
 
 @media (min-width: 1280px) {
-  
 }
 
 @media (min-width: 1536px) {
-  
 }
