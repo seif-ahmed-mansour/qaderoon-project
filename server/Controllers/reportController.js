@@ -9,14 +9,14 @@ exports.addReport = async (req, res) => {
             return res.status(400).json({ message: err.message });
         }
         try {
-            const { title, description } = req.body;
-            if (!title || !description || !req.file) {
+            const { reportTitle, reportDesc } = req.body;
+            if (!reportTitle || !reportDesc || !req.file) {
                 return res.status(400).json({ message: "All fields are required." });
             }
 
             const newReport = new Report({
-                title,
-                description,
+                reportTitle,
+                reportDesc,
                 reportImg: req.file.filename
             });
 
@@ -57,7 +57,7 @@ exports.updateReport = async (req, res) => {
 
         try {
             const { id } = req.params;
-            const { title, description } = req.body;
+            const { reportTitle, reportDesc } = req.body;
             const report = await Report.findById(id);
 
             if (!report) {
@@ -72,8 +72,8 @@ exports.updateReport = async (req, res) => {
                 report.reportImg = req.file.filename;
             }
 
-            report.title = title || report.title;
-            report.description = description || report.description;
+            report.reportTitle = reportTitle || report.reportTitle;
+            report.reportDesc = reportDesc || report.reportDesc;
 
             await report.save();
             res.status(200).json({ message: "Report updated successfully", data: report });

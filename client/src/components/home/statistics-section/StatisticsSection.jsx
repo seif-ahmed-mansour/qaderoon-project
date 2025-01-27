@@ -1,6 +1,8 @@
 import { MdCastForEducation } from "react-icons/md";
 import { PiVideoConference } from "react-icons/pi";
 import { RiUserCommunityFill } from "react-icons/ri";
+import { Md6FtApart } from "react-icons/md";
+
 import StatisticsCard from "./StatisticsCard";
 
 const StatisticsSection = () => (
@@ -28,6 +30,7 @@ const StatisticsSection = () => (
         number="1870"
         label="أعضاء الكيان"
       />
+      <StatisticsCard icon={<Md6FtApart />} number="38" label="الشركاء" />
     </div>
   </section>
 );

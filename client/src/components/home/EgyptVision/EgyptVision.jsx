@@ -20,11 +20,11 @@ const data = {
 const EgyptVision = () => {
   return (
     <>
-      <section className="flex flex-col place-items-center p-7 ev-section pb-10">
+      <section className="flex flex-col place-items-center p-7 ev-section pb-10 ">
         <h2 className="font-extrabold text-4xl pb-5 ev-title mb-6 text-stone-100">
           {data.title} <span className="text-primary relative top-1">2030</span>
         </h2>
-        <div className="grid grid-cols-2 gap-16 text-stone-100">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 text-stone-100 container place-items-center">
           <div className="space-y-5">
             {data && data.visionArray.map((t, index) => <p key={index}>{t}</p>)}
 
@@ -33,12 +33,7 @@ const EgyptVision = () => {
               <FaArrowLeft className="ev-arrow group-hover:-translate-x-2" />
             </button>
           </div>
-          <img
-            src="/images/egypt-vision.png"
-            loading="lazy"
-            className="rounded object-scale-down"
-            alt={data.title}
-          />
+          <img src="/images/egypt-vision.png" loading="lazy" className="rounded object-scale-down hidden lg:block" alt={data.title} />
         </div>
       </section>
     </>
