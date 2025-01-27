@@ -1,12 +1,14 @@
 import { MdCastForEducation } from "react-icons/md";
 import { PiVideoConference } from "react-icons/pi";
 import { RiUserCommunityFill } from "react-icons/ri";
+import { Md6FtApart } from "react-icons/md";
+
 import StatisticsCard from "./StatisticsCard";
 
 const StatisticsSection = () => (
   <section className="bg-gray-100 py-12">
     <div className="text-center mb-8">
-      <h2 className="text-[#da1e33] text-2xl font-bold">الإحصائيات</h2>
+      <h2 className="text-[#da1e33] text-3xl font-bold">الإحصائيات</h2>
       <p className="text-gray-600 text-lg mt-2">
         أرقام تعبر عن تميز وريادة الكيان
       </p>
@@ -28,6 +30,7 @@ const StatisticsSection = () => (
         number="1870"
         label="أعضاء الكيان"
       />
+      <StatisticsCard icon={<Md6FtApart />} number="38" label="الشركاء" />
     </div>
   </section>
 );
