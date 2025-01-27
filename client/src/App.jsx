@@ -9,6 +9,8 @@ import AOS from "aos";
 import { useEffect } from "react";
 
 function App() {
+
+  // initialize AOS
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
