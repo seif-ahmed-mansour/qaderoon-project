@@ -14,7 +14,8 @@ const StatisticsSection = () => (
       </p>
       <div className="w-16 h-1 bg-[#a21c34] mt-2 mx-auto"></div>
     </div>
-    <div className="flex flex-wrap justify-center gap-6">
+
+    <div className="flex flex-wrap justify-center gap-2 md:gap-10 px-[1px]">
       <StatisticsCard
         icon={<PiVideoConference />}
         number="6"
