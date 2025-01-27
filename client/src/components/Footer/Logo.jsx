@@ -4,14 +4,14 @@ export const Logo = () => (
   <a
     rel="noopener noreferrer"
     href="/"
-    className="flex justify-center space-x-10">
-    <span className="self-center text-3xl font-bold text-primary">
+    className="flex justify-center space-x-6">
+    <span className="self-center text-3xl pt-5 text-primary logo">
       {ORG_NAME}
     </span>
 
-    <div className="flex items-center justify-center size-12 rounded-full bg-default-400">
+    <div className="flex items-center justify-center size-16 rounded-full bg-default-400">
       <img
-        src="/public/images/logo.jpg"
+        src="/public/images/logo.png"
         alt="Qaderoon Logo"
       />
     </div>
