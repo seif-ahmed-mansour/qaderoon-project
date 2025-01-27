@@ -31,12 +31,11 @@ function ActivitiesCard() {
           </h1>
 
           {/* Content and image container */}
-          <div className="flex flex-col md:flex-row mt-6 gap-6">
+          <div className="flex flex-col-reverse md:flex-row mt-6 gap-6">
             <div
               className="md:w-1/2 text-right"
               data-aos="fade-down"
-              data-aos-duration="1500"
-            >
+              data-aos-duration="1500">
               <h4 className="text-3xl font-semibold text-primary mb-4 mt-10">
                 البرامج التدريبية
               </h4>
@@ -46,8 +45,7 @@ function ActivitiesCard() {
                 {trainingPrograms.map((program, index) => (
                   <div
                     key={index}
-                    className="bg-white p-4 rounded-lg flex items-center group hover:translate-x-2 hover:scale-105 transition-all duration-300"
-                  >
+                    className="bg-white p-4 rounded-lg flex items-center group hover:translate-x-2 hover:scale-105 transition-all duration-300">
                     <div className="border-2 border-primary rounded-full p-1 group-hover:bg-primary group-hover:border-primary">
                       <AiFillSafetyCertificate className="text-lg text-primary group-hover:text-white" />
                     </div>
@@ -65,7 +63,7 @@ function ActivitiesCard() {
               alt="pic"
               data-aos="fade-up"
               data-aos-duration="1500"
-              className="w-full md:w-1/2 rounded-lg shadow-md object-cover"
+              className="w-full md:w-1/2 rounded-lg shadow-md"
             />
           </div>
           {/* End of content and image container */}
