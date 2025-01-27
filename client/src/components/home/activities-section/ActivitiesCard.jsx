@@ -23,7 +23,7 @@ function ActivitiesCard() {
   return (
     <div>
       {/* Bootstrap-like container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-10 md:my-22">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-10 md:my-22 ">
         {/* A container for animation */}
         <div className="text-center">
           <h1 className="text-3xl font-bold ac-title">
@@ -31,7 +31,7 @@ function ActivitiesCard() {
           </h1>
 
           {/* Content and image container */}
-          <div className="flex flex-col md:flex-row mt-6 gap-6">
+          <div className="flex flex-col-reverse md:flex-row mt-6 gap-6">
             <div
               className="md:w-1/2 text-right"
               data-aos="fade-down"
