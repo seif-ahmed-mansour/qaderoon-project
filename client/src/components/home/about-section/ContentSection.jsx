@@ -3,7 +3,7 @@ import Button from "../../../utils/Button";
 
 const ContentSection = () => (
   <div className="text-right" data-aos="fade-right">
-    <p className="text-gray-800 text-xl leading-relaxed">
+    <p className="text-gray-800 text-base  md:text-xl leading-relaxed">
       بـدأت شـبـاب قـادرون كـأحـد الـكـيـانـات الـشـبـابـيـة بـوزارة الشباب
       والرياضة وبدعم ورعاية من معالى وزير الشباب والرياضة الاستاذ الدكتور / أشرف
       صـبـحـى و خلال عـامـان قدمت فعاليات و انشطة شبابية في مصر وكانت البداية

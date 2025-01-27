@@ -26,7 +26,7 @@ function ActivitiesCard() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-10 md:my-22">
         {/* A container for animation */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold ac-title">
+          <h1 className="text-2xl md:text-3xl font-bold ac-title">
             أنشطة المؤسسة <span></span>
           </h1>
 
@@ -36,10 +36,10 @@ function ActivitiesCard() {
               className="md:w-1/2 text-right"
               data-aos="fade-down"
               data-aos-duration="1500">
-              <h4 className="text-3xl font-semibold text-primary mb-4 mt-10">
+              <h4 className="text-2xl md:text-3xl  font-semibold text-primary mb-4 mt-10">
                 البرامج التدريبية
               </h4>
-              <div className="space-y-2">
+              <div className="space-y-0 md:space-y-2">
                 {" "}
                 {/* Reduced margin between items */}
                 {trainingPrograms.map((program, index) => (

@@ -1,6 +1,6 @@
 const Header = () => (
   <header
-    className="flex flex-col items-start justify-center text-black font-bold text-3xl"
+    className="flex flex-col items-start justify-center text-black font-bold text-2xl md:text-3xl"
     data-aos="fade-right"
   >
     <h1>
