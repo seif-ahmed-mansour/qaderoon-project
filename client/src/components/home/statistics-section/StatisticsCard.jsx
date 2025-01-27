@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 const StatisticsCard = ({ icon, number, label }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // العد يتم مرة واحدة فقط
+    triggerOnce: false, // العد يتم اكثر من مرة
     threshold: 0.5, // يبدأ العد عندما يكون 50% من العنصر مرئيًا
   });
 

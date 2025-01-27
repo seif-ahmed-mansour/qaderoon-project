@@ -1,5 +1,8 @@
 const Header = () => (
-  <header className="flex flex-col items-start justify-center text-black font-bold text-3xl">
+  <header
+    className="flex flex-col items-start justify-center text-black font-bold text-3xl"
+    data-aos="fade-right"
+  >
     <h1>
       من نحن <span className="text-primary">&quot;شباب قادرون&quot;</span>
     </h1>
