@@ -1,4 +1,3 @@
-import React from "react";
 import "./articles.css";
 import Card from "../../../utils/Card/Card";
 import Button from "../../../utils/Button";
