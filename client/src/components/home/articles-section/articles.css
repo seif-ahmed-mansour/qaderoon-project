@@ -1,4 +1,5 @@
 .articles-cont {
+  min-height: 100dvh;
   height: 100%;
   position: relative;
   background-image: url("../../../../public/images/articles-section-image.png");
