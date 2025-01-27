@@ -20,7 +20,7 @@ function Articles() {
       title: "مقال رأي حول التعليم عن بُعد. يتحدث عن الفوائد والعيوب المرتبطة بالتعلم عبر الإنترنت.",
     },
     {
-      image: "./public/images/home-artical section-photo.jpg", // Add your image URL here
+      image: "/images/home-artical section-photo.jpg", // Add your image URL here
       title: "مقال رأي عن التغير المناخي. يركز على أهمية الوعي البيئي وسبل الحد من التلوث.",
     },
   ];
