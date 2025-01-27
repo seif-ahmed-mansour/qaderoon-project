@@ -5,10 +5,10 @@ function Card(props) {
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
       <a href="#">
-        <img className="rounded-t-lg" src={props.image} alt="" />
+        <img className="rounded-t-lg card-images" src={props.image} alt="" />
       </a>
       <div className="p-5 text-center">
-        <h3 className="mb-3 text-gray-700">{props.description}</h3>
+        <h1 className="mb-3 text-3xl break-words my-2">{props.description}</h1>
         <Button>
           wow
           <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
