@@ -8,8 +8,11 @@ function App() {
     <>
       {/* <Routes></Routes> */}
       <Navbar />
+      <div className="w-full h-44"></div>
       <HomeLandingSlider />
+      <div className="w-full h-44"></div>
       <EgyptVision />
+      <div className="w-full h-44"></div>
       <Footer />
     </>
   );
