@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { FaCaretDown } from "react-icons/fa";
 
 function Navbar() {
   const [Scrolled, setScrolled] = useState(false);
@@ -52,10 +51,7 @@ function Navbar() {
               aria-expanded="false"
             >
               من نحن
-              <FontAwesomeIcon
-                icon={faCaretDown}
-                className="mr-2 mt-1 transition-all duration-400 group-hover:rotate-90"
-              />
+              <FaCaretDown className="mr-2 mt-1 transition-all duration-400 group-hover:rotate-90" />
             </a>
 
             <ul className="absolute top-full rounded-2xl text-base right-0 z-50 block space-y-2 bg-white max-h-0 overflow-hidden min-w-[230px] group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-[400ms]">
@@ -65,9 +61,9 @@ function Navbar() {
                 "اللجان",
                 "الهيئة العليا",
                 "شركاء النجاح",
-              ].map((item) => (
-                <li className="border-b py-2">
-                  <a className="cursor-pointer hover:text-[#262e30] text-secondary flex items-center">
+              ].map((item, index) => (
+                <li key={index} className="border-b text-gray-300 pt-2 pb-4">
+                  <a className="cursor-pointer hover:text-[#262e30] text-secondary font-bold flex items-center">
                     {item}
                   </a>
                 </li>
@@ -83,23 +79,19 @@ function Navbar() {
               aria-expanded="false"
             >
               خدماتنا
-              <FontAwesomeIcon
-                icon={faCaretDown}
-                className="mr-2 mt-1 transition-all duration-400 group-hover:rotate-90"
-              />
+              <FaCaretDown className="mr-2 mt-1 transition-all duration-400 group-hover:rotate-90" />
             </a>
 
             <ul className="absolute top-full rounded-2xl text-base right-0 z-50 block space-y-2 bg-white max-h-0 overflow-hidden min-w-[230px] group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-[400ms]">
               {[
-                "الاستشارات والدراسات",
-                "التدريب",
-                "الدورات التدريبية",
-                "التحقق من الشهادات",
-                "المؤتمرات",
-                "الرحلات والمصايف",
-              ].map((item) => (
-                <li className="border-b py-2">
-                  <a className="cursor-pointer hover:text-[#262e30] text-secondary flex items-center">
+                "عن الكيان",
+                "كلمة رئيس الكيان",
+                "اللجان",
+                "الهيئة العليا",
+                "شركاء النجاح",
+              ].map((item, index) => (
+                <li key={index} className="border-b text-gray-300 pt-2 pb-4">
+                  <a className="cursor-pointer hover:text-[#262e30] text-secondary font-bold flex items-center">
                     {item}
                   </a>
                 </li>
@@ -134,9 +126,7 @@ function Navbar() {
       </div>
 
       {/* Social Media Accounts Links Section */}
-      <div className="flex flex-wrap justify-center items-center space-x-4 text-2xl gap-2 md:space-x-6 lg:space-x-8">
-        
-      </div>
+      <div className="flex flex-wrap justify-center items-center space-x-4 text-2xl gap-2 md:space-x-6 lg:space-x-8"></div>
 
       {/* Mobile Hamburger Menu for small screens */}
       <div className="lg:hidden flex items-center space-x-4 text-2xl"></div>

@@ -9,17 +9,6 @@ function App() {
 
       <Navbar />
       <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
-      <HomeLandingSlider />
     </>
   );
 }
