@@ -13,17 +13,17 @@ function Articles() {
   const data = [
     {
       image: "/images/articles-init-photo.png", // Add your image URL here
-      description:
+      title:
         "مقال رأي يتناول موضوع التكنولوجيا وتأثيرها على المجتمع. يناقش كيفية التقدم التكنولوجي وتحدياته.",
     },
     {
       image: "/images/logo_with_slogan.jpg", // Add your image URL here
-      description:
+      title:
         "مقال رأي حول التعليم عن بُعد. يتحدث عن الفوائد والعيوب المرتبطة بالتعلم عبر الإنترنت.",
     },
     {
       image: "/images/home-about-section-photo.png", // Add your image URL here
-      description:
+      title:
         "مقال رأي عن التغير المناخي. يركز على أهمية الوعي البيئي وسبل الحد من التلوث.",
     },
   ];
@@ -39,7 +39,7 @@ function Articles() {
           {data.map((article, index) => (
             <Card
               key={index}
-              description={article.description}
+              description={article.title}
               image={article.image}
             />
           ))}
