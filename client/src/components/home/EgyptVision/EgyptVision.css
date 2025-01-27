@@ -18,7 +18,7 @@
   position: relative;
 
   * {
-    @apply z-10;
+    @apply z-1;
   }
 
   p,

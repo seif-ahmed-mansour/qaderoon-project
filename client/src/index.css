@@ -12,3 +12,7 @@
 p {
   @apply leading-relaxed; /* Increase line height for Arabic text  */
 }
+
+.debug {
+  @apply border-pink-400 border-4;
+}
