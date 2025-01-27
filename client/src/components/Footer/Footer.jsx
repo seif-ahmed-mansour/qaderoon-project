@@ -26,7 +26,7 @@ const footerData = {
         { href: "#", label: "الرحلات والمصايف" },
       ],
     },
-    
+
     {
       title: "الأخبار",
       links: [{ href: "#", label: "" }],
@@ -61,16 +61,14 @@ const Footer = () => {
             <SocialLinks />
           </div>
 
-          <div className="grid grid-cols-1 gap-8 border-t border-gray-200 pt-10 sm:grid-cols-4 xl:grid-cols-6">
-          {footerData &&
+          <div className="grid grid-cols-2 gap-8 border-t border-gray-200 pt-10 sm:grid-cols-4 xl:grid-cols-6">
+            {footerData &&
               footerData.sections.map(({ links, title }) => (
                 <FooterSection key={title} title={title} links={links} />
               ))}
           </div>
 
-          <p
-            className="py-6 text-sm text-center text-gray-400"
-            dir="ltr">
+          <p className="py-6 text-sm text-center text-gray-400" dir="ltr">
             {footerData.copyright}
           </p>
         </div>
