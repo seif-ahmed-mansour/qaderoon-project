@@ -1,4 +1,5 @@
 import { FaPlay } from "react-icons/fa6";
+import Button from "../../../utils/Button";
 
 const ContentSection = () => (
   <div className="text-right">
@@ -18,12 +19,12 @@ const ContentSection = () => (
     </p>
 
     <div className="flex justify-start mt-6 gap-4">
-      <button className="bg-gradient-to-b from-primary to-secondary text-white px-4 py-2 rounded-xl shadow-md hover:bg-green-500 hover:scale-105 transition-transform duration-200">
-        معرفة المزيد
-      </button>
-      <button className="bg-gradient-to-b from-primary to-secondary text-white px-4 py-2 rounded-xl shadow-md hover:bg-green-500 hover:scale-105 transition-transform duration-200">
-        فيديو تعريفي <FaPlay />
-      </button>
+      <Button className="hover:scale-105 transition-transform duration-200">
+        عرض المزيد
+      </Button>
+      <Button className="hover:scale-105 transition-transform duration-200">
+        فيديو تعريفي <FaPlay className="mr-2" />
+      </Button>
     </div>
   </div>
 );
