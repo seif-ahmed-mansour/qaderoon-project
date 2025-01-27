@@ -8,8 +8,8 @@ const footerData = {
     {
       title: "من نحن",
       links: [
-        { href: "#", label: "عن الكيان" },
-        { href: "#", label: "كلمة رئيس الكيان" },
+        { href: "#", label: "عن المؤسسة" },
+        { href: "#", label: "كلمة رئيس المؤسسة" },
         { href: "#", label: "اللجان" },
         { href: "#", label: "الهيئة العليا" },
         { href: "#", label: "شركاء النجاح" },

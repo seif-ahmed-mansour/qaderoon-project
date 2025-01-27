@@ -88,8 +88,8 @@ function Navbar() {
 
             <ul className="absolute top-full rounded-2xl text-base right-0 z-50 block space-y-2 bg-white max-h-0 overflow-hidden min-w-[230px] group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-[400ms]">
               {[
-                "عن الكيان",
-                "كلمة رئيس الكيان",
+                "عن المؤسسة",
+                "كلمة رئيس المؤسسة",
                 "اللجان",
                 "الهيئة العليا",
                 "شركاء النجاح",
@@ -267,8 +267,8 @@ function Navbar() {
                 }`}
               >
                 {[
-                  "عن الكيان",
-                  "كلمة رئيس الكيان",
+                  "عن المؤسسة",
+                  "كلمة رئيس المؤسسة",
                   "اللجان",
                   "الهيئة العليا",
                   "شركاء النجاح",

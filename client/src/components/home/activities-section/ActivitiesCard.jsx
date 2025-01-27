@@ -27,7 +27,7 @@ function ActivitiesCard() {
         {/* A container for animation */}
         <div className="text-center">
           <h1 className="text-3xl font-bold ac-title">
-            أنشطة الكيان <span></span>
+            أنشطة المؤسسة <span></span>
           </h1>
 
           {/* Content and image container */}
