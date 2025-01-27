@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+.ev-title {
+  position: relative;
+}
+
+.ev-title::after {
+  content: "";
+  left: 25%;
+  background-color: var(--color-primary);
+  @apply bottom-0 h-1 w-[50%] absolute;
+}
+
+.ev-section {
+  background-image: url("images/pyramids.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  * {
+    @apply z-50;
+  }
+
+  p,
+  button {
+    @apply font-semibold text-base;
+  }
+}
+
+/* overlay for the background image */
+.ev-section::before {
+  content: "";
+  background-color: #252220;
+  @apply bottom-0 size-full absolute z-0 opacity-80;
+}
+
+.ev-arrow {
+  @apply relative transform transition-transform duration-200;
+}
+
+.ev-button {
+  @apply px-4.5 py-2 rounded flex items-center justify-between space-x-3;
+}
