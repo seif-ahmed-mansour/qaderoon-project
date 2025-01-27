@@ -187,32 +187,6 @@
     padding: 20px;
     text-align: center;
   }
-
-  .hero .hero-buttons {
-    display: block;
-    z-index: 555;
-  }
-
-  .hero .hero-buttons a {
-    border-radius: 50%;
-    font-size: 30px;
-    position: absolute;
-    background-color: #da1e33a6;
-  }
-
-  .hero .hero-buttons a:hover {
-    background-color: #a21c34a6;
-  }
-
-  .hero .hero-buttons a:nth-child(1) {
-    right: 0;
-    top: 50%;
-  }
-
-  .hero .hero-buttons a:nth-child(2) {
-    left: 0;
-    top: 50%;
-  }
 }
 
 @media (max-width: 600px) {

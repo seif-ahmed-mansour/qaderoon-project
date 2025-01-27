@@ -1,4 +1,3 @@
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import { useEffect, useState } from "react";
@@ -7,7 +6,6 @@ import data from "./LandingSliderData.json";
 import "swiper/css";
 import "./HomeLandingSlider.css";
 import "swiper/css/effect-cards";
-import Button from "../../../utils/Button";
 
 const HomeLandingSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -28,14 +26,6 @@ const HomeLandingSlider = () => {
 
     return () => clearInterval(interval);
   }, [heroSwiper]);
-
-  const prevHandler = () => {
-    heroSwiper.slidePrev();
-  };
-
-  const nextHandler = () => {
-    heroSwiper.slideNext();
-  };
 
   useEffect(() => {
     const handleAnimationReset = () => {
@@ -75,14 +65,7 @@ const HomeLandingSlider = () => {
 
       <div className="hero-content">
         <div className="top-section">
-          <div className="hero-buttons">
-            <Button className="focus:ring-0" onClick={prevHandler}>
-              <FaArrowRight />
-            </Button>
-            <Button className="focus:ring-0" onClick={nextHandler}>
-              <FaArrowLeft />
-            </Button>
-          </div>
+         
           <div className="hero-text hero-animated">
             <div className="hero-text-content">
               {heroData.length > 0 && (

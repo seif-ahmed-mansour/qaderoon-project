@@ -17,6 +17,7 @@
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "postcss": "^8.5.1",
+    "qaderoon-project": "file:",
     "react": "^18.3.1",
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",

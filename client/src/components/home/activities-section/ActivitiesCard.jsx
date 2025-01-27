@@ -24,7 +24,7 @@ function ActivitiesCard() {
   return (
     <div>
       {/* Bootstrap-like container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-5">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-[50px] mt-[40px]">
         {/* A container for animation */}
         <div className="text-center">
           <h1 className="text-3xl font-bold ac-title">
@@ -58,8 +58,8 @@ function ActivitiesCard() {
               </div>
             </div>
             <img
-              src="https://mishkahacademy.com/wp-content/uploads/2022/04/60-1-e1671190571742.jpg"
-              alt="Traditions of Egypt"
+              src="/images/ac-pic.png"
+              alt="pic"
               data-aos="fade-up"
               data-aos-duration="1500"
               className="w-full md:w-1/2 rounded-lg shadow-md"
