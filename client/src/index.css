@@ -42,5 +42,5 @@ p {
 }
 
 .debug {
-  @apply border-pink-400 border-4;
+  @apply border-pink-600 border-4;
 }
