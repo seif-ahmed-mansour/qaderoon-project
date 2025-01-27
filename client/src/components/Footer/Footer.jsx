@@ -55,7 +55,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-gray-100">
-        <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-6 sm:px-6 lg:space-y-16 lg:px-8">
+        <div className="mx-auto max-w-screen-xl space-y-8 px-4 pt-12 pb-6 sm:px-6 lg:space-y-16 lg:px-8">
           <div className="sm:flex sm:items-center sm:justify-between f-social-links">
             <Logo />
             <SocialLinks />

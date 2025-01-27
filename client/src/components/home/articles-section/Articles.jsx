@@ -28,8 +28,8 @@ function Articles() {
     <div className="articles-cont">
       <div className="layer"></div>
       <div className="container mx-auto px-4 text-center article-content" data-aos="fade-down" data-aos-duration="1000">
-        <h1 className="text-6xl my-3 text-white">مقالات الرأي</h1>
-        <p className="text-3xl my-5 text-white">مجموعة من المقالات المحدثة باستمرار</p>
+        <h1 className="text-4xl font-bold my-3 text-white">مقالات الرأي</h1>
+        <p className="text-xl  my-5 text-white">مجموعة من المقالات المحدثة باستمرار</p>
         <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr">
           {data.map((article, index) => (
             <Card key={index} description={article.title} image={article.image} />

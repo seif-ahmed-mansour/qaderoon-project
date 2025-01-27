@@ -3,16 +3,16 @@ import "./card.css";
 
 function Card(props) {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
+    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl">
       <a href="#" className="overflow-hidden block">
         <img
-          className="rounded-t-lg card-images hover:scale-125 ease-in duration-200"
+          className="rounded-t-lg card-images hover:scale-105 ease-in duration-200"
           src={props.image}
           alt=""
         />
       </a>
       <div className="p-5 text-center">
-        <h1 className="mb-3 text-3xl break-words my-2">{props.description}</h1>
+        <h1 className="mb-3 text-xl break-words my-2">{props.description}</h1>
         <Button>
           إقرأ المزيد
           <svg

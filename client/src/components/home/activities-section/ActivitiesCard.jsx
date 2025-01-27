@@ -1,4 +1,3 @@
-import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -24,7 +23,7 @@ function ActivitiesCard() {
   return (
     <div>
       {/* Bootstrap-like container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-[50px] mt-[40px]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-10 md:my-22">
         {/* A container for animation */}
         <div className="text-center">
           <h1 className="text-3xl font-bold ac-title">
@@ -41,7 +40,9 @@ function ActivitiesCard() {
               <h4 className="text-3xl font-semibold text-primary mb-4 mt-10">
                 البرامج التدريبية
               </h4>
-              <div className="space-y-2"> {/* Reduced margin between items */}
+              <div className="space-y-2">
+                {" "}
+                {/* Reduced margin between items */}
                 {trainingPrograms.map((program, index) => (
                   <div
                     key={index}
@@ -50,7 +51,9 @@ function ActivitiesCard() {
                     <div className="border-2 border-primary rounded-full p-1 group-hover:bg-primary group-hover:border-primary">
                       <AiFillSafetyCertificate className="text-lg text-primary group-hover:text-white" />
                     </div>
-                    <h2 className="text-xl font-semibold mr-4 group-hover:text-primary"> {/* Added margin-right (mr-4) for spacing */}
+                    <h2 className="text-xl font-semibold mr-4 group-hover:text-primary">
+                      {" "}
+                      {/* Added margin-right (mr-4) for spacing */}
                       {program}
                     </h2>
                   </div>
