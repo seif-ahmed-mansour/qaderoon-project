@@ -11,7 +11,7 @@ export const Logo = () => (
 
     <div className="flex items-center justify-center size-16 rounded-full bg-default-400">
       <img
-        src="/public/images/logo.jpg"
+        src="/public/images/logo.png"
         alt="Qaderoon Logo"
       />
     </div>
