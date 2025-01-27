@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
 
           <p
-            className="py-6 text-sm text-center text-gray-400"
+            className="pt-6 text-sm text-center text-gray-400"
             dir="ltr">
             {footerData.copyright}
           </p>
