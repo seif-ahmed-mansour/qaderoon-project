@@ -24,6 +24,7 @@ const sponsors = [
   { id: 17, logo: "/images/sponsors/Picture17.png", name: "Picture17" },
   { id: 18, logo: "/images/sponsors/Picture18.jpg", name: "Picture18" },
   { id: 19, logo: "/images/sponsors/Picture19.jpg", name: "Picture19" },
+  {id: 20, logo: "/images/sponsors/Picture20.jpg", name: "Picture20"},
 ];
 
 const SponsorsSlider = () => {
