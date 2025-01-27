@@ -15,7 +15,10 @@ import { FaXTwitter } from "react-icons/fa6";
 function Navbar() {
   const [Scrolled, setScrolled] = useState(false);
   const [NavMenu, setNavMenu] = useState(false);
-  const [Navitem, setNavitem] = useState(false);
+  const [navItems, setNavItems] = useState({
+    about: false,
+    services: false,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +31,16 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleNavItem = (item) => {
+    setNavItems((prev) => {
+      const newState = {
+        about: item === "about" ? !prev.about : false,
+        services: item === "services" ? !prev.services : false,
+      };
+      return newState;
+    });
+  };
 
   return (
     <div
@@ -217,35 +230,42 @@ function Navbar() {
         <div onClick={() => setNavMenu(!NavMenu)} className="space-y-1">
           <div
             className={`w-10 h-1 bg-[#262e30]/90 rounded-full transition-all duration-300 ease-in-out
-         ${NavMenu ? "translate-y-2 rotate-45" : ""}`}
+              ${NavMenu ? "translate-y-2 rotate-45" : ""}`}
           ></div>
           <div
-            className={`w-10 h-1 bg-[#262e30]/90 rounded-full transition-all duration-300 ease-in-out 
-        ${NavMenu ? "opacity-0" : ""}`}
+            className={`w-10 h-1 bg-[#262e30]/90 rounded-full transition-all duration-300 ease-in-out
+              ${NavMenu ? "opacity-0" : ""}`}
           ></div>
           <div
-            className={`w-10 h-1 bg-[#262e30]/90 rounded-full transition-all duration-300 ease-in-out 
-        ${NavMenu ? "-translate-y-2 -rotate-45" : ""}`}
+            className={`w-10 h-1 bg-[#262e30]/90 rounded-full transition-all duration-300 ease-in-out
+              ${NavMenu ? "-translate-y-2 -rotate-45" : ""}`}
           ></div>
         </div>
 
         {/* Mobile Menu with Navigation Links */}
         <div
-          className={`absolute top-full right-0 px-5 w-screen bg-white shadow-lg flex flex-col items-center space-y-4 overflow-hidden transition-all duration-500 ease-in-out 
+          className={`absolute top-full right-0 px-5 w-screen bg-white shadow-lg flex flex-col items-center space-y-4 overflow-hidden transition-all duration-500 ease-in-out
           ${NavMenu ? "max-h-96 p-4 opacity-100" : "max-h-0 p-0 opacity-0"}`}
         >
-          <ul className="w-full space-y-2">
+          <ul className="w-full space-y-3">
             {/* "من نحن" Dropdown */}
-            <li className="relative group z-50">
+            <div className="relative group w-full">
               <button
                 className="cursor-pointer hover:text-[#262e30] text-primary flex items-center w-full justify-between"
-                onClick={() => setNavitem(!Navitem)}
+                onClick={() => toggleNavItem("about")}
               >
                 من نحن
                 <FaCaretDown className="mr-2 mt-1 transition-all duration-400 group-hover:rotate-90" />
               </button>
 
-              <ul className="absolute top-full rounded-2xl text-base right-0 z-50 block space-y-2 bg-white max-h-0 overflow-hidden min-w-[230px] group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-[400ms]">
+              <ul
+                className={`text-base bg-white w-full px-6 transition-all duration-[400ms]
+                ${
+                  navItems.about
+                    ? "opacity-100 max-h-[700px] pb-4 pt-2"
+                    : "opacity-0 max-h-0"
+                }`}
+              >
                 {[
                   "عن الكيان",
                   "كلمة رئيس الكيان",
@@ -260,13 +280,13 @@ function Navbar() {
                   </li>
                 ))}
               </ul>
-            </li>
+            </div>
 
             {/* "خدماتنا" Dropdown */}
             <div className="relative group w-full">
               <button
                 className="cursor-pointer hover:text-[#262e30] text-primary flex items-center w-full justify-between"
-                onClick={() => setNavitem(!Navitem)}
+                onClick={() => toggleNavItem("services")}
               >
                 خدماتنا
                 <FaCaretDown className="mr-2 mt-1 transition-all duration-400 group-hover:rotate-90" />
@@ -275,11 +295,10 @@ function Navbar() {
               <ul
                 className={`text-base bg-white w-full px-6 transition-all duration-[400ms]
                 ${
-                  Navitem
-                    ? "opacity-100 max-h-[700px] pb-4 pt-6"
+                  navItems.services
+                    ? "opacity-100 max-h-[700px] pb-4 pt-2"
                     : "opacity-0 max-h-0"
-                }
-              `}
+                }`}
               >
                 {[
                   "الاستشارات والدراسات",
@@ -298,6 +317,7 @@ function Navbar() {
               </ul>
             </div>
 
+            {/* Other Menu Items */}
             <li className="z-50">
               <button className="cursor-pointer hover:text-[#262e30] text-primary flex items-center w-full justify-between">
                 الأخبار
