@@ -61,7 +61,7 @@ const Footer = () => {
             <SocialLinks />
           </div>
 
-          <div className="grid grid-cols-1 gap-8 border-t border-gray-200 pt-10 sm:grid-cols-4 xl:grid-cols-6">
+          <div className="grid grid-cols-2 gap-8 border-t border-gray-200 pt-10 sm:grid-cols-4 xl:grid-cols-6">
           {footerData &&
               footerData.sections.map(({ links, title }) => (
                 <FooterSection key={title} title={title} links={links} />
