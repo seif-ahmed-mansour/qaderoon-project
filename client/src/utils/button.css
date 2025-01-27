@@ -1,0 +1,9 @@
+.card-button:hover svg {
+  transform: translateX(4px);
+}
+.card-button svg {
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
