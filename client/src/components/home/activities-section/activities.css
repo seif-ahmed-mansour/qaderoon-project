@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.ac-title {
+  position: relative;
+  padding: 14px;
+}
+
+.ac-title::after {
+  content: "";
+  right: 47%;
+  background-color: var(--color-primary);
+  @apply bottom-0 h-1 w-[5%] absolute;
+}
