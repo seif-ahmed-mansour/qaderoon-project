@@ -65,7 +65,7 @@ function ActivitiesCard() {
               alt="pic"
               data-aos="fade-up"
               data-aos-duration="1500"
-              className="w-full md:w-1/2 rounded-lg shadow-md"
+              className="w-full md:w-1/2 rounded-lg shadow-md object-cover"
             />
           </div>
           {/* End of content and image container */}
