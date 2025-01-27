@@ -37,7 +37,7 @@ const SponsorsSlider = () => {
         spaceBetween={30}
         slidesPerView={3}
         loop={true}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 1000 }}
         modules={[Autoplay]}
         breakpoints={{
           640: {
