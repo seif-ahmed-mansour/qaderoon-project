@@ -28,7 +28,7 @@ const sponsors = [
 
 const SponsorsSlider = () => {
   return (
-    <div className="sponsors-slider-container container w-full m-auto px-3 md:px-1 my-7">
+    <div className="sponsors-slider-container container w-full m-auto px-3 md:px-1 my-16">
       <h2 className="font-extrabold text-4xl pb-5 ev-title-sponsors mb-6 text-neutral-950">
         شركاء <span className="text-primary relative top-1">النجاح</span>
       </h2>

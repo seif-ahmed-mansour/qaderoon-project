@@ -6,7 +6,7 @@ import { Md6FtApart } from "react-icons/md";
 import StatisticsCard from "./StatisticsCard";
 
 const StatisticsSection = () => (
-  <section className="bg-gray-100 py-12">
+  <section className="bg-gray-100 py-20">
     <div className="text-center mb-8">
       <h2 className="text-[#da1e33] text-3xl font-bold">الإحصائيات</h2>
       <p className="text-gray-600 text-lg mt-2">
