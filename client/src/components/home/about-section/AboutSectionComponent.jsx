@@ -4,7 +4,7 @@ import ImageSection from "./ImageSection";
 
 const AboutSectionComponent = () => {
   return (
-    <section className="container flex flex-col md:flex-row items-center gap-6 p-6 bg-gray-100 rounded-xl shadow-lg mx-auto mt-3">
+    <section className="container flex flex-col md:flex-row items-center gap-6 p-6 rounded-xl mx-auto mt-3">
       <div className="md:w-1/2">
         <Header />
         <ContentSection />
