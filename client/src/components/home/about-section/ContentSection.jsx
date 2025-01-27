@@ -2,7 +2,7 @@ import { FaPlay } from "react-icons/fa6";
 import Button from "../../../utils/Button";
 
 const ContentSection = () => (
-  <div className="text-right">
+  <div className="text-right" data-aos="fade-right">
     <p className="text-gray-800 text-lg leading-relaxed">
       بـدأت شـبـاب قـادرون كـأحـد الـكـيـانـات الـشـبـابـيـة بـوزارة الشباب
       والرياضة وبدعم ورعاية من معالى وزير الشباب والرياضة الاستاذ الدكتور / أشرف
@@ -17,7 +17,6 @@ const ContentSection = () => (
       القيادات الشبابية فى السعودية و الامارات والكويت والبحرين والمغرب لتكرار
       نفس التجربة الاردنية .
     </p>
-
     <div className="flex justify-start mt-6 gap-4">
       <Button className="hover:scale-105 transition-transform duration-200">
         عرض المزيد
