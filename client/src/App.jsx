@@ -15,6 +15,7 @@ function App() {
       <StatisticsSection />
       <EgyptVision />
       <Footer />
+      <sofy/>
     </main>
   );
 }
