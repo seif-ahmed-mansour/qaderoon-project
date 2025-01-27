@@ -1,4 +1,4 @@
-import React from "react";
+import "./button.css";
 import { Link } from "react-router-dom";
 
 function Button({ link, children, className = "", ...rest }) {
