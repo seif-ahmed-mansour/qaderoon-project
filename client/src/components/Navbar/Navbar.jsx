@@ -30,7 +30,7 @@ function Navbar() {
   return (
     <div
       className={`navbar flex justify-between px-24 py-6 sticky top-0 z-50 w-full bg-white transition-all duration-500 ease-out 
-    ${Scrolled ? "h-24 shadow-xl" : "h-36 shadow-md"}`}
+    ${Scrolled ? "h-24 shadow-xl" : "h-30 shadow-md"}`}
     >
       {/* Logo Section */}
       <div className="flex items-center justify-center z-50">
