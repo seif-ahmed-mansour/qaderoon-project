@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const AddReport = () => {
-  const [reportTitle, setReportTitle] = useState('');
-  const [reportDesc, setReportDesc] = useState('');
+  const [reportTitle, setReportTitle] = useState("");
+  const [reportDesc, setReportDesc] = useState("");
   const [reportImg, setReportImg] = useState(null);
 
   const handleFileChange = (e) => {
@@ -13,20 +13,20 @@ const AddReport = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('reportTitle', reportTitle);
-    formData.append('reportDesc', reportDesc);
-    formData.append('reportImg', reportImg);
+    formData.append("reportTitle", reportTitle);
+    formData.append("reportDesc", reportDesc);
+    formData.append("reportImg", reportImg);
 
     try {
-      await axios.post(`http://localhost:5000/reports`, formData, {
+      await axios.post(`${import.meta.env.VITE_HOST_SERVER}reports`, formData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
       });
-      alert('Report added successfully');
+      alert("Report added successfully");
     } catch (error) {
-      console.error('Error adding report:', error);
-      alert('Failed to add report');
+      console.error("Error adding report:", error);
+      alert("Failed to add report");
     }
   };
 
