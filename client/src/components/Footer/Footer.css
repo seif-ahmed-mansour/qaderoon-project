@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+footer {
+  .f-icon {
+    color: var(--color);
+    @apply relative
+    flex flex-col justify-center items-center
+    bg-white
+    rounded-full
+    p-4
+    size-12
+    text-2xl
+    cursor-pointer transition-colors duration-[400ms];
+  }
+
+  .f-icon:hover {
+    background-color: var(--color);
+    @apply text-white;
+  }
+}
+
+/* rules for 864px and smaller */
+@media screen and (max-width: 864px) {
+  .f-social-links {
+    display: flex;
+    flex-direction: column;
+    @apply space-y-10;
+  }
+}
