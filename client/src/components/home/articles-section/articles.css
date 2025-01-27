@@ -2,7 +2,8 @@
   min-height: 100dvh;
   height: 100%;
   position: relative;
-  background-image: url("../../../../public/images/articles-section-image.png");
+  /* images in public directory doesn't need absolute path */
+  background-image: url("/images/articles-section-image.png");
 }
 
 .background {

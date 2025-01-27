@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../../assets/fonts/arfonts-vip-hala-bold-vip-hala-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo {
+    font-family: 'CustomFont', sans-serif;
+    background: linear-gradient(90deg, #a61c36, #e7203b);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Ensure the dropdown appears on focus and active states */
+.group:focus-within .group-hover\:opacity-100 {
+    opacity: 1;
+    max-block-size: 700px;
+}
+
+.group:focus-within .group-hover\:pt-6 {
+    padding-block-start: 1.5rem;
+}
+
+.group:focus-within .group-hover\:pb-4 {
+    padding-block-end: 1rem;
+}
+
+.group:active .group-hover\:opacity-100 {
+    opacity: 1;
+    max-block-size: 700px;
+}
+
+.group:active .group-hover\:pt-6 {
+    padding-block-start: 1.5rem;
+}
+
+.group:active .group-hover\:pb-4 {
+    padding-block-end: 1rem;
+}
