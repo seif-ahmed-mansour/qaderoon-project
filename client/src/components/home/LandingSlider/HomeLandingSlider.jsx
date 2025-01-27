@@ -1,4 +1,3 @@
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import { useEffect, useState } from "react";

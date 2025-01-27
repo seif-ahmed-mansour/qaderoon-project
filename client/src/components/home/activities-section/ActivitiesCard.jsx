@@ -24,7 +24,7 @@ function ActivitiesCard() {
   return (
     <div>
       {/* Bootstrap-like container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-5 shadow-md">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-[50px] mt-[40px]">
         {/* A container for animation */}
         <div className="text-center">
           <h1 className="text-3xl font-bold ac-title">
