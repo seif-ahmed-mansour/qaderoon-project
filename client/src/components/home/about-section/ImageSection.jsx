@@ -1,5 +1,5 @@
 const ImageSection = () => (
-  <div className="flex justify-center" data-aos="fade-left">
+  <div className="flex justify-center hidden md:block" data-aos="fade-left">
     <img
       src="/images/home-about-section-photo.jpg"
       alt="Ministry Initiative"
