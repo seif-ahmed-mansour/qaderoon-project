@@ -4,13 +4,25 @@ import axios from 'axios';
 const AddReport = () => {
   const [reportTitle, setReportTitle] = useState('');
   const [reportDesc, setReportDesc] = useState('');
-  const [reportImg, setReportImg] = useState('');
+  const [reportImg, setReportImg] = useState(null);
+
+  const handleFileChange = (e) => {
+    setReportImg(e.target.files[0]);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const reportData = { reportTitle, reportDesc, reportImg };
+    const formData = new FormData();
+    formData.append('reportTitle', reportTitle);
+    formData.append('reportDesc', reportDesc);
+    formData.append('reportImg', reportImg);
+
     try {
-      await axios.post(`${process.env.REACT_APP_HOST_SERVER}reports`, reportData);
+      await axios.post(`http://localhost:5000/reports`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
       alert('Report added successfully');
     } catch (error) {
       console.error('Error adding report:', error);
@@ -49,13 +61,13 @@ const AddReport = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="reportImg">
-            Report Image URL
+            Report Image
           </label>
           <input
-            type="text"
+            type="file"
             id="reportImg"
-            value={reportImg}
-            onChange={(e) => setReportImg(e.target.value)}
+            accept="image/jpeg, image/jpg, image/png, image/gif, image/bmp, image/webp"
+            onChange={handleFileChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             required
           />

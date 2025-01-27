@@ -17,6 +17,10 @@ mongoose.connect(mongoURI)
     process.exit(-1);
   });
 
+
+// to use anything in Public
+app.use(express.static('Public'))
+
 // to use in front
 app.use(cors());
 
