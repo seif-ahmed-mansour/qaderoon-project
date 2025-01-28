@@ -1,4 +1,3 @@
-import React from "react";
 import HomeLandingSlider from "../components/home/LandingSlider/HomeLandingSlider";
 import AboutSectionComponent from "../components/home/about-section/AboutSectionComponent";
 import Articles from "../components/home/articles-section/Articles";
