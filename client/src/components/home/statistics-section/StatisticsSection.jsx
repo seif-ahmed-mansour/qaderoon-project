@@ -28,7 +28,7 @@ const StatisticsSection = () => (
       />
       <StatisticsCard
         icon={<RiUserCommunityFill />}
-        number="18700"
+        number="8700"
         label="أعضاء المؤسسة"
       />
       <StatisticsCard icon={<Md6FtApart />} number="38" label="الشركاء" />
