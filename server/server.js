@@ -5,7 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT || 50001;
+const port = process.env.PORT || 5000;
 const mongoURI = process.env.MONGO_URI;
 
 // to use anything in Public
