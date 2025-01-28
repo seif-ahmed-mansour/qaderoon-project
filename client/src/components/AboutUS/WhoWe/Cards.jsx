@@ -24,7 +24,7 @@ const Cards = () => {
     <div data-aos="fade-right" className="grid text-center grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 p-8">
         {data.map((object)=>{
             return(
-                <div className="bg-white w-110 md:w-82 lg:w-100 xl:100 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="shadow-2xl shadow-black/30  bg-white w-110 md:w-82 lg:w-100 xl:100 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="p-6 " >
                     <div className="flex justify-center">
                   <div className="bg-red-100 w-fit justify-items-center  p-3 rounded-full mb-4">
