@@ -36,7 +36,7 @@ function ActivitiesCard() {
               className="md:w-1/2 text-right"
               data-aos="fade-down"
               data-aos-duration="1500">
-              <h4 className="text-2xl md:text-3xl  font-semibold text-primary mb-4 mt-10">
+              <h4 className="text-2xl md:text-3xl  font-semibold text-primary mb-4">
                 البرامج التدريبية
               </h4>
               <div className="space-y-0 md:space-y-2">

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import {
   FaCaretDown,
@@ -49,7 +50,7 @@ function Navbar() {
     >
       {/* Logo Section */}
       <div className="flex items-center justify-center z-50">
-        <div className="flex flex-col items-center">
+        <Link to="/" className="flex flex-col items-center">
           <img
             src="/images/logo.png"
             alt="Logo"
@@ -69,7 +70,7 @@ function Navbar() {
           >
             شباب قادرون
           </h1>
-        </div>
+        </Link>
       </div>
 
       {/* Navigation Link Section */}
