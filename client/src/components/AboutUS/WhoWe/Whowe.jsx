@@ -13,7 +13,7 @@ export const Whowe = () => {
         <HeaderWho/>
         <ContentOne/>
      </section>
-     <section className="container bg-gray-100 items-center gap-6 p-6 rounded-xl mx-auto my-10 lg:my-20">
+     <section className="container  items-center gap-6 p-6 rounded-xl mx-auto my-10 lg:my-20">
         <Header2/>
         <Cards/>
      </section>
