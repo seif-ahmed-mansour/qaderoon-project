@@ -159,7 +159,6 @@ const SponsorsSlider = () => {
                   className="object-contain w-full max-h-30"
                 />
               </a>
-              <h1 className="text-lg mt-5 text-center">{sponsor.name}</h1>
             </div>
           </SwiperSlide>
         ))}
