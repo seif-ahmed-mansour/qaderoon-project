@@ -8,17 +8,17 @@ const sponsors = [
   {
     id: 1,
     name: "وزارة التضامن الاجتماعي",
-    link: "https://www.moss.gov.eg/",
+    link: "https://www.moss.gov.eg",
   },
   {
     id: 2,
     name: "وزارة الشباب والرياضة",
-    link: "https://www.emys.gov.eg/",
+    link: "https://www.emys.gov.eg",
   },
   {
     id: 3,
     name: "اتحاد التنمية المهنية الشبابية",
-    link: "https://manhom.com/شركات/اتحاد-التنمية-المهنية-الشبابية/",
+    link: "https://manhom.com/شركات/اتحاد-التنمية-المهنية-الشبابية",
   },
   {
     id: 4,
@@ -28,22 +28,22 @@ const sponsors = [
   {
     id: 5,
     name: "جمعية الترابط الإنساني",
-    link: "https://www.facebook.com/MoroccanEgyptianAssociationinegy/",
+    link: "https://www.facebook.com/MoroccanEgyptianAssociationinegy",
   },
   {
     id: 6,
     name: "مؤسسة مهندسون من اجل مصر المستدامة",
-    link: "https://ese-eg.com/",
+    link: "https://ese-eg.com",
   },
   {
     id: 7,
     name: "مؤسسة شارعنا للرعاية والتنمية",
-    link: "https://www.facebook.com/shr3na.eg/",
+    link: "https://www.facebook.com/shr3na.eg",
   },
   {
     id: 8,
     name: "كيان شباب الوطن للريادة والتنمية",
-    link: "https://www.facebook.com/shababelwatan/",
+    link: "https://www.facebook.com/shababelwatan",
   },
   {
     id: 9,
@@ -53,7 +53,7 @@ const sponsors = [
   {
     id: 10,
     name: "إيجي جيت لريادة الأعمال ودعم المرأة",
-    link: "https://www.facebook.com/p/%D8%A5%D9%8A%D8%AC%D9%8A-%D8%AC%D9%8A%D8%AA-%D9%84%D8%B1%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84-%D9%88%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D9%85%D8%B1%D8%A3%D8%A9-100083000097290/?locale=ar_AR",
+    link: "https://www.facebook.com/profile.php?id=100083000097290",
   },
   {
     id: 11,
@@ -63,12 +63,12 @@ const sponsors = [
   {
     id: 12,
     name: "جمعية الريادة لتنمية الأعمال وسلاسل التوريد",
-    link: "https://www.facebook.com/p/Reyada-Association-for-Business-Development-and-Supply-Chain-100068578001391/?_rdr",
+    link: "https://www.facebook.com/profile.php?id=100068578001391",
   },
   {
     id: 13,
     name: "شباب مستدام",
-    link: "https://www.facebook.com/Mostadaminitiative/",
+    link: "https://www.facebook.com/Mostadaminitiative",
   },
   {
     id: 14,
@@ -83,12 +83,12 @@ const sponsors = [
   {
     id: 16,
     name: "AMIT learning",
-    link: "https://amit-learning.com/",
+    link: "https://amit-learning.com",
   },
   {
     id: 17,
     name: "YMCA",
-    link: "https://www.ymca.int/",
+    link: "https://www.ymca.int",
   },
   {
     id: 18,
@@ -98,7 +98,7 @@ const sponsors = [
   {
     id: 19,
     name: "QYF School",
-    link: "https://qyfschool.com/",
+    link: "https://qyfschool.com",
   },
   {
     id: 20,
@@ -120,7 +120,7 @@ const SponsorsSlider = () => {
         spaceBetween={30}
         slidesPerView={3}
         loop={true}
-        autoplay={{ delay: 1500 }}
+        autoplay={{ delay: 2000 }}
         modules={[Autoplay]}
         breakpoints={{
           640: { slidesPerView: 2, spaceBetween: 20 },
