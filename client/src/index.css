@@ -42,9 +42,14 @@
 }
 
 p {
-  @apply leading-relaxed; /* Increase line height for Arabic text  */
+  @apply leading-relaxed;
+  /* Increase line height for Arabic text  */
 }
 
 .debug {
   @apply border-pink-600 border-4;
+}
+
+html {
+  scroll-behavior: smooth;
 }
