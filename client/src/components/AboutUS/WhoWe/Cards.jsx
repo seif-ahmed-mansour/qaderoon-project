@@ -14,7 +14,7 @@ const Cards = () => {
 
         },
         {
-            title:"الرؤيه",
+            title:"رسالة",
             icon:"/images/WhoWe/personal-network-2-svgrepo-com.svg",
             para:"رفع كفاءة الشباب من خلال توسيع الخيارات المتاحه لهم وبناء قدراتهم للمشاركة في صنع مستقبل ايجابي مستدام لوطنهم",
 
