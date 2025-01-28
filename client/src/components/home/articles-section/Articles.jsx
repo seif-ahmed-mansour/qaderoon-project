@@ -67,7 +67,7 @@ function Articles() {
             />
           ))}
         </div>
-        <Button className="bg-white !text-primary hover:bg-white hover:scale-105 transition-transform duration-200">
+        <Button className="bg-white !text-primary hover:bg-white hover:scale-105 transition-transform duration-200" link="/articles">
           عرض المزيد
         </Button>
       </div>

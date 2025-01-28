@@ -5,6 +5,7 @@ import AOS from "aos";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import AllArticles from "./components/AllArticles/AllArticles";
 
 function App() {
   // initialize AOS
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/articles" element={<AllArticles/>}/>
       </Routes>
       <Footer />
     </main>
