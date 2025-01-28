@@ -16,18 +16,11 @@ const allowedOrigins = [
   "http://localhost:3000", // For local development
 ];
 
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true, // If your frontend needs to send cookies or headers
-  })
-);
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 // to use anything in Public
 app.use(express.static("Public"));
