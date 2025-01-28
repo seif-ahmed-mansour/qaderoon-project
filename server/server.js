@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const reportRoutes = require("./Routes/reportRoutes");
 const newsRoutes = require("./Routes/newsRoutes");
-const path = require('path');
+const path = require("path");
 const cors = require("cors");
 require("dotenv").config();
 
@@ -10,12 +10,28 @@ const app = express();
 const port = process.env.PORT || 5000;
 const mongoURI = process.env.MONGO_URI;
 
-// to use anything in Public
-app.use(express.static('Public'))
-app.use('/imgs', express.static(path.join(__dirname, 'Public/imgs')));
+// Configure CORS to allow specific origins
+const allowedOrigins = [
+  "https://your-vercel-domain.vercel.app", // Replace with your actual Vercel domain
+  "http://localhost:3000", // For local development
+];
 
-// to use in front
-app.use(cors());
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // If your frontend needs to send cookies or headers
+  })
+);
+
+// to use anything in Public
+app.use(express.static("Public"));
+app.use("/imgs", express.static(path.join(__dirname, "Public/imgs")));
 
 // to access routes
 app.use("/reports", reportRoutes);
