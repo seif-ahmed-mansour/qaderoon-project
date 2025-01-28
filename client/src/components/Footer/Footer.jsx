@@ -8,44 +8,31 @@ const footerData = {
     {
       title: "من نحن",
       links: [
-        { href: "#", label: "عن المؤسسة" },
-        { href: "#", label: "كلمة رئيس المؤسسة" },
-        { href: "#", label: "اللجان" },
-        { href: "#", label: "الهيئة العليا" },
-        { href: "#", label: "شركاء النجاح" },
+        { href: "/about/institution", label: "عن المؤسسة" },
+        { href: "/about/speech", label: "كلمة رئيس المؤسسة" },
+        { href: "/about/board", label: "مجلس الأمناء" },
+        { href: "/about/supreme-advisory", label: "الهيئة العليا والاستشارية" },
+        { href: "/about/offices", label: "المكاتب" },
+        { href: "/about/units", label: "الإدارات والوحدات" },
+        { href: "/about/governorates", label: "المحافظات" },
+        { href: "/about/success-partners", label: "شركاء النجاح" },
       ],
     },
     {
       title: "خدماتنا",
       links: [
-        { href: "#", label: "الاستشارات والدراسات" },
-        { href: "#", label: "التدريب" },
-        { href: "#", label: "الدورات التدريبية" },
-        { href: "#", label: "التحقق من الشهادات" },
-        { href: "#", label: "المؤتمرات" },
-        { href: "#", label: "الرحلات والمصايف" },
+        { href: "/services/consulting", label: "الاستشارات والدراسات" },
+        { href: "/services/training", label: "التدريب" },
+        { href: "/services/courses", label: "الدورات التدريبية" },
+        { href: "/services/certification", label: "التحقق من الشهادات" },
+        { href: "/services/conferences", label: "المؤتمرات" },
+        { href: "/services/trips", label: "الرحلات والمصايف" },
       ],
     },
-
-    {
-      title: "الأخبار",
-      links: [{ href: "#", label: "" }],
-    },
-
-    {
-      title: "المقالات",
-      links: [{ href: "#", label: "" }],
-    },
-
-    {
-      title: "تواصل معنا",
-      links: [{ href: "#", label: "" }],
-    },
-
-    {
-      title: "إنضم إلينا",
-      links: [{ href: "#", label: "" }],
-    },
+    { title: "الأخبار", links: [{ href: "/news", label: "الأخبار" }] },
+    { title: "المقالات", links: [{ href: "/articles", label: "المقالات" }] },
+    { title: "تواصل معنا", links: [{ href: "/contact", label: "تواصل معنا" }] },
+    { title: "إنضم إلينا", links: [{ href: "/join-us", label: "إنضم إلينا" }] },
   ],
 
   copyright: "© 2025 Qaderoon Co. All rights reserved.",
@@ -62,7 +49,7 @@ const Footer = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-8 border-t border-gray-200 pt-10 sm:grid-cols-4 xl:grid-cols-6">
-          {footerData &&
+            {footerData &&
               footerData.sections.map(({ links, title }) => (
                 <FooterSection key={title} title={title} links={links} />
               ))}
