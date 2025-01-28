@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "../../colors.css";
+
+.markdown-content {
+  @apply max-w-none text-gray-800;
+
+  h1 {
+    @apply text-4xl font-bold mb-4 text-primary;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold mb-3 text-secondary;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold text-primary mb-2;
+  }
+
+  p {
+    @apply leading-relaxed mb-4 text-gray-700;
+  }
+
+  a {
+    @apply text-secondary underline hover:text-primary;
+  }
+
+  blockquote {
+    @apply border-l-4 border-primary pl-4 italic text-gray-600 mb-4;
+  }
+
+  code {
+    @apply bg-gray-100 px-1 py-0.5 rounded text-sm text-primary;
+  }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 rounded-md overflow-x-auto text-sm;
+  }
+
+  ul {
+    @apply list-disc pl-6 mb-4;
+  }
+
+  ol {
+    @apply list-decimal pl-6 mb-4;
+  }
+
+  li {
+    @apply mb-2;
+  }
+
+  hr {
+    @apply border-t-2 border-secondary my-6;
+  }
+
+  table {
+    @apply w-full border-collapse border border-gray-200 my-4;
+  }
+
+  th {
+    @apply bg-gray-100 p-2 border border-gray-200 text-left;
+  }
+
+  td {
+    @apply p-2 border border-gray-200;
+  }
+}
