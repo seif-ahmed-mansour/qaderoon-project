@@ -9,7 +9,7 @@ function ArticleDetails() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/reports/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_HOST_SERVER}reports/${id}`);
         // console.log(response);
 
         setArticle(response.data.data);
@@ -30,7 +30,7 @@ function ArticleDetails() {
         </h2>
       </div>
       <div className="text-center flex justify-center">
-        <img src={article&&article.reportImg} alt="" className=" h-100 object-cover as" />
+        <img src={`${import.meta.env.VITE_HOST_SERVER}imgs/`+article.reportImg} alt="" className=" h-100 object-cover as" />
       </div>
       <p className="text-2xl m-9">{article && article.reportDesc}</p>
       {/* nubuib */}

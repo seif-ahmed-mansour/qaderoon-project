@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ReportSchema = new Schema({
-    reportTitle: {
+const NewsSchema = new Schema({
+    newsTitle: {
         type: String,
         required: true,
     },
-    reportDesc: {
+    newsDesc: {
         type: String,
         required: true,
     },
-    reportImg: {
+    newsImg: {
         type: String,
         required: true,
     }
@@ -19,5 +19,5 @@ const ReportSchema = new Schema({
         timestamps: true,
     });
 
-const Report = mongoose.model('Report', ReportSchema);
-module.exports = Report;
+const News = mongoose.model('News', NewsSchema);
+module.exports = News;

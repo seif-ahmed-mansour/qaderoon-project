@@ -8,7 +8,7 @@ function AllArticles() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/reports");
+        const response = await axios.get(`${import.meta.env.VITE_HOST_SERVER}reports`);
         // console.log(response);
 
         setArticles(response.data.data);
@@ -28,7 +28,7 @@ function AllArticles() {
             <Card
               key={index}
               description={article.reportTitle}
-              image={article.reportImg}
+              image={`${import.meta.env.VITE_HOST_SERVER}imgs/`+article.reportImg}
             />
           ))}
         </div>
