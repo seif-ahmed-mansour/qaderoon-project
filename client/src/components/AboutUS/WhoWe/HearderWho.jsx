@@ -4,7 +4,7 @@ const HeaderWho = () => (
       data-aos="fade-right"
     >
       <h1>
-        عن المؤوسسه
+        عن المؤوسه
       </h1>
       <div className="w-16 h-1 bg-primary mt-6 mb-7"></div>
       <div>
