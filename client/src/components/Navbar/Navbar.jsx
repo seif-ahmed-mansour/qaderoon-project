@@ -8,7 +8,7 @@ import { FaCaretDown } from "react-icons/fa";
 const navItemsData = [
   {
     name: "من نحن",
-    link: "/about",
+    link: "/about/institution",
     subItems: [
       { name: "عن المؤسسة", link: "/about/institution" },
       { name: "كلمة رئيس المؤسسة", link: "/about/speech" },

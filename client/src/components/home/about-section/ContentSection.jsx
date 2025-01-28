@@ -1,6 +1,6 @@
 import { FaPlay } from "react-icons/fa6";
 import Button from "../../../utils/Button";
-
+import { Link } from "react-router-dom";
 const ContentSection = () => (
   <div className="text-right" data-aos="fade-right">
     <p className="text-gray-800 text-base  md:text-xl leading-relaxed">
@@ -18,9 +18,10 @@ const ContentSection = () => (
       نفس التجربة الاردنية .
     </p>
     <div className="flex justify-start mt-6 gap-4">
-      <Button className="hover:scale-105 transition-transform duration-200">
+      <Link to="/about/institution"><Button className="hover:scale-105 transition-transform duration-200">
         عرض المزيد
-      </Button>
+      </Button> </Link>
+      
       <Button className="hover:scale-105 transition-transform duration-200">
         فيديو تعريفي <FaPlay className="mr-2" />
       </Button>
