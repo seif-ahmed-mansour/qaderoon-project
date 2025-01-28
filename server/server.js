@@ -1,21 +1,25 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const reportRoutes = require("./Routes/reportRoutes");
+const newsRoutes = require("./Routes/newsRoutes");
+const path = require('path');
 const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT || 50001;
+const port = process.env.PORT || 5000;
 const mongoURI = process.env.MONGO_URI;
 
 // to use anything in Public
-app.use(express.static("Public"));
+app.use(express.static('Public'))
+app.use('/imgs', express.static(path.join(__dirname, 'Public/imgs')));
 
 // to use in front
 app.use(cors());
 
 // to access routes
 app.use("/reports", reportRoutes);
+app.use("/news", newsRoutes);
 
 // if the database connection failed don't run the server
 mongoose

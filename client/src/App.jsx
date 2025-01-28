@@ -7,6 +7,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AllArticles from "./components/AllArticles/AllArticles";
 import ArticleDetails from "./components/ArticleDetails/ArticleDetails";
+import AddReport from "./dashboard/AddReport";
+import AddNews from "./dashboard/AddNews";
 
 function App() {
   // initialize AOS
@@ -21,7 +23,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/articles" element={<AllArticles/>}/>
         <Route path="/article/:id" element={<ArticleDetails />} />
-
+        <Route path="dashboard">
+            <Route path="add-article" element={<AddReport />} />
+            <Route path="add-news" element={<AddNews />} />
+        </Route>
       </Routes>
       <Footer />
     </main>
