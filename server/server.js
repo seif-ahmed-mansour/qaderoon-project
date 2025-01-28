@@ -12,7 +12,7 @@ const mongoURI = process.env.MONGO_URI;
 
 // Configure CORS to allow specific origins
 const allowedOrigins = [
-  "https://your-vercel-domain.vercel.app", // Replace with your actual Vercel domain
+  "https://qaderoon-project-server.vercel.app/", 
   "http://localhost:3000", // For local development
 ];
 
