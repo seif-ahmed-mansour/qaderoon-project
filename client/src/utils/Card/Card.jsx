@@ -13,6 +13,7 @@ function Card(props) {
       </a>
       <div className="p-5 text-center">
         <h1 className="mb-3 text-xl break-words my-2">{props.description}</h1>
+        {/* Omit the link prop since the entire card is wrapped in a Link */}
         <Button>
           إقرأ المزيد
           <svg

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AllArticles from "./components/AllArticles/AllArticles";
+import ArticleDetails from "./components/ArticleDetails/ArticleDetails";
 
 function App() {
   // initialize AOS
@@ -19,6 +20,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/articles" element={<AllArticles/>}/>
+        <Route path="/article/:id" element={<ArticleDetails />} />
+
       </Routes>
       <Footer />
     </main>

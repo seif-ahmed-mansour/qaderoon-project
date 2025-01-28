@@ -5,6 +5,7 @@ import Button from "../../../utils/Button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Articles() {
   const [articles, setArticles] = useState([]);
@@ -16,14 +17,14 @@ function Articles() {
       try {
         const response = await axios.get("http://localhost:5000/reports");
         // console.log(response);
-        
-        setArticles(response.data.data.slice(0, 3)); 
+
+        setArticles(response.data.data.slice(0, 3));
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
     // console.log(articles);
-    
+
     fetchData();
   }, []);
 
@@ -59,15 +60,21 @@ function Articles() {
           مجموعة من المقالات المحدثة باستمرار
         </p>
         <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr">
-          {articles&&articles.map((article, index) => (
-            <Card
-              key={index}
-              description={article.reportTitle}
-              image={article.reportImg}
-            />
-          ))}
+          {articles &&
+            articles.map((article, index) => (
+              <Link to={`/article/${article._id}`} key={index}>
+{                console.log(article._id)}                
+                <Card
+                  description={article.reportTitle}
+                  image={article.reportImg}
+                />
+              </Link>
+            ))}
         </div>
-        <Button className="bg-white !text-primary hover:bg-white hover:scale-105 transition-transform duration-200" link="/articles">
+        <Button
+          className="bg-white !text-primary hover:bg-white hover:scale-105 transition-transform duration-200"
+          link="/articles"
+        >
           عرض المزيد
         </Button>
       </div>
