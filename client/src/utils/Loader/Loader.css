@@ -2,7 +2,9 @@
 
 .loader {
   animation: rotation 1s linear infinite;
-  @apply size-20 shadow rounded-full inline-block box-border border-8 border-white border-b-secondary;
+  /* margin: 0 calc(100vw - 100%); */
+  margin: auto;
+  @apply size-20 shadow rounded-full box-border border-8 border-white border-b-secondary;
 }
 
 @keyframes rotation {
