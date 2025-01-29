@@ -46,7 +46,7 @@ function ActivitiesCard() {
                   <div
                     key={index}
                     className="bg-white p-4 rounded-lg flex items-center group hover:translate-x-2 hover:scale-105 transition-all duration-300">
-                    <div className="border-2 border-primary rounded-full p-1 group-hover:bg-primary group-hover:border-primary">
+                    <div className="border-2 border-primary rounded-full p-1 group-hover:bg-primary group-hover:border-primary cursor-default">
                       <AiFillSafetyCertificate className="text-lg text-primary group-hover:text-white" />
                     </div>
                     <h2 className="text-xl font-semibold mr-4 group-hover:text-primary">
