@@ -1,18 +1,7 @@
 const HeaderWho = () => (
-    <header
-      className="flex flex-col items-start justify-center text-black font-bold text-2xl md:text-3xl"
-      data-aos="fade-right"
-    >
-      <h1>
-        عن المؤسسة
-      </h1>
-      <div className="w-16 h-1 bg-primary mt-6 mb-7"></div>
-      <div>
-     
-      </div>
-      
-    </header>
-  );
-  
-  export default HeaderWho;
-  
+  <h2 className="font-extrabold text-3xl md:text-4xl pb-5 ev-title-sponsors text-neutral-950 mb-6 container mx-auto ">
+    عن <span className="text-primary relative top-1">المؤسسة</span>
+  </h2>
+);
+
+export default HeaderWho;
