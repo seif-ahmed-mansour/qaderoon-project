@@ -43,7 +43,7 @@ function Articles() {
         <p className="text-xl my-5 text-white">
           مجموعة من المقالات المحدثة باستمرار
         </p>
-        <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center sm-justify-center">
+        <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center sm:justify-center">
           {articles &&
             articles.map(({ _id, title, Img }) => (
               <Link
