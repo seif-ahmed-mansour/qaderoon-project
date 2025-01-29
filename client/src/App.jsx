@@ -9,7 +9,7 @@ import AllArticles from "./pages/AllArticles";
 import ArticleDetails from "./pages/ArticleDetails";
 import AddReport from "./dashboard/AddReport";
 import AddNews from "./dashboard/AddNews";
-import { Whowe } from "./components/AboutUS/WhoWe/Whowe";
+import Whowe from "./components/AboutUS/WhoWe/Whowe";
 import News from "./pages/News";
 
 function App() {

@@ -15,7 +15,9 @@ function Articles() {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_HOST_SERVER}reports/`);
+        const response = await axios.get(
+          `${import.meta.env.VITE_HOST_SERVER}reports/`
+        );
         // console.log(response);
 
         setArticles(response.data.data.slice(0, 3));
@@ -28,53 +30,35 @@ function Articles() {
     fetchData();
   }, []);
 
-  // const data = [
-  //   {
-  //     image: "/images/articles-init-photo.png", // Add your image URL here
-  //     title:
-  //       "مقال رأي يتناول موضوع التكنولوجيا وتأثيرها على المجتمع. يناقش كيفية التقدم التكنولوجي وتحدياته.",
-  //   },
-  //   {
-  //     image: "/images/logo_with_slogan.jpg", // Add your image URL here
-  //     title:
-  //       "مقال رأي حول التعليم عن بُعد. يتحدث عن الفوائد والعيوب المرتبطة بالتعلم عبر الإنترنت.",
-  //   },
-  //   {
-  //     image: "/images/home-artical section-photo.jpg", // Add your image URL here
-  //     title:
-  //       "مقال رأي عن التغير المناخي. يركز على أهمية الوعي البيئي وسبل الحد من التلوث.",
-  //   },
-  // ];
   return (
     <div className="articles-cont">
       <div className="layer"></div>
       <div
         className="container mx-auto px-4 text-center article-content"
         data-aos="fade-down"
-        data-aos-duration="1000"
-      >
+        data-aos-duration="1000">
         <h1 className="text-3xl md:text-4xl font-bold my-3 text-white">
           مقالات الرأي
         </h1>
         <p className="text-xl my-5 text-white">
           مجموعة من المقالات المحدثة باستمرار
         </p>
-        <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr">
+        <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center">
           {articles &&
-            articles.map((article, index) => (
-              <Link to={`/article/${article._id}`} key={index}>
-{                console.log(article._id)}                
+            articles.map(({ _id, reportTitle, reportImg }) => (
+              <Link
+                to={`/article/${_id}`}
+                key={_id}>
                 <Card
-                  description={article.reportTitle}
-                  image={`${import.meta.env.VITE_HOST_SERVER}imgs/`+article.reportImg}
+                  description={reportTitle}
+                  image={`${import.meta.env.VITE_HOST_SERVER}imgs/${reportImg}`}
                 />
               </Link>
             ))}
         </div>
         <Button
-          className="bg-white !text-primary hover:bg-white hover:scale-105 transition-transform duration-200"
-          link="/articles"
-        >
+          className="bg-white !text-primary hover:bg-white hover:scale-105 transition-transform duration-200 font-semibold"
+          link="/articles">
           عرض المزيد
         </Button>
       </div>
