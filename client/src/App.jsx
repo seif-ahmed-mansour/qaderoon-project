@@ -5,12 +5,12 @@ import AOS from "aos";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import AllArticles from "./components/AllArticles/AllArticles";
-import ArticleDetails from "./components/ArticleDetails/ArticleDetails";
+import AllArticles from "./pages/AllArticles";
+import ArticleDetails from "./pages/ArticleDetails";
 import AddReport from "./dashboard/AddReport";
 import AddNews from "./dashboard/AddNews";
 import { Whowe } from "./components/AboutUS/WhoWe/Whowe";
-import News from "./components/News/News";
+import News from "./pages/News";
 
 function App() {
   // initialize AOS
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <main>
-      
+
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
