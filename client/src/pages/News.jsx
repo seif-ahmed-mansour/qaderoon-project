@@ -50,7 +50,7 @@ const News = () => {
         اخر <span className="text-primary relative top-1">الاخبار</span>
       </h2>
 
-      <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr">
+      <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center sm:justify-center text-center cards-containerr">
         {isLoading || isPageLoading ? (
           <Loader /> 
         ) : (
