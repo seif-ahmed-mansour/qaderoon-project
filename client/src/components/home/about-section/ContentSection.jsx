@@ -9,42 +9,42 @@ const ContentSection = () => (
   >
     <p className="text-gray-700 text-lg md:text-xl leading-relaxed tracking-wide">
       بدأت مبادرة{" "}
-      <span className="text-primary font-semibold">
+      <span className="text-secondary font-semibold">
         {"'"}شباب قادرون{"'"}
       </span>{" "}
       كإحدى الكيانات الشبابية تحت إشراف{" "}
-      <span className="text-primary font-semibold">وزارة الشباب والرياضة</span>، بدعم ورعاية
+      <span className="text-secondary font-semibold">وزارة الشباب والرياضة</span>، بدعم ورعاية
       من معالي وزير الشباب والرياضة، الأستاذ الدكتور{" "}
-      <span className="text-primary font-semibold">أشرف صبحي</span>. على مدار عامين، قدمت
+      <span className="text-secondary font-semibold">أشرف صبحي</span>. على مدار عامين، قدمت
       المبادرة العديد من الفعاليات والأنشطة الشبابية في{" "}
-      <span className="text-primary font-semibold">مصر</span>، حيث كانت البداية مع{" "}
-      <span className="text-primary font-semibold">مؤتمر الشباب العربي</span> في إطار{" "}
-      <span className="text-primary font-semibold">{"'"}الجمهورية الجديدة{"'"}</span> الذي رعاه معالي
+      <span className="text-secondary font-semibold">مصر</span>، حيث كانت البداية مع{" "}
+      <span className="text-secondary font-semibold">مؤتمر الشباب العربي</span> في إطار{" "}
+      <span className="text-secondary font-semibold">{"'"}الجمهورية الجديدة{"'"}</span> الذي رعاه معالي
       الوزير. هذا المؤتمر كان نقطة الانطلاق للتوسع العربي،
       حيث بدأت المبادرة في عدة دول{" "}
-      <span className="text-primary font-semibold">عربية</span>{" "}
+      <span className="text-secondary font-semibold">عربية</span>{" "}
       شقيقة، ومن بينها{" "}
-      <span className="text-primary font-semibold">المملكة الأردنية الهاشمية</span>، التي
+      <span className="text-secondary font-semibold">المملكة الأردنية الهاشمية</span>، التي
       تلقت دعوة كريمة من{" "}
-      <span className="text-primary font-semibold">وزارة الشباب والتنمية السياسية</span> و
-      <span className="text-primary font-semibold">مجلس النواب الأردني</span> لنقل تجربة{" "}
-      <span className="text-primary font-semibold">{"'"}شباب قادرون{"'"}</span> إلى{" "}
-      <span className="text-primary font-semibold">الأردن</span>. بعد هذه الزيارة
+      <span className="text-secondary font-semibold">وزارة الشباب والتنمية السياسية</span> و
+      <span className="text-secondary font-semibold">مجلس النواب الأردني</span> لنقل تجربة{" "}
+      <span className="text-secondary font-semibold">{"'"}شباب قادرون{"'"}</span> إلى{" "}
+      <span className="text-secondary font-semibold">الأردن</span>. بعد هذه الزيارة
       الناجحة، وجه السيد{" "}
-      <span className="text-primary font-semibold">وائل محمد الشريف</span>, رئيس{" "}
-      <span className="text-primary font-semibold">{"'"}شباب قادرون{"'"}</span>
+      <span className="text-secondary font-semibold">وائل محمد الشريف</span>, رئيس{" "}
+      <span className="text-secondary font-semibold">{"'"}شباب قادرون{"'"}</span>
       ، دعوة من{" "}
-      <span className="text-primary font-semibold">الديوان الملكي الأردني</span>{" "}
+      <span className="text-secondary font-semibold">الديوان الملكي الأردني</span>{" "}
       إلى كوادر{" "}
-      <span className="text-primary font-semibold">{"'"}شباب قادرون{"'"}</span>{" "}
+      <span className="text-secondary font-semibold">{"'"}شباب قادرون{"'"}</span>{" "}
       لتأسيس الفرع الأردني للمبادرة. بعد ذلك، تلقى{" "}
-      <span className="text-primary font-semibold">{"'"}شباب قادرون{"'"}</span>{" "}
+      <span className="text-secondary font-semibold">{"'"}شباب قادرون{"'"}</span>{" "}
       طلبات من العديد من القيادات الشبابية في{" "}
-      <span className="text-primary font-semibold">السعودية</span>،{" "}
-      <span className="text-primary font-semibold">الإمارات</span>،{" "}
-      <span className="text-primary font-semibold">الكويت</span>،{" "}
-      <span className="text-primary font-semibold">البحرين</span>، و
-      <span className="text-primary font-semibold">المغرب</span> لتكرار نفس التجربة الناجحة
+      <span className="text-secondary font-semibold">السعودية</span>،{" "}
+      <span className="text-secondary font-semibold">الإمارات</span>،{" "}
+      <span className="text-secondary font-semibold">الكويت</span>،{" "}
+      <span className="text-secondary font-semibold">البحرين</span>، و
+      <span className="text-secondary font-semibold">المغرب</span> لتكرار نفس التجربة الناجحة
       في تلك الدول.
     </p>
     <div className="flex justify-start mt-8 gap-6">

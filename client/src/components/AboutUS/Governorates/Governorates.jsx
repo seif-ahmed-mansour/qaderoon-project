@@ -27,14 +27,14 @@ function Governorates() {
         محافظات تواجد <span className="text-primary relative">شباب قادرون</span>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-8 ">
-        {governorates.map((province, index) => (
+        {governorates.map((governorate, index) => (
           <div
             key={index}
-            className="province-card bg-white p-6 shadow-sm md:shadow-md rounded-lg hover:shadow-lg transform transition-all duration-300 hover:scale-105">
+            className="bg-white p-6 shadow-sm md:shadow-md rounded-lg hover:shadow-lg transform transition-all duration-300 hover:scale-105">
             <h3 className="text-lg md:text-xl font-semibold text-primary text-center">
-              {province}
+              {governorate}
             </h3>
-          </div>
+          </div>  
         ))}
       </div>
     </div>
