@@ -31,7 +31,7 @@ function Governorates() {
           <div
             data-aos="fade-down"
             key={index}
-            className="bg-white p-6 shadow-sm md:shadow-md rounded-lg hover:shadow-lg transform transition-all duration-300 hover:scale-105">
+            className="bg-white p-6 shadow-sm md:shadow-md rounded-lg hover:shadow-lg transform transition-all duration-300 hover:scale-105 cursor-default">
             <h3 className="text-lg md:text-xl font-semibold text-primary text-center">
               {governorate}
             </h3>
