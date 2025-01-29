@@ -97,47 +97,51 @@ function Navbar() {
             navMenuOpen ? "max-h-96 p-4 opacity-100" : "max-h-0 p-0 opacity-0"
           }`}>
           <ul className="w-full space-y-3">
-            {navItemsData.map((item, index) => (
-              <div
-                key={index}
-                className="relative group w-full">
-                <button
-                  className="cursor-pointer hover:text-primary text-[#262e30] text-lg flex items-center w-full justify-between"
-                  onClick={() => toggleDropdown(item.name)}>
-                  {item.name}
+            <li>
+              {navItemsData.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative group w-full">
+                  <button
+                    className="cursor-pointer hover:text-primary text-[#262e30] text-lg flex items-center w-full justify-between"
+                    onClick={() => toggleDropdown(item.name)}>
+                    {item.name}
+                    {item.subItems && (
+                      <FaCaretDown
+                        className={`mr-2 mt-1 transition-transform duration-400 ${
+                          openDropdown === item.name ? "rotate-180" : "rotate-0"
+                        }`}
+                      />
+                    )}
+                  </button>
                   {item.subItems && (
-                    <FaCaretDown
-                      className={`mr-2 mt-1 transition-transform duration-400 ${
-                        openDropdown === item.name ? "rotate-180" : "rotate-0"
+                    <ul
+                      className={`text-base bg-white w-full px-6 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] ${
+                        openDropdown === item.name
+                          ? "max-h-96 opacity-100"
+                          : "max-h-0 opacity-0"
                       }`}
-                    />
+                      style={{
+                        transitionProperty: "max-height, opacity",
+                      }}>
+                      <li>
+                        {item.subItems.map((subItem, subIndex) => (
+                          <Link
+                            to={subItem.link}
+                            key={subIndex}
+                            onClick={() => setNavMenuOpen(false)}
+                            className="border-b text-gray-200">
+                            <h1 className="cursor-pointer hover:text-secondary text-[#414e52] text-base flex items-center mt-2">
+                              {subItem.name}
+                            </h1>
+                          </Link>
+                        ))}
+                      </li>
+                    </ul>
                   )}
-                </button>
-                {item.subItems && (
-                  <ul
-                    className={`text-base bg-white w-full px-6 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] ${
-                      openDropdown === item.name
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
-                    }`}
-                    style={{
-                      transitionProperty: "max-height, opacity",
-                    }}>
-                    {item.subItems.map((subItem, subIndex) => (
-                      <Link
-                        to={subItem.link}
-                        key={subIndex}
-                        onClick={() => setNavMenuOpen(false)}
-                        className="border-b text-gray-200">
-                        <h1 className="cursor-pointer hover:text-secondary text-[#414e52] text-base flex items-center mt-2">
-                          {subItem.name}
-                        </h1>
-                      </Link>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
+                </div>
+              ))}
+            </li>
           </ul>
         </div>
       </div>

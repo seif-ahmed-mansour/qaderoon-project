@@ -21,7 +21,11 @@ const Cards = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mx-2">
-      {data.map((object) => {
+      {data.map((object, index) => {
+        // Determine the appropriate heading level based on its index or context
+        // If this is a list of sections, you might want to use <h2> or <h3> accordingly
+        // In this case, let's assume <h2> is appropriate for this section
+        const HeadingTag = index === 0 ? "h2" : "h3"; // Example to use <h2> for the first item, then <h3> for others
         return (
           <div
             data-aos="fade-up"
@@ -42,9 +46,10 @@ const Cards = () => {
                   )}
                 </div>
               </div>
-              <h3 className="font-semibold text-2xl text-gray-800 mb-4">
+              {/* Use the dynamically determined HeadingTag */}
+              <HeadingTag className="font-semibold text-2xl text-gray-800 mb-4">
                 {object.title}
-              </h3>
+              </HeadingTag>
               <p className="text-base text-gray-600 leading-relaxed">
                 {object.para}
               </p>
