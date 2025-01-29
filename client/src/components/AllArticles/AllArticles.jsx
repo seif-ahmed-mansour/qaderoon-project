@@ -8,7 +8,9 @@ function AllArticles() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_HOST_SERVER}reports`);
+        const response = await axios.get(
+          `${import.meta.env.VITE_HOST_SERVER}reports`
+        );
         // console.log(response);
 
         setArticles(response.data.data);
@@ -22,16 +24,21 @@ function AllArticles() {
   }, []);
   return (
     <div>
-      <h2 className="text-4xl m-7">المقالات</h2>
+      <h2 className="font-extrabold text-3xl md:text-4xl pb-5 ev-title-sponsors text-neutral-950 mb- container my-11 mx-auto ">
+        اخر <span className="text-primary relative top-1">المقالات</span>
+      </h2>
       <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr">
-          {articles&&articles.map((article, index) => (
+        {articles &&
+          articles.map((article, index) => (
             <Card
               key={index}
               description={article.reportTitle}
-              image={`${import.meta.env.VITE_HOST_SERVER}imgs/`+article.reportImg}
+              image={
+                `${import.meta.env.VITE_HOST_SERVER}imgs/` + article.reportImg
+              }
             />
           ))}
-        </div>
+      </div>
     </div>
   );
 }
