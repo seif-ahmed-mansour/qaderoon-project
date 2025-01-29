@@ -8,18 +8,18 @@ import { isEmptyArray } from "../lib/utils";
 function AllArticles() {
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const [isLoading, setIsLoading] = useState(false); 
-  const [isPageLoading, setIsPageLoading] = useState(false); 
-  const limit = 2; 
+  const [isLoading, setIsLoading] = useState(false);
+  const [isPageLoading, setIsPageLoading] = useState(false);
+  const limit = 3;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
         const response = await axios.get(`${import.meta.env.VITE_HOST_SERVER}articles/`);
-        
+
         console.log("API Response Data:", response.data.data);
-        
+
         setArticles(response.data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -35,12 +35,12 @@ function AllArticles() {
 
   const handlePageClick = (page) => {
     if (page >= 0 && page < totalPages) {
-      setIsPageLoading(true); 
+      setIsPageLoading(true);
 
       setTimeout(() => {
         setCurrentPage(page);
         setIsPageLoading(false);
-      }, 500); 
+      }, 500);
     }
   };
 
@@ -54,7 +54,7 @@ function AllArticles() {
 
       <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr mt-16">
         {isLoading || isPageLoading ? (
-          <Loader /> 
+          <Loader />
         ) : (
           displayedArticles.map(({ _id, title, Img }) => (
             <Link key={_id} to={`/article/${_id}`}>
