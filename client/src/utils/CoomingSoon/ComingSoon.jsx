@@ -12,7 +12,7 @@ const ComingSoon = () => {
     }, []);
 
     return (
-        <div className="h-[88vh] bg-gradient-to-br from-red-500 to-black/85 flex items-center justify-center p-4">
+        <div className="h-[91vh] md:h-[88vh] bg-gradient-to-br from-red-500 to-black/85 flex items-center justify-center p-4">
             {loading ? (
                 <div className="flex flex-col items-center space-y-4">
                     <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
