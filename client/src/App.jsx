@@ -12,6 +12,7 @@ import Whowe from "./components/AboutUS/WhoWe/Whowe";
 import Speech from "./components/AboutUS/Speech/Speech";
 import Governorates from "./components/AboutUS/Governorates/Governorates";
 import SuccessPartners from "./components/AboutUS/SuccessPartners/SuccessPartners";
+import Offices from "./components/AboutUS/Offices/Offices";
 import News from "./pages/News";
 import ScrollToTop from "./lib/ScrollToTop";
 import AddArticle from "./dashboard/AddArticle";
@@ -46,6 +47,7 @@ function App() {
         <Route path="/about/speech" element={<Speech/>}/>
         <Route path="/about/governorates" element={<Governorates/>}/>
         <Route path="/about/success-partners" element={<SuccessPartners/>}/>
+        <Route path="/about/offices" element={<Offices/>}/>
       </Routes>
       <Footer />
     </main>
