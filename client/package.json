@@ -18,6 +18,7 @@
     "dotenv": "^16.4.7",
     "markdown-it": "^14.1.0",
     "postcss": "^8.5.1",
+    "qaderoon-project": "file:",
     "react": "^18.3.1",
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
