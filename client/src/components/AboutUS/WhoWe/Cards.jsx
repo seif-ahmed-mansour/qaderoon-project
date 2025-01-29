@@ -25,7 +25,7 @@ const Cards = () => {
         return (
           <div
             data-aos="fade-up"
-            className="bg-white rounded-xl shadow-sm hover:shadow-md transform transition-all duration-300 hover:scale-105 cursor-pointer"
+            className="bg-white shadow-black/40 rounded-xl shadow-sm hover:shadow-md transform transition-all duration-300 hover:scale-105 cursor-pointer"
             key={object.title}>
             <div className="p-6">
               <div className="flex justify-center mb-6">
