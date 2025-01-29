@@ -29,9 +29,7 @@
   position: relative;
   padding: 20px;
 }
-.cards-containerr{
-  justify-content: center;
-}
+
 @media (min-width: 640px) {
 }
 
