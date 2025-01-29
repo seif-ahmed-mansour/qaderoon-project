@@ -1,6 +1,6 @@
 const SocialIcon = ({ platform, href, color, children }) => (
   <>
-    <li
+    <div
       className="f-icon"
       style={{ "--color": color }}>
       <a
@@ -11,7 +11,7 @@ const SocialIcon = ({ platform, href, color, children }) => (
         <span className="sr-only">{platform}</span>
         {children}
       </a>
-    </li>
+    </div>
   </>
 );
 
