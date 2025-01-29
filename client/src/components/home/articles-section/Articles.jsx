@@ -16,9 +16,9 @@ function Articles() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_HOST_SERVER}reports/`
+          `${import.meta.env.VITE_HOST_SERVER}articles/`
         );
-        // console.log(response);
+        console.log(response);
 
         setArticles(response.data.data.slice(0, 3));
       } catch (error) {
@@ -45,13 +45,13 @@ function Articles() {
         </p>
         <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center">
           {articles &&
-            articles.map(({ _id, reportTitle, reportImg }) => (
+            articles.map(({ _id, title, Img }) => (
               <Link
                 to={`/article/${_id}`}
                 key={_id}>
                 <Card
-                  description={reportTitle}
-                  image={`${import.meta.env.VITE_HOST_SERVER}imgs/${reportImg}`}
+                  description={title}
+                  image={`${import.meta.env.VITE_HOST_SERVER}imgs/${Img}`}
                 />
               </Link>
             ))}

@@ -2,18 +2,22 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../utils/Card/Card";
 import { Link } from "react-router-dom";
+import Loader from "../utils/Loader/Loader";
+import { isEmptyArray } from "../lib/utils";
 
 function AllArticles() {
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const limit = 9;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setIsLoading(true);
         const response = await axios.get(
-          `${import.meta.env.VITE_HOST_SERVER}reports`,
+          `${import.meta.env.VITE_HOST_SERVER}articles`,
           {
             params: {
               page: currentPage + 1,
@@ -22,10 +26,14 @@ function AllArticles() {
           }
         );
 
+        console.dir("🚀 ~ fetchData ~ response:", response.data.data);
+
         setArticles(response.data.data);
         setTotalPages(response.data.totalPages);
       } catch (error) {
         console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -46,62 +54,68 @@ function AllArticles() {
 
       {/* Articles Grid */}
       <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr mt-16">
-        {articles.map(({ _id, reportTitle, reportImg }) => (
-          <Link key={_id} to={`/article/${_id}`}>
-            <Card
-              description={reportTitle}
-              image={`${import.meta.env.VITE_HOST_SERVER}imgs/` + reportImg}
-            />
-          </Link>
-        ))}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          articles &&
+          articles.map(({ _id, reportTitle, reportImg }) => (
+            <Link
+              key={_id}
+              to={`/article/${_id}`}>
+              <Card
+                description={reportTitle}
+                image={`${import.meta.env.VITE_HOST_SERVER}imgs/` + reportImg}
+              />
+            </Link>
+          ))
+        )}
       </div>
 
-      <div className="flex justify-center mt-8 space-x-2">
-        <button
-          onClick={() => handlePageClick(currentPage - 1)}
-          disabled={currentPage === 0}
-          className={`px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors ${
-            currentPage === 0 ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-        >
-          السابق
-        </button>
-
-        {currentPage > 0 && (
+      {!isLoading && !isEmptyArray(articles) && (
+        <div className="flex justify-center mt-8 space-x-2">
           <button
             onClick={() => handlePageClick(currentPage - 1)}
-            className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors"
-          >
-            {currentPage}
+            disabled={currentPage === 0}
+            className={`px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors ${
+              currentPage === 0 ? "opacity-50 cursor-not-allowed" : ""
+            }`}>
+            السابق
           </button>
-        )}
 
-        <button
-          className="px-4 py-2 bg-primary text-white rounded cursor-default"
-          disabled
-        >
-          {currentPage + 1}
-        </button>
+          {currentPage > 0 && (
+            <button
+              onClick={() => handlePageClick(currentPage - 1)}
+              className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors">
+              {currentPage}
+            </button>
+          )}
 
-        {currentPage < totalPages - 1 && (
+          <button
+            className="px-4 py-2 bg-primary text-white rounded cursor-default"
+            disabled>
+            {currentPage + 1}
+          </button>
+
+          {currentPage < totalPages - 1 && (
+            <button
+              onClick={() => handlePageClick(currentPage + 1)}
+              className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors">
+              {currentPage + 2}
+            </button>
+          )}
+
           <button
             onClick={() => handlePageClick(currentPage + 1)}
-            className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors"
-          >
-            {currentPage + 2}
+            disabled={currentPage >= totalPages - 1}
+            className={`px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors ${
+              currentPage >= totalPages - 1
+                ? "opacity-50 cursor-not-allowed"
+                : ""
+            }`}>
+            التالي
           </button>
-        )}
-
-        <button
-          onClick={() => handlePageClick(currentPage + 1)}
-          disabled={currentPage >= totalPages - 1}
-          className={`px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors ${
-            currentPage >= totalPages - 1 ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-        >
-          التالي
-        </button>
-      </div>
+        </div>
+      )}
     </div>
   );
 }
