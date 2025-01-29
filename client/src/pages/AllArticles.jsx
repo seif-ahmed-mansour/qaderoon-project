@@ -31,6 +31,8 @@ function AllArticles() {
 
     fetchData();
   }, [currentPage]);
+
+  // Handle page change
   const handlePageClick = (page) => {
     if (page >= 0 && page < totalPages) {
       setCurrentPage(page);
@@ -42,11 +44,11 @@ function AllArticles() {
       <h2 className="font-extrabold text-3xl md:text-4xl pb-5 underlineR text-neutral-950 mx-auto">
         اخر <span className="text-primary relative top-1">المقالات</span>
       </h2>
+
+      {/* Articles Grid */}
       <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr mt-16">
         {articles.map(({ _id, reportTitle, reportImg }) => (
-          <Link
-            key={_id}
-            to={`/article/${_id}`}>
+          <Link key={_id} to={`/article/${_id}`}>
             <Card
               description={reportTitle}
               image={`${import.meta.env.VITE_HOST_SERVER}imgs/` + reportImg}
@@ -54,40 +56,56 @@ function AllArticles() {
           </Link>
         ))}
       </div>
+
+      {/* Custom Pagination Controls */}
       <div className="flex justify-center mt-8 space-x-2">
+        {/* Previous Button */}
         <button
           onClick={() => handlePageClick(currentPage - 1)}
           disabled={currentPage === 0}
           className={`px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors ${
             currentPage === 0 ? "opacity-50 cursor-not-allowed" : ""
-          }`}>
+          }`}
+        >
           السابق
         </button>
+
+        {/* Previous Page Number */}
         {currentPage > 0 && (
           <button
             onClick={() => handlePageClick(currentPage - 1)}
-            className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors">
+            className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors"
+          >
             {currentPage}
           </button>
         )}
+
+        {/* Current Page Number */}
         <button
           className="px-4 py-2 bg-primary text-white rounded cursor-default"
-          disabled>
+          disabled
+        >
           {currentPage + 1}
         </button>
+
+        {/* Next Page Number */}
         {currentPage < totalPages - 1 && (
           <button
             onClick={() => handlePageClick(currentPage + 1)}
-            className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors">
+            className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors"
+          >
             {currentPage + 2}
           </button>
         )}
+
+        {/* Next Button */}
         <button
           onClick={() => handlePageClick(currentPage + 1)}
           disabled={currentPage >= totalPages - 1}
           className={`px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors ${
             currentPage >= totalPages - 1 ? "opacity-50 cursor-not-allowed" : ""
-          }`}>
+          }`}
+        >
           التالي
         </button>
       </div>

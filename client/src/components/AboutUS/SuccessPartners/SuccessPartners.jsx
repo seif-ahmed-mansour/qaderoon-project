@@ -103,28 +103,28 @@ const sponsors = [
 
 const SuccessPartners = () => {
   return (
-    <div className="sponsors-section w-full mx-auto px-3 md:px-12 lg:px-40 my-16">
-      <h2 className="font-extrabold text-2xl md:text-4xl pb-5  underlineR text-neutral-950 mb-6 ">
+    <div className="w-full mx-auto px-4 md:px-10 lg:px-20 my-12">
+      <h2 className="text-center font-extrabold text-2xl md:text-4xl pb-4 underlineR text-neutral-950 mb-8">
         شركاء <span className="text-primary relative top-1">النجاح</span>
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
         {sponsors.map((sponsor) => (
           <div
             key={sponsor.id}
-            className="sponsor-card flex flex-col justify-center items-center text-center bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+            className="flex flex-col items-center text-center bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
             <a
               href={sponsor.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex justify-center items-center mb-4">
+              className="flex justify-center items-center w-full">
               <img
                 src={`/images/sponsors/sponsor-${sponsor.id}.png`}
                 alt={sponsor.name}
-                className="object-contain w-full max-h-24 md:max-h-30"
+                className="w-full max-h-20 sm:max-h-24 md:max-h-28 lg:max-h-32 object-contain"
               />
             </a>
-            <p className="mt-2 text-lg font-semibold text-neutral-800">
+            <p className="mt-3 text-sm sm:text-base md:text-lg font-semibold text-neutral-800">
               {sponsor.name}
             </p>
           </div>
