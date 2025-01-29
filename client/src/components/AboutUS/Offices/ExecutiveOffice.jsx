@@ -7,13 +7,17 @@ import {
 } from "react-icons/fa";
 
 const ExecutiveOffice = () => (
-  <section className="mb-20 mt-20">
-    <h2 className="flex space-x-2 font-extrabold text-2xl md:text-4xl pb-4 underlinee text-neutral-950 mb-8">
+  <section className="mb-20 mt-28">
+    <h2
+      data-aos="fade-down"
+      className="flex space-x-2 font-extrabold text-xl md:text-4xl pb-4 underlinee text-neutral-950 mb-8">
       <FaCalendarAlt className="text-primary text-4xl" />
       <span>المكتب التنفيذي – مؤسسة شباب قادرون</span>
     </h2>
 
-    <p className="text-lg font-bold mb-10 text-gray-700 leading-relaxed">
+    <p
+      data-aos="fade-down"
+      className="text-base font-bold mb-10 text-gray-700 leading-relaxed">
       المكتب التنفيذي هو الواجهة الرئيسية لمؤسسة شباب قادرون، والمسؤولة عن تنظيم
       المبادرات وإدارة الفعاليات والندوات والمؤتمرات التي تخص المؤسسة. تهدف
       المكتب إلى ضمان نجاح جميع الفعاليات من خلال تقديم حلول مبتكرة وغير
@@ -22,7 +26,9 @@ const ExecutiveOffice = () => (
     </p>
     {/* المهام والمسؤوليات */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div className="bg-white shadow-lg rounded-xl p-6 border-l-8 border-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+      <div
+        data-aos="fade-down"
+        className="bg-white shadow-lg rounded-xl p-6 border-l-8 border-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
         <FaCalendarAlt className="text-primary text-5xl mb-6" />
         <h4 className="text-xl font-bold mb-4 text-gray-800">
           تنظيم المبادرات والفعاليات
@@ -40,7 +46,9 @@ const ExecutiveOffice = () => (
         </ul>
       </div>
 
-      <div className="bg-white shadow-lg rounded-xl p-6 border-l-8 border-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+      <div
+        data-aos="fade-down"
+        className="bg-white shadow-lg rounded-xl p-6 border-l-8 border-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
         <FaCogs className="text-primary text-5xl mb-6" />
         <h4 className="text-xl font-bold mb-4 text-gray-800">
           التنسيق بين اللجان
@@ -52,7 +60,9 @@ const ExecutiveOffice = () => (
         </ul>
       </div>
 
-      <div className="bg-white shadow-lg rounded-xl p-6 border-l-8 border-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+      <div
+        data-aos="fade-down"
+        className="bg-white shadow-lg rounded-xl p-6 border-l-8 border-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
         <FaBullhorn className="text-primary text-5xl mb-6" />
         <h4 className="text-xl font-bold mb-4 text-gray-800">
           التواصل والدعاية
@@ -64,7 +74,9 @@ const ExecutiveOffice = () => (
         </ul>
       </div>
 
-      <div className="bg-white shadow-lg rounded-xl p-6 border-l-8 border-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+      <div
+        data-aos="fade-down"
+        className="bg-white shadow-lg rounded-xl p-6 border-l-8 border-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
         <FaUsersCog className="text-primary text-5xl mb-6" />
         <h4 className="text-xl font-bold mb-4 text-gray-800">
           إدارة العلاقات العامة
@@ -78,13 +90,16 @@ const ExecutiveOffice = () => (
     </div>
 
     {/* أهداف المكتب التنفيذي */}
-    <h3 className="text-2xl font-extrabold text-neutral-950 mb-8 mt-8">
+    <h3
+      data-aos="fade-down"
+      className="text-2xl font-extrabold text-neutral-950 mb-8 mt-8">
       أهداف المكتب التنفيذي
     </h3>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-
-      <div className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+      <div
+        data-aos="fade-down"
+        className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
         <div className="flex items-center space-x-4 mb-4">
           <FaCalendarAlt className="text-primary text-4xl" />
           <h4 className="text-xl font-bold text-gray-800">
@@ -97,7 +112,9 @@ const ExecutiveOffice = () => (
         </p>
       </div>
 
-      <div className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+      <div
+        data-aos="fade-down"
+        className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
         <div className="flex items-center space-x-4 mb-4">
           <FaBullhorn className="text-primary text-4xl" />
           <h4 className="text-xl font-bold text-gray-800">خلق بيئة محفزة</h4>
@@ -108,7 +125,9 @@ const ExecutiveOffice = () => (
         </p>
       </div>
 
-      <div className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+      <div
+        data-aos="fade-down"
+        className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
         <div className="flex items-center space-x-4 mb-4">
           <FaCogs className="text-primary text-4xl" />
           <h4 className="text-xl font-bold text-gray-800">
@@ -121,7 +140,9 @@ const ExecutiveOffice = () => (
         </p>
       </div>
 
-      <div className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+      <div
+        data-aos="fade-down"
+        className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
         <div className="flex items-center space-x-4 mb-4">
           <FaUsersCog className="text-primary text-4xl" />
           <h4 className="text-xl font-bold text-gray-800">
@@ -134,7 +155,9 @@ const ExecutiveOffice = () => (
         </p>
       </div>
 
-      <div className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+      <div
+        data-aos="fade-down"
+        className="bg-white p-6 shadow-md rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
         <div className="flex items-center space-x-4 mb-4">
           <FaClipboardList className="text-primary text-4xl" />
           <h4 className="text-xl font-bold text-gray-800">
@@ -146,7 +169,6 @@ const ExecutiveOffice = () => (
           اللوجستية والبروتوكولات.
         </p>
       </div>
-      
     </div>
   </section>
 );
