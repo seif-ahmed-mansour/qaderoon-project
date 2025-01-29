@@ -16,7 +16,9 @@
 }
 
 .layer {
-  background-color: var(--color-primary);
+
+  background-color: rgb(218, 30, 51);
+  opacity: 80%;
   position: absolute;
   top: 0;
   left: 0;
