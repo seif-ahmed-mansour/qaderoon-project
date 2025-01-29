@@ -18,6 +18,7 @@ import ScrollToTop from "./lib/ScrollToTop";
 import AddArticle from "./dashboard/AddArticle";
 import AddAuthor from "./dashboard/AddAuthor";
 import Board from "./components/AboutUS/BoardofTrustees/Board";
+import ComingSoon from "./utils/CoomingSoon/ComingSoon";
 
 function App() {
   // initialize AOS
@@ -50,6 +51,9 @@ function App() {
         <Route path="/about/success-partners" element={<SuccessPartners/>}/>
         <Route path="/about/offices" element={<Offices/>}/>
         <Route path="/about/board" element={<Board/>}/>
+
+
+        <Route path="*" element={<ComingSoon />} />
       </Routes>
       <Footer />
     </main>
