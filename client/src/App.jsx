@@ -12,6 +12,7 @@ import AddNews from "./dashboard/AddNews";
 import Whowe from "./components/AboutUS/WhoWe/Whowe";
 import Speech from "./components/AboutUS/Speech/Speech";
 import News from "./pages/News";
+import ScrollToTop from "./lib/ScrollToTop";
 
 function App() {
   // initialize AOS
@@ -21,8 +22,11 @@ function App() {
 
   return (
     <main>
-
       <Navbar />
+
+      {/* Ensures the page scrolls to the top on route change */}
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/articles" element={<AllArticles/>}/>
