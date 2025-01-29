@@ -24,8 +24,10 @@ const EgyptVision = () => {
             {data && data.visionArray.map((t, index) => <p key={index}>{t}</p>)}
 
             <button className="ev-button bg-secondary group">
-              <p>{data.button}</p>
-              <FaArrowLeft className="ev-arrow group-hover:-translate-x-2" />
+              <a className="ev-button" target="_blank" href="https://www.presidency.eg/ar/%D9%85%D8%B5%D8%B1/%D8%B1%D8%A4%D9%8A%D8%A9-%D9%85%D8%B5%D8%B1-2030/">
+                <p>{data.button}</p>
+                <FaArrowLeft className="ev-arrow group-hover:-translate-x-2" />
+              </a>
             </button>
           </div>
           <img

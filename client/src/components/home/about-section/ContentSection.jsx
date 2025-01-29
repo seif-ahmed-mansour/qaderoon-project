@@ -1,28 +1,60 @@
 import { FaPlay } from "react-icons/fa6";
 import Button from "../../../utils/Button";
 import { Link } from "react-router-dom";
+
 const ContentSection = () => (
-  <div className="text-right" data-aos="fade-right">
-    <p className="text-gray-800 text-base  md:text-xl leading-relaxed">
-      بـدأت شـبـاب قـادرون كـأحـد الـكـيـانـات الـشـبـابـيـة بـوزارة الشباب
-      والرياضة وبدعم ورعاية من معالى وزير الشباب والرياضة الاستاذ الدكتور / أشرف
-      صـبـحـى و خلال عـامـان قدمت فعاليات و انشطة شبابية في مصر وكانت البداية
-      بمؤتمر الشباب العربى فى ظل الجمهورية الجديدة برعاية سيادتكم و هى نقطة
-      البداية للتواجد عربيا بعدد من البلدان الـعـربـيـة الـشـقـيقة من خلال
-      الممكلة الاردنية الهاشمية حيث تلقت شباب قادرون دعوة كـريـمـة مـن وزارة
-      الـشــبـاب والتنمية السياسية ومجلس النواب الاردنى لنقل تجربة شباب قادرون
-      إلى الاردن الشقيقة. مما نتج عن صدى تلك الزيارة للسيد رئيس شباب قادرون /
-      وائل محمد الشريف توجيه الدعـوة مـن من نحن "شباب قادرون" الديوان الـمـلـكـى
-      بـالاردن لـكـوادر شباب قادرون لتأسيس شباب قادرون بالاردن وطلب العديد من
-      القيادات الشبابية فى السعودية و الامارات والكويت والبحرين والمغرب لتكرار
-      نفس التجربة الاردنية .
+  <div
+    className="text-right"
+    data-aos="fade-right"
+  >
+    <p className="text-gray-700 text-lg md:text-xl leading-relaxed tracking-wide">
+      بدأت مبادرة{" "}
+      <span className="text-primary font-semibold">
+        {"'"}شباب قادرون{"'"}
+      </span>{" "}
+      كإحدى الكيانات الشبابية تحت إشراف{" "}
+      <span className="text-primary font-semibold">وزارة الشباب والرياضة</span>، بدعم ورعاية
+      من معالي وزير الشباب والرياضة، الأستاذ الدكتور{" "}
+      <span className="text-primary font-semibold">أشرف صبحي</span>. على مدار عامين، قدمت
+      المبادرة العديد من الفعاليات والأنشطة الشبابية في{" "}
+      <span className="text-primary font-semibold">مصر</span>، حيث كانت البداية مع{" "}
+      <span className="text-primary font-semibold">مؤتمر الشباب العربي</span> في إطار{" "}
+      <span className="text-primary font-semibold">{"'"}الجمهورية الجديدة{"'"}</span> الذي رعاه معالي
+      الوزير. هذا المؤتمر كان نقطة الانطلاق للتوسع العربي،
+      حيث بدأت المبادرة في عدة دول{" "}
+      <span className="text-primary font-semibold">عربية</span>{" "}
+      شقيقة، ومن بينها{" "}
+      <span className="text-primary font-semibold">المملكة الأردنية الهاشمية</span>، التي
+      تلقت دعوة كريمة من{" "}
+      <span className="text-primary font-semibold">وزارة الشباب والتنمية السياسية</span> و
+      <span className="text-primary font-semibold">مجلس النواب الأردني</span> لنقل تجربة{" "}
+      <span className="text-primary font-semibold">{"'"}شباب قادرون{"'"}</span> إلى{" "}
+      <span className="text-primary font-semibold">الأردن</span>. بعد هذه الزيارة
+      الناجحة، وجه السيد{" "}
+      <span className="text-primary font-semibold">وائل محمد الشريف</span>, رئيس{" "}
+      <span className="text-primary font-semibold">{"'"}شباب قادرون{"'"}</span>
+      ، دعوة من{" "}
+      <span className="text-primary font-semibold">الديوان الملكي الأردني</span>{" "}
+      إلى كوادر{" "}
+      <span className="text-primary font-semibold">{"'"}شباب قادرون{"'"}</span>{" "}
+      لتأسيس الفرع الأردني للمبادرة. بعد ذلك، تلقى{" "}
+      <span className="text-primary font-semibold">{"'"}شباب قادرون{"'"}</span>{" "}
+      طلبات من العديد من القيادات الشبابية في{" "}
+      <span className="text-primary font-semibold">السعودية</span>،{" "}
+      <span className="text-primary font-semibold">الإمارات</span>،{" "}
+      <span className="text-primary font-semibold">الكويت</span>،{" "}
+      <span className="text-primary font-semibold">البحرين</span>، و
+      <span className="text-primary font-semibold">المغرب</span> لتكرار نفس التجربة الناجحة
+      في تلك الدول.
     </p>
-    <div className="flex justify-start mt-6 gap-4">
-      <Link to="/about/institution"><Button className="hover:scale-105 transition-transform duration-200">
-        عرض المزيد
-      </Button> </Link>
-      
-      <Button className="hover:scale-105 transition-transform duration-200">
+    <div className="flex justify-start mt-8 gap-6">
+      <Link to="/about/institution">
+        <Button className="hover:scale-105 transition-transform duration-200 text-lg px-6 py-3">
+          عرض المزيد
+        </Button>
+      </Link>
+
+      <Button className="hover:scale-105 transition-transform duration-200 text-lg px-6 py-3">
         فيديو تعريفي <FaPlay className="mr-2" />
       </Button>
     </div>
