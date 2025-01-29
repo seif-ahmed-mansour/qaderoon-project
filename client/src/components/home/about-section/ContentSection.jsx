@@ -70,7 +70,7 @@ const ContentSection = () => (
     </p>
     <div className="flex justify-start sm:flex-col md:flex-row mt-8 gap-6">
       <Link to="/about/institution">
-        <Button className="hover:scale-105 transition-transform duration-200 text-lg px-6 py-3">
+        <Button className="hover:scale-105 transition-transform duration-200 text-lg px-6 sm:py-1 md:py-3">
           عرض المزيد
         </Button>
       </Link>
@@ -78,7 +78,7 @@ const ContentSection = () => (
       <a
         target="_blank"
         href="https://youtu.be/XU18YdtyNHk?si=0axAfZTf2PY5JtcO">
-        <Button className="hover:scale-105 transition-transform duration-200 text-lg px-6 py-3">
+        <Button className="hover:scale-105 transition-transform duration-200 text-lg px-6  sm:py-1 md:py-3">
           فيديو تعريفي <FaPlay className="mr-2" />
         </Button>
       </a>
