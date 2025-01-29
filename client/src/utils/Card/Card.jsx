@@ -3,7 +3,7 @@ import "./card.css";
 
 function Card(props) {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl h-full flex flex-col">
+    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl h-full flex flex-col justify-center">
       <p className="overflow-hidden block">
         <img
           className="rounded-t-lg card-images hover:scale-105 ease-in duration-200"
