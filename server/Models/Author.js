@@ -1,23 +1,23 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ReportSchema = new Schema({
-    reportTitle: {
+const AuthorSchema = new Schema({
+    name: {
         type: String,
         required: true,
     },
-    reportDesc: {
+    title: {
         type: String,
         required: true,
     },
-    reportImg: {
+    image: {
         type: String,
-        required: true,
+        default: "",
     }
 },
     {
         timestamps: true,
     });
 
-const Report = mongoose.model('Report', ReportSchema);
-module.exports = Report;
+const Author = mongoose.model('Author', AuthorSchema);
+module.exports = Author;

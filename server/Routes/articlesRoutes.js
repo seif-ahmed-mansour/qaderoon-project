@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const reportController = require('../Controllers/reportController');
+const reportController = require('../Controllers/articleController');
 
 router.post('/', reportController.addReport);
 router.get('/', reportController.getReports);

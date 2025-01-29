@@ -7,7 +7,6 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AllArticles from "./pages/AllArticles";
 import ArticleDetails from "./pages/ArticleDetails";
-import AddReport from "./dashboard/AddReport";
 import AddNews from "./dashboard/AddNews";
 import Whowe from "./components/AboutUS/WhoWe/Whowe";
 import Speech from "./components/AboutUS/Speech/Speech";
@@ -15,6 +14,8 @@ import Governorates from "./components/AboutUS/Governorates/Governorates";
 import SuccessPartners from "./components/AboutUS/SuccessPartners/SuccessPartners";
 import News from "./pages/News";
 import ScrollToTop from "./lib/ScrollToTop";
+import AddArticle from "./dashboard/AddArticle";
+import AddAuthor from "./dashboard/AddAuthor";
 
 function App() {
   // initialize AOS
@@ -35,8 +36,9 @@ function App() {
         <Route path="/article/:id" element={<ArticleDetails />} />
         <Route path="/news" element={<News/>} />
         <Route path="dashboard">
-            <Route path="add-article" element={<AddReport />} />
+            <Route path="add-article" element={<AddArticle />} />
             <Route path="add-news" element={<AddNews />} />
+            <Route path="add-author" element={<AddAuthor />} />
         </Route>
 
         {/* من نحن Section */}
