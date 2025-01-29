@@ -2,22 +2,22 @@
 @import "../../colors.css";
 
 .markdown-content {
-  @apply max-w-none text-gray-800;
+  @apply text-gray-800 md:text-xl space-y-6 leading-relaxed max-w-screen-lg sm:text-sm;
 
   h1 {
-    @apply text-4xl font-bold mb-4 text-primary;
+    @apply md:text-4xl text-2xl font-bold text-secondary;
   }
 
   h2 {
-    @apply text-3xl font-semibold mb-3 text-secondary;
+    @apply md:text-3xl text-xl font-semibold text-secondary;
   }
 
   h3 {
-    @apply text-2xl font-semibold text-primary mb-2;
+    @apply md:text-2xl text-lg font-semibold text-secondary;
   }
 
   p {
-    @apply leading-relaxed mb-4 text-gray-700;
+    @apply leading-relaxed text-gray-700;
   }
 
   a {
@@ -25,11 +25,11 @@
   }
 
   blockquote {
-    @apply border-l-4 border-primary pl-4 italic text-gray-600 mb-4;
+    @apply border-l-4 border-primary pl-4 italic text-gray-600;
   }
 
   code {
-    @apply bg-gray-100 px-1 py-0.5 rounded text-sm text-primary;
+    @apply bg-gray-100 px-1 py-0.5 rounded text-sm  text-secondary;
   }
 
   pre {
@@ -37,30 +37,26 @@
   }
 
   ul {
-    @apply list-disc pl-6 mb-4;
+    @apply list-disc pl-6 space-y-6;
   }
 
   ol {
-    @apply list-decimal pl-6 mb-4;
-  }
-
-  li {
-    @apply mb-2;
+    @apply list-decimal pl-6 space-y-3.5;
   }
 
   hr {
-    @apply border-t-2 border-secondary my-6;
+    @apply border-t-2 border-secondary;
   }
 
   table {
-    @apply w-full border-collapse border border-gray-200 my-4;
+    @apply w-full border-collapse border border-gray-950;
   }
 
   th {
-    @apply bg-gray-100 p-2 border border-gray-200 text-left;
+    @apply bg-gray-200 p-2 border border-gray-950 text-center;
   }
 
   td {
-    @apply p-2 border border-gray-200;
+    @apply p-2 border border-gray-950;
   }
 }

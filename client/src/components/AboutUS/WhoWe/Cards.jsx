@@ -1,3 +1,5 @@
+import { FaHandshake } from "react-icons/fa";
+
 const Cards = () => {
   const data = [
     {
@@ -7,7 +9,7 @@ const Cards = () => {
     },
     {
       title: "الاهداف",
-      icon: "/images/WhoWe/shake-hand-svgrepo-com.svg",
+      icon: <FaHandshake className="text-black w-12 h-12" />,
       para: "نعمل علي نشر الوعي الوطني و تنمية قدرات الشباب و دعم البحث العلمي و التشجيع علي الابتكار وريادة الاعمال والمشاركة المجتمعية والتطوعية ودعم رؤية مصر 2030 للتنمية المستدامة",
     },
     {
@@ -16,27 +18,36 @@ const Cards = () => {
       para: "رفع كفاءة الشباب من خلال توسيع الخيارات المتاحه لهم وبناء قدراتهم للمشاركة في صنع مستقبل ايجابي مستدام لوطنهم",
     },
   ];
+
   return (
-    <div
-      data-aos="fade-right"
-      className="grid text-center grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 space-x-10">
+    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mx-2">
       {data.map((object) => {
         return (
           <div
-            className="shadow-black/30 border border-black/30  bg-white w-110 md:w-82 lg:w-100 xl:100 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-default"
+            data-aos="fade-up"
+            className="bg-white rounded-xl shadow-sm hover:shadow-md transform transition-all duration-300 hover:scale-105 cursor-pointer"
             key={object.title}>
-            <div className="p-6 ">
-              <div className="flex justify-center">
-                <div className="bg-red-100 w-fit justify-items-center  p-3 rounded-full mb-4">
-                  <img
-                    src={object.icon}
-                    alt="icon1"
-                    className="w-8 h-8 items-center text-red-600 "
-                  />
+            <div className="p-6">
+              <div className="flex justify-center mb-6">
+                <div className="bg-red-100 p-4 rounded-full shadow-md transition-transform transform hover:scale-110">
+                  {/* Render the icon dynamically */}
+                  {typeof object.icon === "string" ? (
+                    <img
+                      src={object.icon}
+                      alt="icon"
+                      className="w-12 h-12 text-red-600"
+                    />
+                  ) : (
+                    object.icon
+                  )}
                 </div>
               </div>
-              <h3 className="font-bold text-3xl mb-2">{object.title}</h3>
-              <p className="text-2xl text-gray-600">{object.para}</p>
+              <h3 className="font-semibold text-2xl text-gray-800 mb-4">
+                {object.title}
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                {object.para}
+              </p>
             </div>
           </div>
         );

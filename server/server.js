@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const reportRoutes = require("./Routes/reportRoutes");
 const newsRoutes = require("./Routes/newsRoutes");
+const articleRoutes = require("./Routes/articleRoutes");
 const path = require("path");
 const cors = require("cors");
 require("dotenv").config();
@@ -19,6 +20,7 @@ app.use("/imgs", express.static(path.join(__dirname, "Public/imgs")));
 // to access routes
 app.use("/reports", reportRoutes);
 app.use("/news", newsRoutes);
+app.use("/articles", articleRoutes);
 
 // if the database connection failed don't run the server
 mongoose
