@@ -15,7 +15,7 @@ const navItemsData = [
   },
   {
     name: "خدماتنا",
-    link: "/services",
+    link: "#",
     subItems: [
       { name: "الاستشارات والدراسات", link: "/services/consulting" },
       { name: "التدريب", link: "/services/training" },

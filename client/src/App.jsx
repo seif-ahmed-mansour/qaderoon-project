@@ -10,6 +10,7 @@ import ArticleDetails from "./pages/ArticleDetails";
 import AddReport from "./dashboard/AddReport";
 import AddNews from "./dashboard/AddNews";
 import Whowe from "./components/AboutUS/WhoWe/Whowe";
+import Speech from "./components/AboutUS/Speech/Speech";
 import News from "./pages/News";
 
 function App() {
@@ -31,7 +32,11 @@ function App() {
             <Route path="add-article" element={<AddReport />} />
             <Route path="add-news" element={<AddNews />} />
         </Route>
+
+        {/* من نحن Section */}
         <Route path="/about/institution" element={<Whowe/>}/>
+        <Route path="/about/speech" element={<Speech/>}/>
+
       </Routes>
       <Footer />
     </main>
