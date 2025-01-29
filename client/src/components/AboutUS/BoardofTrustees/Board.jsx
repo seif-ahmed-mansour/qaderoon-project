@@ -5,13 +5,15 @@ import { Missions } from "./Missions"
 const Board = () => {
   return (
         <>
-        <section className="container p-1 rounded-xl mx-auto mb-0 my-4 lg:my-20">
+        <section className=" p-1 rounded-xl mx-auto mb-0 ">
+            <div className="container mx-auto">
                 <AboutBroad/>
-
-        <Formating/>
-        <Missions/>
-
+                <Formating/>
+      
+                </div>
+              <Missions />
         </section> 
+        
 
                 
         </>

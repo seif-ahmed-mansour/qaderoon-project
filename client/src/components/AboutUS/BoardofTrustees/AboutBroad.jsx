@@ -2,7 +2,7 @@
 const AboutBroad = () => {
   return (
     <>
-      <h2 data-aos="fade-down" className="font-extrabold text-2xl md:text-4xl pb-5 underlineR text-neutral-950 mb-6 container mx-auto ">
+      <h2 data-aos="fade-down" className=" pt-8 font-extrabold text-2xl md:text-4xl pb-5 underlineR text-neutral-950 mb-6 container mx-auto ">
     تعريف <span className="text-primary relative top-1">مجلس الأمناء</span>
   </h2>
   <div className="text-right" data-aos="fade-down">
