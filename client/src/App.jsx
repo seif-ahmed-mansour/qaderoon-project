@@ -10,6 +10,7 @@ import ArticleDetails from "./components/ArticleDetails/ArticleDetails";
 import AddReport from "./dashboard/AddReport";
 import AddNews from "./dashboard/AddNews";
 import { Whowe } from "./components/AboutUS/WhoWe/Whowe";
+import News from "./components/News/News";
 
 function App() {
   // initialize AOS
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/articles" element={<AllArticles/>}/>
         <Route path="/article/:id" element={<ArticleDetails />} />
+        <Route path="/news" element={<News/>} />
         <Route path="dashboard">
             <Route path="add-article" element={<AddReport />} />
             <Route path="add-news" element={<AddNews />} />
