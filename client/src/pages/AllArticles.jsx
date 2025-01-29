@@ -17,7 +17,7 @@ function AllArticles() {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `${import.meta.env.VITE_HOST_SERVER}articles`,
+          `${import.meta.env.VITE_HOST_SERVER}articles/`,
           {
             params: {
               page: currentPage + 1,
@@ -58,13 +58,13 @@ function AllArticles() {
           <Loader />
         ) : (
           articles &&
-          articles.map(({ _id, reportTitle, reportImg }) => (
+          articles.map(({ _id, title, Img }) => (
             <Link
               key={_id}
               to={`/article/${_id}`}>
               <Card
-                description={reportTitle}
-                image={`${import.meta.env.VITE_HOST_SERVER}imgs/` + reportImg}
+                description={title}
+                image={`${import.meta.env.VITE_HOST_SERVER}imgs/` + Img}
               />
             </Link>
           ))
