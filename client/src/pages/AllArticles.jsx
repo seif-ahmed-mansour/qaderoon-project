@@ -52,7 +52,7 @@ function AllArticles() {
         اخر <span className="text-primary relative top-1">المقالات</span>
       </h2>
 
-      <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr mt-16">
+      <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center sm:justify-center cards-containerr mt-16">
         {isLoading || isPageLoading ? (
           <Loader />
         ) : (
