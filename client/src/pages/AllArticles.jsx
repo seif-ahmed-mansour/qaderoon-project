@@ -8,28 +8,19 @@ import { isEmptyArray } from "../lib/utils";
 function AllArticles() {
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  const limit = 9;
+  const [isPageLoading, setIsPageLoading] = useState(false);
+  const limit = 3;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get(
-          `${import.meta.env.VITE_HOST_SERVER}articles`,
-          {
-            params: {
-              page: currentPage + 1,
-              limit: limit,
-            },
-          }
-        );
+        const response = await axios.get(`${import.meta.env.VITE_HOST_SERVER}articles/`);
 
-        console.dir("🚀 ~ fetchData ~ response:", response.data.data);
+        console.log("API Response Data:", response.data.data);
 
         setArticles(response.data.data);
-        setTotalPages(response.data.totalPages);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -38,13 +29,22 @@ function AllArticles() {
     };
 
     fetchData();
-  }, [currentPage]);
+  }, []);
+
+  const totalPages = Math.ceil(articles.length / limit);
 
   const handlePageClick = (page) => {
     if (page >= 0 && page < totalPages) {
-      setCurrentPage(page);
+      setIsPageLoading(true);
+
+      setTimeout(() => {
+        setCurrentPage(page);
+        setIsPageLoading(false);
+      }, 500);
     }
   };
+
+  const displayedArticles = articles.slice(currentPage * limit, (currentPage + 1) * limit);
 
   return (
     <div className="py-11 pb-16">
@@ -52,19 +52,15 @@ function AllArticles() {
         اخر <span className="text-primary relative top-1">المقالات</span>
       </h2>
 
-      {/* Articles Grid */}
-      <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr mt-16">
-        {isLoading ? (
+      <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center sm:justify-center cards-containerr mt-16">
+        {isLoading || isPageLoading ? (
           <Loader />
         ) : (
-          articles &&
-          articles.map(({ _id, reportTitle, reportImg }) => (
-            <Link
-              key={_id}
-              to={`/article/${_id}`}>
+          displayedArticles.map(({ _id, title, Img }) => (
+            <Link key={_id} to={`/article/${_id}`}>
               <Card
-                description={reportTitle}
-                image={`${import.meta.env.VITE_HOST_SERVER}imgs/` + reportImg}
+                description={title}
+                image={`${import.meta.env.VITE_HOST_SERVER}imgs/` + Img}
               />
             </Link>
           ))
@@ -90,9 +86,7 @@ function AllArticles() {
             </button>
           )}
 
-          <button
-            className="px-4 py-2 bg-primary text-white rounded cursor-default"
-            disabled>
+          <button className="px-4 py-2 bg-primary text-white rounded cursor-default" disabled>
             {currentPage + 1}
           </button>
 
@@ -108,9 +102,7 @@ function AllArticles() {
             onClick={() => handlePageClick(currentPage + 1)}
             disabled={currentPage >= totalPages - 1}
             className={`px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition-colors ${
-              currentPage >= totalPages - 1
-                ? "opacity-50 cursor-not-allowed"
-                : ""
+              currentPage >= totalPages - 1 ? "opacity-50 cursor-not-allowed" : ""
             }`}>
             التالي
           </button>
