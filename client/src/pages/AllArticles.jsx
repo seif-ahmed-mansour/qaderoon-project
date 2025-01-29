@@ -32,7 +32,6 @@ function AllArticles() {
     fetchData();
   }, [currentPage]);
 
-  // Handle page change
   const handlePageClick = (page) => {
     if (page >= 0 && page < totalPages) {
       setCurrentPage(page);
@@ -57,9 +56,7 @@ function AllArticles() {
         ))}
       </div>
 
-      {/* Custom Pagination Controls */}
       <div className="flex justify-center mt-8 space-x-2">
-        {/* Previous Button */}
         <button
           onClick={() => handlePageClick(currentPage - 1)}
           disabled={currentPage === 0}
@@ -70,7 +67,6 @@ function AllArticles() {
           السابق
         </button>
 
-        {/* Previous Page Number */}
         {currentPage > 0 && (
           <button
             onClick={() => handlePageClick(currentPage - 1)}
@@ -80,7 +76,6 @@ function AllArticles() {
           </button>
         )}
 
-        {/* Current Page Number */}
         <button
           className="px-4 py-2 bg-primary text-white rounded cursor-default"
           disabled
@@ -88,7 +83,6 @@ function AllArticles() {
           {currentPage + 1}
         </button>
 
-        {/* Next Page Number */}
         {currentPage < totalPages - 1 && (
           <button
             onClick={() => handlePageClick(currentPage + 1)}
@@ -98,7 +92,6 @@ function AllArticles() {
           </button>
         )}
 
-        {/* Next Button */}
         <button
           onClick={() => handlePageClick(currentPage + 1)}
           disabled={currentPage >= totalPages - 1}
