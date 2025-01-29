@@ -63,7 +63,6 @@ html {
   @apply bottom-0 h-1 w-[50%] absolute;
 }
 
-
 body {
   --sb-track-color: #ffffff;
   --sb-thumb-color: #da1e33;
@@ -71,7 +70,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  inline-size: var(--sb-size)
+  inline-size: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
@@ -82,11 +81,24 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 1px;
-
 }
 
 @supports not selector(::-webkit-scrollbar) {
   body {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
+}
+
+img {
+  user-select: none;
+}
+
+*::selection {
+  color: white;
+  background: #a21c35;
+}
+
+*::-moz-selection {
+  color: white;
+  background: #a21c35;
 }
