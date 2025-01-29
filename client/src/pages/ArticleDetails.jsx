@@ -2,11 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MarkdownParser from "../components/MarkdownParser/MarkdownParser";
-import articleTemp from "../data/article-temp";
 import { isEmptyObject } from "../lib/utils";
 
 function ArticleDetails() {
-  const test = articleTemp[1];
   const { id } = useParams();
 
   const [article, setArticle] = useState({});
@@ -14,17 +12,17 @@ function ArticleDetails() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_HOST_SERVER}reports/${id}`
+          `${import.meta.env.VITE_HOST_SERVER}articles/${id}`
         );
-        // console.log("🚀 ~ fetchData ~ response:", response.data.data);
         setArticle(response.data.data);
-        setArticle(test);
+
+        console.log("🚀 ~ fetchData ~ response:", response.data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
     fetchData();
-  }, [id, test]);
+  }, [id]);
 
   console.log(article);
 
@@ -37,8 +35,8 @@ function ArticleDetails() {
             <div className="absolute left-0 bottom-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-black" />
             <img
               src={
-                article.image
-                  ? `${import.meta.env.VITE_HOST_SERVER}imgs/${article.image}`
+                article.Img
+                  ? `${import.meta.env.VITE_HOST_SERVER}imgs/${article.Img}`
                   : ""
               }
               className="absolute left-0 top-0 w-full h-full z-0 object-cover bg-black"
@@ -53,14 +51,19 @@ function ArticleDetails() {
 
               {/* Author Info */}
               <div className="flex mt-3">
-                <div className="ml-3 w-full">
-                  <p className="font-semibold text-gray-200  text-base md:text-lg mb-3">
+                <div className="md:ml-3 ml-0 w-full flex justify-between items-center debug md:block">
+                  <p className="font-semibold text-gray-200 text-base md:text-lg mb-3">
                     <span>بقلم </span>
                     {article.author.name}
                   </p>
-                  <pre className="font-semibold text-gray-200 w-full text-sm md:text-base">
+                  <pre className="font-semibold text-gray-200 w-full text-sm md:text-base hidden md:block">
                     {article.author.title}
                   </pre>
+                  {/* Date */}
+                  <p className="mt-2 font-semibold text-white text-sm w-fit justify-self-left md:justify-self-auto">
+                    نشر في{" "}
+                    {new Date(article.createdAt).toLocaleDateString("Ar-eg")}
+                  </p>
                 </div>
                 <img
                   src={
@@ -70,15 +73,10 @@ function ArticleDetails() {
                         }`
                       : `/images/profile.png`
                   }
-                  className="md:size-24 size-16 rounded-full object-cover"
+                  className="md:size-24 size-16 rounded-full object-cover hidden md:block"
                   alt={article.author.name}
                 />
               </div>
-
-              {/* Date */}
-              <p className="mt-2 font-semibold text-white text-sm">
-                نشر في {new Date(article.createdAt).toLocaleDateString("Ar-eg")}
-              </p>
             </div>
           </div>
 

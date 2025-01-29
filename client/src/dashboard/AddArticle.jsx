@@ -61,7 +61,7 @@ const AddArticle = () => {
           <input
             type="text"
             id="title"
-            value={reportTitle}
+            value={title}
             onChange={(e) => setReportTitle(e.target.value)}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             required
@@ -69,11 +69,11 @@ const AddArticle = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="reportDesc">
-            Report Description
+            Article Content
           </label>
           <textarea
             id="reportDesc"
-            value={reportDesc}
+            value={content}
             onChange={(e) => setReportDesc(e.target.value)}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             required
@@ -81,7 +81,7 @@ const AddArticle = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="reportImg">
-            Report Image
+            Article Image
           </label>
           <input
             type="file"

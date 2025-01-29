@@ -38,7 +38,9 @@ const AddAuthor = () => {
       <h2 className="text-2xl font-bold mb-6 text-red-600">Add Author</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="name">
             Author Name
           </label>
           <input
@@ -51,10 +53,12 @@ const AddAuthor = () => {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="title">
             Author Title
           </label>
-          <input
+          <textarea
             type="text"
             id="title"
             value={title}
@@ -64,7 +68,9 @@ const AddAuthor = () => {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="image">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="image">
             Author Image
           </label>
           <input
@@ -78,8 +84,7 @@ const AddAuthor = () => {
         <div className="flex items-center justify-between">
           <button
             type="submit"
-            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
             Add Author
           </button>
         </div>
