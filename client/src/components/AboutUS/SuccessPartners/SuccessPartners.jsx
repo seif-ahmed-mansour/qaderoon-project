@@ -108,7 +108,7 @@ const SuccessPartners = () => {
         شركاء <span className="text-primary relative top-1">النجاح</span>
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 cursor-pointer">
         {sponsors.map((sponsor) => (
           <div
             data-aos="fade-down"
