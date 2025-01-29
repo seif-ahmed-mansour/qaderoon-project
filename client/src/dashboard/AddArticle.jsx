@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const AddArticle = () => {
-  const [title, setReportTitle] = useState("");
-  const [content, setReportDesc] = useState("");
-  const [img, setReportImg] = useState(null);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [Img, setImg] = useState(null);
   const [authors, setAuthors] = useState([]);
   const [selectedAuthor, setSelectedAuthor] = useState("");
 
@@ -24,7 +24,7 @@ const AddArticle = () => {
   }, []);
 
   const handleFileChange = (e) => {
-    setReportImg(e.target.files[0]);
+    setImg(e.target.files[0]);
   };
 
   const handleSubmit = async (e) => {
@@ -32,7 +32,7 @@ const AddArticle = () => {
     const formData = new FormData();
     formData.append("title", title);
     formData.append("content", content);
-    formData.append("img", img);
+    formData.append("Img", Img);
     formData.append("author", selectedAuthor);
 
     try {
@@ -45,13 +45,14 @@ const AddArticle = () => {
           },
         }
       );
-      setReportTitle("");
-      setReportDesc("");
-      setReportImg(null);
+      setTitle("");
+      setContent("");
+      setImg(null);
       setSelectedAuthor("");
       alert("Article added successfully");
     } catch (error) {
-      console.error("Error adding article:", error);
+      console.info("Error adding article: ");
+      console.dir(error);
       alert("Failed to add article");
     }
   };
@@ -63,14 +64,14 @@ const AddArticle = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="reportTitle">
+            htmlFor="title">
             Article Title
           </label>
           <input
             type="text"
             id="title"
             value={title}
-            onChange={(e) => setReportTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             required
           />
@@ -78,13 +79,13 @@ const AddArticle = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="reportDesc">
+            htmlFor="content">
             Article Content
           </label>
           <textarea
-            id="reportDesc"
+            id="content"
             value={content}
-            onChange={(e) => setReportDesc(e.target.value)}
+            onChange={(e) => setContent(e.target.value)}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             required
           />
@@ -92,13 +93,13 @@ const AddArticle = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="reportImg">
+            htmlFor="Img">
             Article Image
           </label>
           <div className="relative border rounded shadow appearance-none focus-within:shadow-outline">
             <input
               type="file"
-              id="reportImg"
+              id="Img"
               accept="image/jpeg, image/jpg, image/png, image/gif, image/bmp, image/webp"
               onChange={handleFileChange}
               className="absolute opacity-0 w-full h-full cursor-pointer"
