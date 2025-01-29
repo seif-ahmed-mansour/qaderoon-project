@@ -11,12 +11,15 @@ function ArticleDetails() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
+        const res = await axios.get(
           `${import.meta.env.VITE_HOST_SERVER}articles/${id}`
         );
-        setArticle(response.data.data);
 
-        console.log("🚀 ~ fetchData ~ response:", response.data.data);
+        const authorRes = await axios.get(
+          `${import.meta.env.VITE_HOST_SERVER}authors/${res.data.data.author}`
+        );
+
+        setArticle({ ...res.data.data, author: authorRes.data.data });
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -24,8 +27,7 @@ function ArticleDetails() {
     fetchData();
   }, [id]);
 
-  console.log(article);
-
+  console.log("🚀 ~ fetchData ~ response:", article);
   return (
     <div className="max-w-screen-xl mx-auto pb-10">
       {!isEmptyObject(article) && (
@@ -44,14 +46,14 @@ function ArticleDetails() {
             />
 
             {/* Article Header */}
-            <div className="p-4 absolute bottom-0 left-0 z-20">
+            <div className="p-4 absolute bottom-0 left-0 z-20 w-full">
               <h2 className="md:text-4xl text-lg font-semibold text-white leading-tight">
                 {article.title}
               </h2>
 
               {/* Author Info */}
               <div className="flex mt-3">
-                <div className="md:ml-3 ml-0 w-full flex justify-between items-center debug md:block">
+                <div className="md:ml-3 ml-0 w-full flex justify-between items-center sm:block">
                   <p className="font-semibold text-gray-200 text-base md:text-lg mb-3">
                     <span>بقلم </span>
                     {article.author.name}
@@ -60,7 +62,7 @@ function ArticleDetails() {
                     {article.author.title}
                   </pre>
                   {/* Date */}
-                  <p className="mt-2 font-semibold text-white text-sm w-fit justify-self-left md:justify-self-auto">
+                  <p className="mt-2 font-semibold text-white text-sm w-fit justify-self-left sm:justify-self-auto">
                     نشر في{" "}
                     {new Date(article.createdAt).toLocaleDateString("Ar-eg")}
                   </p>
@@ -73,7 +75,7 @@ function ArticleDetails() {
                         }`
                       : `/images/profile.png`
                   }
-                  className="md:size-24 size-16 rounded-full object-cover hidden md:block"
+                  className="md:size-24 size-16 rounded-full object-cover hidden sm:block"
                   alt={article.author.name}
                 />
               </div>
