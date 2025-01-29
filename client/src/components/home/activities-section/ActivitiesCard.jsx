@@ -17,8 +17,8 @@ function ActivitiesCard() {
     "زمالة شباب قادرون لبناء قدرات المجتمع المدني",
     "برنامج تأهيل الكوادر البشرية للعمل العام",
     "التسويق الرقمي وإدارة العلامات التجارية",
-    "برامج التأهيل المهنى والتقنى"
-];
+    "برامج التأهيل المهنى والتقنى",
+  ];
 
   return (
     <div>
@@ -36,9 +36,10 @@ function ActivitiesCard() {
               className="md:w-1/2 text-right"
               data-aos="fade-down"
               data-aos-duration="1500">
-              <h4 className="text-2xl md:text-3xl  font-semibold text-primary mb-4">
+              {/* If this is the main section heading, it should be <h2> */}
+              <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-4">
                 البرامج التدريبية
-              </h4>
+              </h2>
               <div className="space-y-0 md:space-y-2">
                 {" "}
                 {/* Reduced margin between items */}
@@ -49,11 +50,11 @@ function ActivitiesCard() {
                     <div className="border-2 border-primary rounded-full p-1 group-hover:bg-primary group-hover:border-primary cursor-default">
                       <AiFillSafetyCertificate className="text-lg text-primary group-hover:text-white" />
                     </div>
-                    <h2 className="text-xl font-semibold mr-4 group-hover:text-primary">
+                    <h3 className="text-xl font-semibold mr-4 group-hover:text-primary">
                       {" "}
                       {/* Added margin-right (mr-4) for spacing */}
                       {program}
-                    </h2>
+                    </h3>
                   </div>
                 ))}
               </div>
@@ -66,6 +67,7 @@ function ActivitiesCard() {
               className="w-full md:w-1/2 rounded-lg shadow-md object-cover"
             />
           </div>
+
           {/* End of content and image container */}
         </div>
       </div>

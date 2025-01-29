@@ -68,17 +68,22 @@ const ContentSection = () => (
       <span className="text-secondary font-semibold">المغرب</span> لتكرار نفس
       التجربة الناجحة في تلك الدول.
     </p>
-    <div className="flex justify-start sm:flex-col md:flex-row mt-8 gap-6">
+    <div className="flex flex-col justify-start sm:flex-col md:flex-row mt-8 md:gap-8">
+      {" "}
+      {/* Increased gap between buttons */}
       <Link to="/about/institution">
-        <Button className="hover:scale-105 transition-transform duration-200 text-lg px-6 sm:py-1 md:py-3">
+        <Button className="inline-flex items-center text-lg font-medium text-center text-white bg-primary rounded-lg hover:bg-secondary focus:ring-4 focus:outline-none transition duration-150 card-button hover:scale-105 transition-transform duration-200 px-8 py-4 sm:px-6 sm:py-3 md:px-8 md:py-4">
+          {" "}
+          {/* Increased padding */}
           عرض المزيد
         </Button>
       </Link>
-
       <a
         target="_blank"
         href="https://youtu.be/XU18YdtyNHk?si=0axAfZTf2PY5JtcO">
-        <Button className="hover:scale-105 transition-transform duration-200 text-lg px-6  sm:py-1 md:py-3">
+        <Button className="inline-flex items-center text-lg font-medium text-center text-white bg-primary rounded-lg hover:bg-secondary focus:ring-4 focus:outline-none transition duration-150 card-button hover:scale-105 transition-transform duration-200 px-8 py-4 sm:px-6 sm:py-3 md:px-8 md:py-4">
+          {" "}
+          {/* Increased padding */}
           فيديو تعريفي <FaPlay className="mr-2" />
         </Button>
       </a>

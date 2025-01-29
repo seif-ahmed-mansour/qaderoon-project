@@ -78,7 +78,7 @@ export const Missions = () => {
     return (
 
 
-        <div className='bg-gray-100 '>
+        <div className='mb-20'>
         <section className="container mx-auto" style={{padding:"1px"}} >
             <div className="mx-auto px-4" data-aos="fade-down">
                     <h2 data-aos="fade-down" className="font-extrabold text-2xl md:text-4xl pb-5 underlineR text-neutral-950 mb-6 mt-15">

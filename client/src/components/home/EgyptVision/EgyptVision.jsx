@@ -1,5 +1,5 @@
-import { FaArrowLeft } from "react-icons/fa";
 import "./EgyptVision.css";
+import Button from "../../../utils/Button";
 
 const data = {
   title: "رؤية مصر",
@@ -23,12 +23,23 @@ const EgyptVision = () => {
           <div className="space-y-5">
             {data && data.visionArray.map((t, index) => <p key={index}>{t}</p>)}
 
-            <button className="ev-button bg-secondary group">
-              <a className="ev-button" target="_blank" href="https://www.presidency.eg/ar/%D9%85%D8%B5%D8%B1/%D8%B1%D8%A4%D9%8A%D8%A9-%D9%85%D8%B5%D8%B1-2030/">
-                <p>{data.button}</p>
-                <FaArrowLeft className="ev-arrow group-hover:-translate-x-2" />
-              </a>
-            </button>
+            <Button className="font-semibold">
+              معرفة المزيد
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10">
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </Button>
           </div>
           <img
             src="/images/egypt-vision.png"

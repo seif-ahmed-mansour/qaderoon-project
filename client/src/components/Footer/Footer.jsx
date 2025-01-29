@@ -55,7 +55,7 @@ const Footer = () => {
               ))}
           </div>
 
-          <p className="py-4 text-base text-center text-gray-500" dir="ltr">
+          <p className="py-4 text-base text-center text-gray-700" dir="ltr">
             {footerData.copyright}
           </p>
         </div>
