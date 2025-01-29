@@ -10,17 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 const mongoURI = process.env.MONGO_URI;
 
-// Configure CORS to allow specific origins
-const allowedOrigins = [
-  "https://qaderoon-project-server.vercel.app/", 
-  "http://localhost:3000", // For local development
-];
-
-app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors());
 
 // to use anything in Public
 app.use(express.static("Public"));
