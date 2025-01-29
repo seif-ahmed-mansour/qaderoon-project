@@ -29,12 +29,13 @@ function Governorates() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-8 ">
         {governorates.map((governorate, index) => (
           <div
+            data-aos="fade-down"
             key={index}
             className="bg-white p-6 shadow-sm md:shadow-md rounded-lg hover:shadow-lg transform transition-all duration-300 hover:scale-105">
             <h3 className="text-lg md:text-xl font-semibold text-primary text-center">
               {governorate}
             </h3>
-          </div>  
+          </div>
         ))}
       </div>
     </div>

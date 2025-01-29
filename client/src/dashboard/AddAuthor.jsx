@@ -67,19 +67,28 @@ const AddAuthor = () => {
             required
           />
         </div>
+
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="image">
             Author Image
           </label>
-          <input
-            type="file"
-            id="image"
-            accept="image/jpeg, image/jpg, image/png, image/gif, image/bmp, image/webp"
-            onChange={handleFileChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+          <div className="relative border rounded shadow appearance-none focus-within:shadow-outline">
+            <input
+              type="file"
+              id="image"
+              accept="image/jpeg, image/jpg, image/png, image/gif, image/bmp, image/webp"
+              onChange={handleFileChange}
+              className="absolute opacity-0 w-full h-full cursor-pointer"
+            />
+            <div className="flex justify-between items-center py-2 px-3 text-gray-700">
+              <span>Choose a file...</span>
+              <span className="bg-primary text-white rounded py-1 px-4">
+                Browse
+              </span>
+            </div>
+          </div>
         </div>
         <div className="flex items-center justify-between">
           <button
