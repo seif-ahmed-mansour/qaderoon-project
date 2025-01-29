@@ -2,7 +2,6 @@
   min-height: 77dvh;
   height: 100%;
   position: relative;
-  /* images in public directory doesn't need absolute path */
   background-image: url("/images/articles-section-image.png");
 }
 
@@ -17,7 +16,7 @@
 }
 
 .layer {
-  background-color: rgba(218, 30, 51, 0.8);
+  background-color: var(--color-primary);
   position: absolute;
   top: 0;
   left: 0;
