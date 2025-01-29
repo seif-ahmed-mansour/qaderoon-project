@@ -1,8 +1,8 @@
 /**
  * @typedef {Object} Author
- * @property {string} id - Name of the author.
  * @property {string} name - Name of the author.
  * @property {string} title - Title or role of the author.
+ * @property {Date} createdAt - Timestamp for the article
  */
 
 /**
