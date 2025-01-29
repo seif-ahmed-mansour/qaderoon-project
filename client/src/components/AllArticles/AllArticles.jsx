@@ -24,7 +24,7 @@ function AllArticles() {
   }, []);
   return (
     <div>
-      <h2 className="font-extrabold text-3xl md:text-4xl pb-5 ev-title-sponsors text-neutral-950 mb- container my-11 mx-auto ">
+      <h2 className="font-extrabold text-3xl md:text-4xl pb-5 underlineR text-neutral-950 mb- container my-11 mx-auto ">
         اخر <span className="text-primary relative top-1">المقالات</span>
       </h2>
       <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center cards-containerr">

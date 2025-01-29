@@ -2,7 +2,8 @@
 
 .ac-title {
   position: relative;
-  padding: 14px;
+  /* padding: 14px; */
+  @apply py-3.5;
 }
 
 .ac-title::after {

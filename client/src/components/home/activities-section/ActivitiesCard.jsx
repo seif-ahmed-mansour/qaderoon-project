@@ -26,8 +26,8 @@ function ActivitiesCard() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-10 md:my-22">
         {/* A container for animation */}
         <div className="text-center">
-          <h1 className="text-2xl md:text-3xl font-bold ac-title">
-            أنشطة المؤسسة <span></span>
+          <h1 className="text-2xl md:text-3xl font-bold py-3.5 underlineR w-fit mx-auto">
+            أنشطة المؤسسة
           </h1>
 
           {/* Content and image container */}

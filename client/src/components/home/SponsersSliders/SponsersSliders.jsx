@@ -111,7 +111,7 @@ const SponsorsSlider = () => {
   return (
     <div className="sponsors-slider-container container w-full mx-auto px-3 md:px-1 my-16">
       {/* Title Section */}
-      <h2 className="font-extrabold text-3xl md:text-4xl pb-5 ev-title-sponsors mb-6 text-neutral-950">
+      <h2 className="font-extrabold text-3xl md:text-4xl pb-5 underlineR mb-6 text-neutral-950">
         شركاء <span className="text-primary relative top-1">النجاح</span>
       </h2>
 

@@ -1,15 +1,4 @@
-@import "tailwindcss";
-
-.ev-title {
-  position: relative;
-}
-
-.ev-title::after {
-  content: "";
-  left: 25%;
-  background-color: var(--color-primary);
-  @apply bottom-0 h-1 w-[50%] absolute;
-}
+@import "../../../colors.css";
 
 .ev-section {
   background-image: url("/images/pyramids.jpg");

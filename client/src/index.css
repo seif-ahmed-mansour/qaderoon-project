@@ -38,8 +38,8 @@
 }
 
 p {
-  @apply leading-relaxed;
   /* Increase line height for Arabic text  */
+  @apply leading-relaxed;
 }
 
 @utility debug {
@@ -48,4 +48,16 @@ p {
 
 html {
   scroll-behavior: smooth;
+}
+
+.underlineR {
+  @apply relative pb-4 w-fit mx-auto; /* Adds a line under header text */
+}
+
+.underlineR::after {
+  content: "";
+  left: 25%;
+  background-color: var(--color-primary);
+  transform: translateY(-30%);
+  @apply bottom-0 h-1 w-[50%] absolute;
 }

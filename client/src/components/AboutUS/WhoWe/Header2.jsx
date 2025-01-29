@@ -1,22 +1,13 @@
-import "./contentOne.css"
+import "./contentOne.css";
 
 const Header2 = () => (
-    <div className="text1">
-    <header
+  <div className="text1">
+    <section
       className="flex flex-col items-start justify-center text-black font-bold text-2xl md:text-3xl"
-      data-aos="fade-right"
-    >
-      <h1>
-        الاهداف - الرؤية - الرسالة
-      </h1>
-      <div className="w-30 h-1 bg-primary mt-6 mb-7"></div>
-      <div>
-     
-      </div>
-      
-    </header>
-    </div>
-  );
-  
-  export default Header2;
-  
+      data-aos="fade-right">
+      <h1 className="underlineR mt-6 mb-7">الاهداف - الرؤية - الرسالة</h1>
+    </section>
+  </div>
+);
+
+export default Header2;

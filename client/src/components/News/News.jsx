@@ -26,7 +26,7 @@ const News = () => {
   return (
     <>
       <section className="container my-11 mx-auto">
-        <h2 className="font-extrabold text-3xl md:text-4xl pb-5 ev-title-sponsors text-neutral-950 mb-6">
+        <h2 className="font-extrabold text-3xl md:text-4xl pb-5 underlineR text-neutral-950 mb-6">
           اخر <span className="text-primary relative top-1">الاخبار</span>
         </h2>
 

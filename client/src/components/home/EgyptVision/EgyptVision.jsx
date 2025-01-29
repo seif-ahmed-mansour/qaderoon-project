@@ -16,7 +16,7 @@ const EgyptVision = () => {
   return (
     <>
       <section className="flex flex-col place-items-center p-7 ev-section pb-10 ">
-        <h2 className="font-extrabold text-3xl md:text-4xl pb-5 ev-title mb-6 text-stone-100">
+        <h2 className="font-extrabold text-3xl md:text-4xl pb-5 underlineR mb-6 text-stone-100">
           {data.title} <span className="text-primary relative top-1">2030</span>
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 text-stone-100 container place-items-center">
