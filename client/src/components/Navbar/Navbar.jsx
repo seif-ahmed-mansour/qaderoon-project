@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import navItemsData from "./navItemsData"
+import navItemsData from "./navItemsData";
 import Dropdown from "./Dropdown";
 import SocialMediaLinks from "./SocialMediaLinks";
 import "./Navbar.css";
@@ -127,6 +127,7 @@ function Navbar() {
                       <Link
                         to={subItem.link}
                         key={subIndex}
+                        onClick={() => setNavMenuOpen(false)}
                         className="border-b text-gray-200">
                         <h1 className="cursor-pointer hover:text-secondary text-[#414e52] text-base flex items-center mt-2">
                           {subItem.name}
