@@ -3,7 +3,7 @@ import Footer from "./components/Footer/Footer";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AllArticles from "./pages/AllArticles";
 import ArticleDetails from "./pages/ArticleDetails";
@@ -17,6 +17,7 @@ import News from "./pages/News";
 import ScrollToTop from "./lib/ScrollToTop";
 import AddArticle from "./dashboard/AddArticle";
 import AddAuthor from "./dashboard/AddAuthor";
+import Board from "./components/AboutUS/BoardofTrustees/Board";
 
 function App() {
   // initialize AOS
@@ -48,6 +49,7 @@ function App() {
         <Route path="/about/governorates" element={<Governorates/>}/>
         <Route path="/about/success-partners" element={<SuccessPartners/>}/>
         <Route path="/about/offices" element={<Offices/>}/>
+        <Route path="/about/board" element={<Board/>}/>
       </Routes>
       <Footer />
     </main>
