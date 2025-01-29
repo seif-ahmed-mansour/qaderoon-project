@@ -12,6 +12,7 @@ import AddNews from "./dashboard/AddNews";
 import Whowe from "./components/AboutUS/WhoWe/Whowe";
 import Speech from "./components/AboutUS/Speech/Speech";
 import Governorates from "./components/AboutUS/Governorates/Governorates";
+import SuccessPartners from "./components/AboutUS/SuccessPartners/SuccessPartners";
 import News from "./pages/News";
 import ScrollToTop from "./lib/ScrollToTop";
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/about/institution" element={<Whowe/>}/>
         <Route path="/about/speech" element={<Speech/>}/>
         <Route path="/about/governorates" element={<Governorates/>}/>
+        <Route path="/about/success-partners" element={<SuccessPartners/>}/>
       </Routes>
       <Footer />
     </main>

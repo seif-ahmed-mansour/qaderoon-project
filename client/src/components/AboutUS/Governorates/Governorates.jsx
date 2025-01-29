@@ -23,7 +23,7 @@ function Governorates() {
     <div
       data-aos="fade-down"
       className="container px-6 py-5 mx-auto my-10 lg:my-20">
-      <h2 className="font-extrabold text-2xl md:text-4xl md:pb-6 text-gray-900 mb-8 text-center">
+      <h2 className="font-extrabold text-2xl md:text-4xl underlineR md:pb-6 text-gray-900 mb-8 text-center">
         محافظات تواجد <span className="text-primary relative">شباب قادرون</span>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-8 ">
