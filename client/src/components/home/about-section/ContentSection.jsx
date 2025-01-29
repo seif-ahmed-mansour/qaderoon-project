@@ -68,7 +68,7 @@ const ContentSection = () => (
       <span className="text-secondary font-semibold">المغرب</span> لتكرار نفس
       التجربة الناجحة في تلك الدول.
     </p>
-    <div className="flex justify-start mt-8 gap-6">
+    <div className="flex justify-start sm:flex-col mt-8 gap-6">
       <Link to="/about/institution">
         <Button className="hover:scale-105 transition-transform duration-200 text-lg px-6 py-3">
           عرض المزيد
