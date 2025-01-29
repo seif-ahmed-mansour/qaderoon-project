@@ -105,7 +105,7 @@ function Navbar() {
                   <button
                     className="cursor-pointer hover:text-primary text-[#262e30] text-lg flex items-center w-full justify-between"
                     onClick={() => toggleDropdown(item.name)}>
-                    {item.name}
+                    <Link to={item.link}>{item.name}</Link>
                     {item.subItems && (
                       <FaCaretDown
                         className={`mr-2 mt-1 transition-transform duration-400 ${
