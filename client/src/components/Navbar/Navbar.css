@@ -11,29 +11,3 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-.group:focus-within .group-hover\:opacity-100 {
-    opacity: 1;
-    max-block-size: 700px;
-}
-
-.group:focus-within .group-hover\:pt-6 {
-    padding-block-start: 1.5rem;
-}
-
-.group:focus-within .group-hover\:pb-4 {
-    padding-block-end: 1rem;
-}
-
-.group:active .group-hover\:opacity-100 {
-    opacity: 1;
-    max-block-size: 700px;
-}
-
-.group:active .group-hover\:pt-6 {
-    padding-block-start: 1.5rem;
-}
-
-.group:active .group-hover\:pb-4 {
-    padding-block-end: 1rem;
-}
