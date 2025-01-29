@@ -79,9 +79,9 @@ export const Missions = () => {
 
 
         <div className='bg-gray-100 '>
-        <section className="container py-16 mx-auto" >
+        <section className="container mx-auto" style={{padding:"1px"}} >
             <div className="container mx-auto px-4" data-aos="fade-down">
-                <h2 data-aos="fade-down" className="font-extrabold text-2xl md:text-4xl pb-5 underlineR text-neutral-950 mb-6 container mx-auto ">
+                    <h2 data-aos="fade-down" className="font-extrabold text-2xl md:text-4xl pb-5 underlineR text-neutral-950 mb-6 my-15">
                     المهام والمسؤوليات
                 </h2>
 
