@@ -4,7 +4,7 @@ import "./card.css";
 function Card(props) {
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl h-full flex flex-col">
-      <p className="overflow-hidden block">
+      <p className="overflow-hidden block rounded-t-lg">
         <img
           loading="lazy"
           className="rounded-t-lg card-images hover:scale-105 ease-in duration-200"
