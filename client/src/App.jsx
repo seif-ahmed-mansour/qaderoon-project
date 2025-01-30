@@ -17,7 +17,6 @@ import Offices from "./components/AboutUS/Offices/Offices";
 import News from "./pages/News";
 import ScrollToTop from "./utils/ScrollToTop";
 import AddAuthor from "./dashboard/AddAuthor";
-import AddArticle from "./dashboard/AddArticle.jsx";
 import Board from "./components/AboutUS/BoardofTrustees/Board";
 import ComingSoon from "./utils/CoomingSoon/ComingSoon";
 import AdminLogin from "./dashboard/Login";
@@ -60,7 +59,6 @@ function App() {
           element={<ContactUs />}
         />
 
-<<<<<<< HEAD
         <Route path="dashboard">
           <Route
             path=""
@@ -82,14 +80,6 @@ function App() {
             path="add-author"
             element={<AddAuthor />}
           />
-=======
-        <Route path="dashboard" >
-          <Route path="" element={<Dashboard/>} />
-          <Route path="login" element={<AdminLogin />} />
-          <Route path="add-article" element={<AddArticle />} />
-          <Route path="add-news" element={<AddNews />} />
-          <Route path="add-author" element={<AddAuthor />} />
->>>>>>> df20fe3f6d3e530f9b690a7109244202e800b5e7
         </Route>
 
         {/* من نحن Section */}
