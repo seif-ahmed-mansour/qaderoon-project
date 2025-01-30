@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import AttachmentsFileInput from "../components/Forms/AttachmentsFileInput";
+import Textarea from "../components/Forms/TextArea";
+import SelectInput from "../components/Forms/SelectInput";
+import Label from "../components/Forms/Label";
+import DefaultInput from "../components/Forms/DefaultInput";
+import Button from "../utils/Button";
 
 const AddArticle = () => {
   const [title, setTitle] = useState("");
@@ -58,88 +64,72 @@ const AddArticle = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-3xl w-full mx-auto my-10 p-6 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-red-600">Add Article</h2>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        noValidate>
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="title">
-            Article Title
-          </label>
-          <input
+          <Label
+            htmlFor="title"
+            label="Article Title"
+          />
+          <DefaultInput
             type="text"
-            id="title"
+            name="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            required
+            required={true}
+            placeholder="عنوان المقال"
           />
         </div>
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="content">
-            Article Content
-          </label>
-          <textarea
-            id="content"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            required
+          <Label htmlFor="author">Author</Label>
+          <Label
+            htmlFor="author"
+            label="Author"
           />
-        </div>
-        <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="Img">
-            Article Image
-          </label>
-          <div className="relative border rounded shadow appearance-none focus-within:shadow-outline">
-            <input
-              type="file"
-              id="Img"
-              accept="image/jpeg, image/jpg, image/png, image/gif, image/bmp, image/webp"
-              onChange={handleFileChange}
-              className="absolute opacity-0 w-full h-full cursor-pointer"
-              required
-            />
-            <div className="flex justify-between items-center py-2 px-3 text-gray-700">
-              <span>Choose a file...</span>
-              <span className="bg-primary text-white rounded py-1 px-4">
-                Browse
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="author">
-            Author
-          </label>
-          <select
-            id="author"
+          <SelectInput
             value={selectedAuthor}
             onChange={(e) => setSelectedAuthor(e.target.value)}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            required>
-            <option value="">Select an author</option>
-            {authors.map((author) => (
-              <option
-                key={author._id}
-                value={author._id}>
-                {author.name}
-              </option>
-            ))}
-          </select>
+            name="author"
+            required={true}
+            defaultValue="اختر المؤلف"
+            options={authors}
+          />
         </div>
-        <div className="flex items-center justify-between">
+        <div className="mb-4">
+          <Label
+            htmlFor="content"
+            label="Article Content"
+          />
+          <Textarea
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            name="content"
+            label="Article Content"
+            placeholder="محتوى المقال..."
+            required={true}
+          />
+        </div>
+        <div className="mb-4">
+          {/* Image upload input */}
+          <Label
+            htmlFor="Img"
+            label="Article Image"
+          />
+          <AttachmentsFileInput
+            name="Img"
+            accept="image/jpeg, image/jpg, image/png, image/gif, image/bmp, image/webp"
+            onChange={handleFileChange}
+            required={true}
+          />
+        </div>
+        <div className="flex items-center justify-between mt-5">
           <button
             type="submit"
             className="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-            Add Article
+            Publish
           </button>
         </div>
       </form>
