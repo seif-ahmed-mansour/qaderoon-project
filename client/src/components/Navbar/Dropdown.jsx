@@ -5,7 +5,7 @@ const Dropdown = ({ subItems, renderSubItems }) => (
     {subItems.map((subItem, index) => (
       <li key={index} className="border-b text-gray-200 pt-2 pb-4">
         <Link to={subItem.link} className="hover:text-[#262e30] text-secondary font-bold flex items-center">
-          {subItem.name}
+          {subItem.label}
         </Link>
         {subItem.subItems && renderSubItems(subItem.subItems)}
       </li>

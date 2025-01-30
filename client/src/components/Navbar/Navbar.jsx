@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import navItemsData from "./navItemsData";
+import LinksData from "../../data/LinksData";
 import Dropdown from "./Dropdown";
 import SocialMediaLinks from "./SocialMediaLinks";
 import "./Navbar.css";
@@ -55,14 +55,14 @@ function Navbar() {
       {/* Navigation Links */}
       <div className="hidden lg:flex justify-center items-center space-x-5 font-black text-lg z-50">
         <ul className="flex space-x-10">
-          {navItemsData.map((item, index) => (
+          {LinksData.map((item, index) => (
             <li
               key={index}
               className="relative group z-50">
               <Link
                 to={item.link}
                 className="hover:text-[#262e30] text-primary flex items-center">
-                {item.name}
+                {item.label}
                 {item.subItems && (
                   <FaCaretDown className="mr-2 mt-1 transition-all duration-400 group-hover:rotate-90" />
                 )}
@@ -99,18 +99,20 @@ function Navbar() {
           }`}>
           <ul className="w-full space-y-3">
             <li>
-              {navItemsData.map((item, index) => (
+              {LinksData.map((item, index) => (
                 <div
                   key={index}
                   className="relative group w-full">
                   <button
                     className="cursor-pointer hover:text-primary text-[#262e30] text-lg flex items-center w-full justify-between"
-                    onClick={() => toggleDropdown(item.name)}>
-                    <Link to={item.link}>{item.name}</Link>
+                    onClick={() => toggleDropdown(item.label)}>
+                    <Link to={item.link}>{item.label}</Link>
                     {item.subItems && (
                       <FaCaretDown
                         className={`mr-2 mt-1 transition-transform duration-400 ${
-                          openDropdown === item.name ? "rotate-180" : "rotate-0"
+                          openDropdown === item.label
+                            ? "rotate-180"
+                            : "rotate-0"
                         }`}
                       />
                     )}
@@ -118,7 +120,7 @@ function Navbar() {
                   {item.subItems && (
                     <ul
                       className={`text-base bg-white w-full px-6 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] ${
-                        openDropdown === item.name
+                        openDropdown === item.label
                           ? "max-h-96 opacity-100"
                           : "max-h-0 opacity-0"
                       }`}
@@ -133,7 +135,7 @@ function Navbar() {
                             onClick={() => setNavMenuOpen(false)}
                             className="border-b text-gray-200">
                             <h1 className="cursor-pointer hover:text-secondary text-[#414e52] text-base flex items-center mt-2">
-                              {subItem.name}
+                              {subItem.label}
                             </h1>
                           </Link>
                         ))}
