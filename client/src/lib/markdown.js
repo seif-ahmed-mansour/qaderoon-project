@@ -16,7 +16,7 @@ export const md = markdownit({
   // useful for external highlighters.
   langPrefix: "language-",
 
-  // Autoconvert URL-like text to links
+  // Auto convert URL-like text to links
   linkify: true,
 
   // Enable some language-neutral replacement + quotes beautification
@@ -24,7 +24,7 @@ export const md = markdownit({
   typographer: true,
 
   // Double + single quotes replacement pairs, when typographer enabled,
-  // and smartquotes on. Could be either a String or an Array.
+  // and smart quotes on. Could be either a String or an Array.
   //
   // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
   // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
