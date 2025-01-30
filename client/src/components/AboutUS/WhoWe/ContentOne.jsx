@@ -3,7 +3,7 @@ const ContentOne = () => {
     <div
       className="text-right"
       data-aos="fade-down">
-      <p className="text-base md:text-xl text-gray-800 leading-relaxed mb-6">
+      <p className="text-base md:text-xl text-gray-800 leading-relaxed mb-6" style={{ lineHeight: "1.8" }}>
         بدأت <span className="text-secondary">شباب قادرون</span> كأحد الكيانات
         الشبابية ب<span className="text-secondary">وزارة الشباب والرياضة</span>{" "}
         بدعم ورعاية من معالى وزير الشباب والرياضة الأستاذ الدكتور /{" "}

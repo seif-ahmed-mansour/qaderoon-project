@@ -6,7 +6,10 @@ const ContentSection = () => (
   <div
     className="text-right"
     data-aos="fade-right">
-    <p className="text-gray-700 text-lg md:text-xl leading-relaxed tracking-wide">
+    <p
+      className="text-gray-700 text-lg md:text-xl leading-relaxed tracking-wide"
+      style={{ lineHeight: "1.8" }}>
+      {" "}
       بدأت مبادرة{" "}
       <span className="text-secondary">
         {'"'}شباب قادرون{'"'}
@@ -21,14 +24,17 @@ const ContentSection = () => (
       عربيًا، حيث بدأت في عدة دول عربية، من بينها
       <span className="text-secondary"> الأردن </span>، التي تلقت دعوة من
       <span className="text-secondary"> وزارة الشباب والتنمية السياسية </span> و
-      <span className="text-secondary"> مجلس النواب الأردني </span> 
+      <span className="text-secondary"> مجلس النواب الأردني </span>
       لنقل التجربة إليها. بعد زيارة ناجحة، وجه{" "}
-      <span className="text-secondary">وائل محمد الشريف</span>
-      ، رئيس المبادرة، دعوة من
+      <span className="text-secondary">وائل محمد الشريف</span>، رئيس المبادرة،
+      دعوة من
       <span className="text-secondary"> الديوان الملكي الأردني </span>
-      إلى كوادر{'"'}شباب قادرون{'"'} لتأسيس الفرع الأردني. لاحقًا، تلقت المبادرة طلبات من قيادات شبابية في 
-      <span className="text-secondary"> السعودية، الإمارات، الكويت، البحرين، والمغرب</span>
-      {" "}
+      إلى كوادر{'"'}شباب قادرون{'"'} لتأسيس الفرع الأردني. لاحقًا، تلقت المبادرة
+      طلبات من قيادات شبابية في
+      <span className="text-secondary">
+        {" "}
+        السعودية، الإمارات، الكويت، البحرين، والمغرب
+      </span>{" "}
       لتكرار التجربة الناجحة.
     </p>
 

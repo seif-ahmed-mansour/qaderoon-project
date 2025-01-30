@@ -20,7 +20,7 @@ function Speech() {
 
         {/* Text Section */}
         <div className="w-full xl:w-2/3">
-          <p className="text-base md:text-xl text-gray-800 ">
+          <p className="text-base md:text-xl text-gray-800 " style={{ lineHeight: "1.8" }}>
             في <span className="text-secondary font-semibold">شباب قادرون</span>
             ، نؤمن بأن الابتكار وريادة الأعمال هما الأساس لتحقيق تنمية اقتصادية
             واجتماعية مستدامة في مصر والوطن العربي. رؤيتنا ترتكز على بناء مجتمع
