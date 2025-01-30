@@ -31,9 +31,12 @@ function App() {
 
   return (
     <Router>
-      <ScrollToTop />
-      <Navbar />
+
       {/* Ensures the page scrolls to the top on route change */}
+      <ScrollToTop />
+
+      <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/articles" element={<AllArticles />} />
@@ -41,6 +44,7 @@ function App() {
         <Route path="/news" element={<News />} />
 
         <Route path="dashboard" >
+          <Route path="" element={<Dashboard/>} />
           <Route path="login" element={<AdminLogin />} />
           <Route path="add-article" element={<Dashboard />} />
           <Route path="add-news" element={<AddNews />} />
@@ -59,6 +63,7 @@ function App() {
 
         <Route path="*" element={<ComingSoon />} />
       </Routes>
+
       <Footer />
     </Router>
   );
