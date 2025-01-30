@@ -59,18 +59,26 @@ const HomeLandingSlider = () => {
   return (
     <div className="hero overflow-hidden">
       <div className="overlay">
-        {heroData.length > 0 && <img src={heroData[activeIndex].img} alt="" className="blur" />}
+        {heroData.length > 0 && (
+          <img
+            loading="lazy"
+            src={heroData[activeIndex].img}
+            alt=""
+            className="blur"
+          />
+        )}
         <div className="shodo"></div>
       </div>
 
       <div className="hero-content">
         <div className="top-section">
-         
           <div className="hero-text hero-animated">
             <div className="hero-text-content">
               {heroData.length > 0 && (
                 <>
-                  <p className="hero-text-title lg:text-3xl xl:text-4xl">{heroData[activeIndex].description}</p>
+                  <p className="hero-text-title lg:text-3xl xl:text-4xl">
+                    {heroData[activeIndex].description}
+                  </p>
                 </>
               )}
             </div>
@@ -84,11 +92,14 @@ const HomeLandingSlider = () => {
               grabCursor
               onSlideChange={handleSlideChange}
               modules={[EffectCards]}
-              className="mySwiper"
-            >
+              className="mySwiper">
               {heroData.map((d, index) => (
                 <SwiperSlide key={index}>
-                  <img src={d.img} alt={d.title} />
+                  <img
+                    loading="lazy"
+                    src={d.img}
+                    alt={d.title}
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -96,7 +107,10 @@ const HomeLandingSlider = () => {
         </div>
         <div className="tab-area">
           {heroData.map((d, index) => (
-            <div key={index} className={`tab-item ${activeIndex === index ? "active" : ""}`} onClick={() => handleTabClick(index)}>
+            <div
+              key={index}
+              className={`tab-item ${activeIndex === index ? "active" : ""}`}
+              onClick={() => handleTabClick(index)}>
               <div className="tab-title">{d.title}</div>
             </div>
           ))}

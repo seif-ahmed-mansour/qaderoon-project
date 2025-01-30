@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <div
-      className={`navbar flex justify-between px-6 py-2 md:px-16 md:py-4 xl:px-24 xl:py-6 sticky top-0 z-50 w-full bg-white transition-all duration-500 ease-out 
+      className={`navbar flex justify-between px-6 py-2 md:px-16 md:py-4 xl:px-24 xl:py-6 sticky top-0 z-50 w-full bg-white transition-all duration-500 ease-out
       ${scrolled ? "md:h-24 shadow-md" : "md:h-30 shadow-sm"}`}>
       {/* Logo Section */}
       <div className="flex items-center justify-center z-50">
@@ -31,6 +31,7 @@ function Navbar() {
           to={"/"}
           className="flex flex-col items-center">
           <img
+            loading="lazy"
             src="/images/logo.png"
             alt="Logo"
             className={`transition-transform duration-300 md:opacity-100  ${
@@ -40,7 +41,7 @@ function Navbar() {
             }`}
           />
           <h1
-            className={`logo md:opacity-100 md:scale-100 md:max-h-[100px] transition-all duration-300 ease-[cubic-bezier(0.25, 1, 0.5, 1)] bg-clip-text text-transparent pt-2 
+            className={`logo md:opacity-100 md:scale-100 md:max-h-[100px] transition-all duration-300 ease-[cubic-bezier(0.25, 1, 0.5, 1)] bg-clip-text text-transparent pt-2
               ${
                 scrolled
                   ? "opacity-0 scale-90 max-h-0 overflow-hidden md:text-base"

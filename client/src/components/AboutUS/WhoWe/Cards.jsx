@@ -37,6 +37,7 @@ const Cards = () => {
                   {/* Render the icon dynamically */}
                   {typeof object.icon === "string" ? (
                     <img
+                      loading="lazy"
                       src={object.icon}
                       alt="icon"
                       className="w-12 h-12 "

@@ -6,6 +6,7 @@ function Card(props) {
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl h-full flex flex-col">
       <p className="overflow-hidden block">
         <img
+          loading="lazy"
           className="rounded-t-lg card-images hover:scale-105 ease-in duration-200"
           src={props.image}
           alt=""
