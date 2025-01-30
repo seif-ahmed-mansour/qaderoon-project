@@ -17,12 +17,10 @@ const navItemsData = [
     name: "خدماتنا",
     link: "#",
     subItems: [
-      { name: "الاستشارات والدراسات", link: "/services/consulting" },
-      { name: "التدريب", link: "/services/training" },
-      { name: "الدورات التدريبية", link: "/services/courses" },
+      { name: "التدريب والاستشارات", link: "/services/training" },
       { name: "التحقق من الشهادات", link: "/services/certification" },
-      { name: "المؤتمرات", link: "/services/conferences" },
-      { name: "الرحلات والمصايف", link: "/services/trips" },
+      { name: "المؤتمرات والندوات", link: "/services/conferences" },
+      { name: "التوظيف", link: "/services/employment" },
     ],
   },
   { name: "الأخبار", link: "/news" },
@@ -31,4 +29,4 @@ const navItemsData = [
   { name: "إنضم إلينا", link: "/join-us" },
 ];
 
-export default navItemsData
+export default navItemsData;
