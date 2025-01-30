@@ -77,9 +77,9 @@ const Supreme = () => {
     ];
 
     return (
-        <div className="p-6 space-y-8">
+        <div className="space-y-8 px-4 md:px-10 lg:px-20 my-16">
             {sections.map((section, index) => (
-                <div key={index} className="p-6">
+                <div key={index} className="p-6"  data-aos="fade-down" >
                     <h2 className="font-extrabold text-2xl md:text-4xl pb-5 underlinee text-neutral-950 mb-6">{section.title}</h2>
                     <p className="text-gray-700 mb-6 text-justify">{section.definition}</p>
                     <div className="">
