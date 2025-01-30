@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     sourcemap: true,
   },
-  // server: {
-  //   host: "192.168.1.11",
-  //   port: 3000,
-  // },
+  server: {
+    host: "192.168.1.11",
+    port: 3000,
+  },
 });
