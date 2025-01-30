@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import "./articles.css";
-import Card from "../../../utils/Card/Card";
-import Button from "../../../utils/Button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import "./articles.css";
 import { Link } from "react-router-dom";
+import Button from "../../../utils/Button";
+import Card from "../../../utils/Card/Card";
 
 function Articles() {
   const [articles, setArticles] = useState([]);
@@ -57,7 +57,7 @@ function Articles() {
             ))}
         </div>
         <Button
-          className="bg-white !text-primary hover:bg-white hover:scale-105 transition-transform duration-200 font-semibold"
+          className="bg-white !text-primary hover:bg-white hover:scale-105 transition-transform duration-200 font-semibold mx-auto"
           link="/articles">
           عرض المزيد
         </Button>

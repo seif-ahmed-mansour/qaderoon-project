@@ -28,5 +28,9 @@
 }
 
 .ev-button {
-  @apply px-4.5 py-2 rounded flex items-center justify-between space-x-3;
+  @apply px-4.5 py-2 rounded flex items-center justify-between gap-3;
 }
+
+/*
+${className} flex items-center justify-between gap-3 w-fit text-lg font-semibold text-center text-white bg-primary hover:bg-secondary rounded-lg transition duration-300 card-button px-5 py-3 my-2
+*/
