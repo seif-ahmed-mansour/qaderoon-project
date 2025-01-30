@@ -17,6 +17,7 @@ import Offices from "./components/AboutUS/Offices/Offices";
 import News from "./pages/News";
 import ScrollToTop from "./utils/ScrollToTop";
 import AddAuthor from "./dashboard/AddAuthor";
+import AddArticle from "./dashboard/AddArticle.jsx";
 import Board from "./components/AboutUS/BoardofTrustees/Board";
 import ComingSoon from "./utils/CoomingSoon/ComingSoon";
 import AdminLogin from "./dashboard/Login";
@@ -46,7 +47,7 @@ function App() {
         <Route path="dashboard" >
           <Route path="" element={<Dashboard/>} />
           <Route path="login" element={<AdminLogin />} />
-          <Route path="add-article" element={<Dashboard />} />
+          <Route path="add-article" element={<AddArticle />} />
           <Route path="add-news" element={<AddNews />} />
           <Route path="add-author" element={<AddAuthor />} />
         </Route>

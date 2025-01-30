@@ -33,9 +33,17 @@
   font-display: swap;
 }
 
+:root {
+  --color-primary: #da1e33;
+  --color-secondary: #a21c34;
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: var(--color-secondary);
+  --sb-size: 1rem;
+}
+
 * {
   font-family: "Almarai", serif;
-  font-display: swap
+  font-display: swap;
 }
 
 p {
@@ -45,11 +53,6 @@ p {
 
 @utility debug {
   @apply border-pink-600 border-4;
-}
-
-html {
-  scroll-behavior: smooth;
-
 }
 
 .underlineR {
@@ -65,29 +68,32 @@ html {
   @apply bottom-0 h-1 w-[50%] absolute;
 }
 
-body {
-  --sb-track-color: #ffffff;
-  --sb-thumb-color: #da1e33;
-  --sb-size: 7px;
-}
-
-body::-webkit-scrollbar {
+/* WebKit Browsers (Chrome, Safari) */
+html::-webkit-scrollbar {
   inline-size: var(--sb-size);
+  scrollbar-width: var(--sb-size);
 }
 
-body::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background: var(--sb-track-color);
   border-radius: 1px;
+  scrollbar-width: var(--sb-size);
 }
 
-body::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
+  scrollbar-width: var(--sb-size);
   border-radius: 1px;
 }
 
+/* WebKit Browsers (firefox) */
 @supports not selector(::-webkit-scrollbar) {
+  html,
   body {
-    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    scroll-behavior: smooth;
+    scrollbar-base-color: var(--sb-thumb-color);
+    scrollbar-color: var(--sb-thumb-color) var(--sb-thumb-color);
+    scrollbar-width: 50px !important;
   }
 }
 
@@ -97,10 +103,10 @@ img {
 
 *::selection {
   color: white;
-  background: #a21c35;
+  background: var(--color-secondary);
 }
 
 *::-moz-selection {
   color: white;
-  background: #a21c35;
+  background: var(--color-secondary);
 }
