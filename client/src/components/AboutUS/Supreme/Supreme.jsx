@@ -79,9 +79,8 @@ const Supreme = () => {
     return (
         <div className="p-6 space-y-8">
             {sections.map((section, index) => (
-                <div key={index} className="rounded-2xl shadow-lg border border-gray-200 p-6">
-                    <h2 className="text-3xl font-bold mb-4 text-primary text-center">{section.title}</h2>
-                    <h3 className="text-xl text-gray-600 mb-6 text-center">{section.subtitle}</h3>
+                <div key={index} className="p-6">
+                    <h2 className="font-extrabold text-2xl md:text-4xl pb-5 underlinee text-neutral-950 mb-6">{section.title}</h2>
                     <p className="text-gray-700 mb-6 text-justify">{section.definition}</p>
                     <div className="">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -90,7 +89,7 @@ const Supreme = () => {
                                 <h4 className="text-lg text-primary font-semibold mb-2">
                                     {responsibility.title}
                                 </h4>
-                                <ul className=" pl-6 text-gray-700">
+                                <ul className="pl-6 text-gray-700">
                                     {responsibility.items.map((item, id) => (
                                         <li key={id}>{item}</li>
                                     ))}
@@ -100,7 +99,7 @@ const Supreme = () => {
                         ))}
                         </div>
                     </div>
-                    <h4 className="text-lg text-primary font-semibold mt-6">تكوين الهيئة:</h4>
+                    <h4 className="text-lg text-black  font-semibold mt-6">تكوين الهيئة:</h4>
                     <p className="text-gray-700 mt-2 text-justify">{section.composition}</p>
                 </div>
             ))}
