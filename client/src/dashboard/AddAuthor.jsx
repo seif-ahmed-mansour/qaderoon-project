@@ -1,5 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import AttachmentsFileInput from "../components/Forms/AttachmentsFileInput";
+import Textarea from "../components/Forms/TextArea";
+import Label from "../components/Forms/Label";
+import DefaultInput from "../components/Forms/DefaultInput";
 
 const AddAuthor = () => {
   const [name, setName] = useState("");
@@ -34,61 +38,49 @@ const AddAuthor = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-3xl w-full mx-auto my-10 p-6 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-red-600">Add Author</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="name">
-            Author Name
-          </label>
-          <input
+          <Label
+            htmlFor="name"
+            label="Author Name"
+          />
+          <DefaultInput
             type="text"
-            id="name"
+            name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            required
+            placeholder="اسم المؤلف"
+            required={true}
           />
         </div>
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="title">
-            Author Title
-          </label>
-          <textarea
-            type="text"
-            id="title"
+          <Label
+            htmlFor="title"
+            label="Author title"
+          />
+          <Textarea
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            required
+            name="title"
+            label="Author Title"
+            placeholder="وظيفة المؤلف"
+            required={true}
           />
         </div>
 
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="image">
-            Author Image
-          </label>
-          <div className="relative border rounded shadow appearance-none focus-within:shadow-outline">
-            <input
-              type="file"
-              id="image"
-              accept="image/jpeg, image/jpg, image/png, image/gif, image/bmp, image/webp"
-              onChange={handleFileChange}
-              className="absolute opacity-0 w-full h-full cursor-pointer"
-            />
-            <div className="flex justify-between items-center py-2 px-3 text-gray-700">
-              <span>Choose a file...</span>
-              <span className="bg-primary text-white rounded py-1 px-4">
-                Browse
-              </span>
-            </div>
-          </div>
+          <Label
+            htmlFor="image"
+            label="Author Image"
+          />
+          <AttachmentsFileInput
+            name="image"
+            accept="image/jpeg, image/jpg, image/png, image/gif, image/bmp, image/webp"
+            onChange={handleFileChange}
+            required={true}
+          />
         </div>
         <div className="flex items-center justify-between">
           <button

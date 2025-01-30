@@ -5,7 +5,6 @@ import Textarea from "../components/Forms/TextArea";
 import SelectInput from "../components/Forms/SelectInput";
 import Label from "../components/Forms/Label";
 import DefaultInput from "../components/Forms/DefaultInput";
-import Button from "../utils/Button";
 
 const AddArticle = () => {
   const [title, setTitle] = useState("");
@@ -67,8 +66,7 @@ const AddArticle = () => {
     <div className="max-w-3xl w-full mx-auto my-10 p-6 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-red-600">Add Article</h2>
       <form
-        onSubmit={handleSubmit}
-        noValidate>
+        onSubmit={handleSubmit}>
         <div className="mb-4">
           <Label
             htmlFor="title"
