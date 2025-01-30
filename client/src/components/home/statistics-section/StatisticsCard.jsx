@@ -10,7 +10,7 @@ const StatisticsCard = ({ icon, number, label }) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center border-2 border-transparent rounded-xl p-4 w-50 h-50 bg-gradient-to-r from-[#da1e33] to-[#a21c34] shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+      className="flex flex-col items-center justify-center border-2 border-transparent rounded-xl p-4 w-50 h-50 bg-gradient-to-r from-[#da1e33] to-[#a21c34] shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-default"
     >
       <div className="text-white text-6xl mb-2">{icon}</div>
       <p className="text-white text-3xl font-bold">

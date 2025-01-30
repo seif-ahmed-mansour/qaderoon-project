@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Button({ link, children, className = "", ...rest }) {
-  const buttonClasses = `inline-flex items-center text-lg font-medium text-center text-white bg-primary rounded-lg hover:bg-secondary focus:ring-4 focus:outline-none transition duration-150 card-button ${className} px-5 py-3 my-2`;
+  const buttonClasses = `${className} flex items-center justify-between gap-3 w-fit text-lg font-semibold text-center text-white bg-primary hover:bg-secondary rounded-lg transition duration-300 card-button px-5 py-3 my-2 group`;
 
   // If a link is provided, render as a Link
   if (link) {
