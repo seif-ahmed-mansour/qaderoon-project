@@ -22,6 +22,7 @@ import ComingSoon from "./utils/CoomingSoon/ComingSoon";
 import AdminLogin from "./dashboard/Login";
 import Dashboard from "./dashboard/Dashboard";
 import Supreme from "./components/AboutUS/Supreme/Supreme";
+import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 
 function App() {
   // initialize AOS
@@ -31,37 +32,94 @@ function App() {
 
   return (
     <Router>
-
       {/* Ensures the page scrolls to the top on route change */}
       <ScrollToTop />
 
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/articles" element={<AllArticles />} />
-        <Route path="/article/:id" element={<ArticleDetails />} />
-        <Route path="/news" element={<News />} />
+        <Route
+          path="/"
+          element={<Home />}
+        />
+        <Route
+          path="/articles"
+          element={<AllArticles />}
+        />
+        <Route
+          path="/article/:id"
+          element={<ArticleDetails />}
+        />
+        <Route
+          path="/news"
+          element={<News />}
+        />
+        <Route
+          path="contact"
+          element={<ContactUs />}
+        />
 
-        <Route path="dashboard" >
-          <Route path="" element={<Dashboard/>} />
-          <Route path="login" element={<AdminLogin />} />
-          <Route path="add-article" element={<Dashboard />} />
-          <Route path="add-news" element={<AddNews />} />
-          <Route path="add-author" element={<AddAuthor />} />
+        <Route path="dashboard">
+          <Route
+            path=""
+            element={<Dashboard />}
+          />
+          <Route
+            path="login"
+            element={<AdminLogin />}
+          />
+          <Route
+            path="add-article"
+            element={<Dashboard />}
+          />
+          <Route
+            path="add-news"
+            element={<AddNews />}
+          />
+          <Route
+            path="add-author"
+            element={<AddAuthor />}
+          />
         </Route>
 
         {/* من نحن Section */}
-        <Route path="/about/institution" element={<Whowe />} />
-        <Route path="/about/speech" element={<Speech />} />
-        <Route path="/about/governorates" element={<Governorates />} />
-        <Route path="/about/success-partners" element={<SuccessPartners />} />
-        <Route path="/about/offices" element={<Offices />} />
-        <Route path="/about/board" element={<Board />} />
-        <Route path="/about/units" element={<Units />} />
-        <Route path="/about/supreme-advisory" element={<Supreme />} />
+        <Route
+          path="/about/institution"
+          element={<Whowe />}
+        />
+        <Route
+          path="/about/speech"
+          element={<Speech />}
+        />
+        <Route
+          path="/about/governorates"
+          element={<Governorates />}
+        />
+        <Route
+          path="/about/success-partners"
+          element={<SuccessPartners />}
+        />
+        <Route
+          path="/about/offices"
+          element={<Offices />}
+        />
+        <Route
+          path="/about/board"
+          element={<Board />}
+        />
+        <Route
+          path="/about/units"
+          element={<Units />}
+        />
+        <Route
+          path="/about/supreme-advisory"
+          element={<Supreme />}
+        />
 
-        <Route path="*" element={<ComingSoon />} />
+        <Route
+          path="*"
+          element={<ComingSoon />}
+        />
       </Routes>
 
       <Footer />
