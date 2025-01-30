@@ -12,6 +12,7 @@ import Whowe from "./components/AboutUS/WhoWe/Whowe";
 import Speech from "./components/AboutUS/Speech/Speech";
 import Governorates from "./components/AboutUS/Governorates/Governorates";
 import SuccessPartners from "./components/AboutUS/SuccessPartners/SuccessPartners";
+import Units from "./components/AboutUS/Units/units.jsx";
 import Offices from "./components/AboutUS/Offices/Offices";
 import News from "./pages/News";
 import ScrollToTop from "./lib/ScrollToTop";
@@ -40,12 +41,14 @@ function App() {
         <Route path="/articles" element={<AllArticles />} />
         <Route path="/article/:id" element={<ArticleDetails />} />
         <Route path="/news" element={<News />} />
+
         <Route path="dashboard" >
           <Route path="login" element={<AdminLogin />} />
           <Route path="add-article" element={<Dashboard />} />
           <Route path="add-news" element={<AddNews />} />
           <Route path="add-author" element={<AddAuthor />} />
         </Route>
+
         {/* من نحن Section */}
         <Route path="/about/institution" element={<Whowe />} />
         <Route path="/about/speech" element={<Speech />} />
@@ -53,7 +56,7 @@ function App() {
         <Route path="/about/success-partners" element={<SuccessPartners />} />
         <Route path="/about/offices" element={<Offices />} />
         <Route path="/about/board" element={<Board />} />
-
+        <Route path="/about/units" element={<Units />} />
 
         <Route path="*" element={<ComingSoon />} />
       </Routes>
