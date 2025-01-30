@@ -21,6 +21,7 @@ import Board from "./components/AboutUS/BoardofTrustees/Board";
 import ComingSoon from "./utils/CoomingSoon/ComingSoon";
 import AdminLogin from "./dashboard/Login";
 import Dashboard from "./dashboard/Dashboard";
+import Supreme from "./components/AboutUS/Supreme/Supreme";
 
 function App() {
   // initialize AOS
@@ -53,8 +54,9 @@ function App() {
         <Route path="/about/success-partners" element={<SuccessPartners />} />
         <Route path="/about/offices" element={<Offices />} />
         <Route path="/about/board" element={<Board />} />
-
-
+        <Route path="/about/supreme-advisory" element={<Supreme />} />
+        
+        {/*coming soon route */}
         <Route path="*" element={<ComingSoon />} />
       </Routes>
       <Footer />
