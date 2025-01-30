@@ -24,6 +24,7 @@ import AdminLogin from "./dashboard/Login";
 import Dashboard from "./dashboard/Dashboard";
 import Supreme from "./components/AboutUS/Supreme/Supreme";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
+import DashboardActions from "./dashboard/DashboardActions.jsx";
 
 function App() {
   // initialize AOS
@@ -60,36 +61,18 @@ function App() {
           element={<ContactUs />}
         />
 
-<<<<<<< HEAD
+                {/* Dashboard Routes */}
         <Route path="dashboard">
-          <Route
-            path=""
-            element={<Dashboard />}
-          />
-          <Route
-            path="login"
-            element={<AdminLogin />}
-          />
-          <Route
-            path="add-article"
-            element={<Dashboard />}
-          />
-          <Route
-            path="add-news"
-            element={<AddNews />}
-          />
-          <Route
-            path="add-author"
-            element={<AddAuthor />}
-          />
-=======
-        <Route path="dashboard" >
-          <Route path="" element={<Dashboard/>} />
+          {/* Login (public) */}
           <Route path="login" element={<AdminLogin />} />
-          <Route path="add-article" element={<AddArticle />} />
-          <Route path="add-news" element={<AddNews />} />
-          <Route path="add-author" element={<AddAuthor />} />
->>>>>>> df20fe3f6d3e530f9b690a7109244202e800b5e7
+
+          {/* Protected Routes (wrapped in Dashboard layout) */}
+          <Route element={<Dashboard />}>
+            <Route index element={<DashboardActions />} /> {/* /dashboard */}
+            <Route path="add-article" element={<AddArticle />} />
+            <Route path="add-news" element={<AddNews />} />
+            <Route path="add-author" element={<AddAuthor />} />
+          </Route>
         </Route>
 
         {/* من نحن Section */}
