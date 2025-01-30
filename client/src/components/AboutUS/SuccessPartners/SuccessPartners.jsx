@@ -120,6 +120,7 @@ const SuccessPartners = () => {
               rel="noopener noreferrer"
               className="flex justify-center items-center w-full">
               <img
+                loading="lazy"
                 src={`/images/sponsors/sponsor-${sponsor.id}.png`}
                 alt={sponsor.name}
                 className="w-full max-h-20 sm:max-h-24 md:max-h-28 lg:max-h-32 object-contain"

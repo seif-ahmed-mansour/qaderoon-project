@@ -138,6 +138,7 @@ const SponsorsSlider = () => {
                 target="_blank"
                 rel="noopener noreferrer">
                 <img
+                  loading="lazy"
                   src={`/images/sponsors/sponsor-${sponsor.id}.png`}
                   alt={sponsor.name}
                   className="object-contain w-full max-h-30"

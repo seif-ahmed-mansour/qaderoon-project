@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MarkdownParser from "../components/MarkdownParser/MarkdownParser";
-import Loader from "../utils/Loader/Loader";
 import { isEmptyObject } from "../lib/utils";
+import Loader from "../utils/Loader/Loader";
 
 function ArticleDetails() {
   const { id } = useParams();
@@ -44,6 +44,7 @@ function ArticleDetails() {
           <div className="mb-4 md:mb-0 w-full lg:max-w-screen-lg max-w-screen mx-auto relative h-full aspect-video hover:scale-105 transition-transform duration-500 cursor-default">
             <div className="absolute left-0 bottom-0 w-full h-full z-10 bg-gradient-to-b from-transparent to-black" />
             <img
+              loading="lazy"
               src={
                 article.Img
                   ? `${import.meta.env.VITE_HOST_SERVER}imgs/${article.Img}`
@@ -76,6 +77,7 @@ function ArticleDetails() {
                   </p>
                 </div>
                 <img
+                  loading="lazy"
                   src={
                     article.author?.image
                       ? `${import.meta.env.VITE_HOST_SERVER}imgs/${

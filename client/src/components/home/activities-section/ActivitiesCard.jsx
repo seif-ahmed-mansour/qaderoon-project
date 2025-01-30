@@ -62,6 +62,7 @@ function ActivitiesCard() {
             <img
               src="/images/ac-pic.png"
               alt="pic"
+              loading="lazy"
               data-aos="fade-up"
               data-aos-duration="1500"
               className="w-full md:w-1/2 rounded-lg shadow-md object-cover"
