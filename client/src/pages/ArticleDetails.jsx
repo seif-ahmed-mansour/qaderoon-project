@@ -35,7 +35,7 @@ function ArticleDetails() {
   return (
     <div className="max-w-screen-xl mx-auto pb-10">
       {isLoading || isEmptyObject(article) ? (
-        <div className="w-full min-h-dvh grid place-items-center overflow-y-hidden">
+        <div className="w-full loader-container grid place-items-center overflow-y-hidden h-[75dvh]">
           <Loader />
         </div>
       ) : (

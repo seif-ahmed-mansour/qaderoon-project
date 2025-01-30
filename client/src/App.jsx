@@ -3,10 +3,10 @@ import Footer from "./components/Footer/Footer";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/Home";
 import AllArticles from "./pages/AllArticles";
-import ArticleDetails from "./pages/ArticleDetails";
+import ArticleDetails from "./pages/ArticleDetails.jsx";
 import AddNews from "./dashboard/AddNews";
 import Whowe from "./components/AboutUS/WhoWe/Whowe";
 import Speech from "./components/AboutUS/Speech/Speech";
@@ -15,8 +15,7 @@ import SuccessPartners from "./components/AboutUS/SuccessPartners/SuccessPartner
 import Units from "./components/AboutUS/Units/units.jsx";
 import Offices from "./components/AboutUS/Offices/Offices";
 import News from "./pages/News";
-import ScrollToTop from "./lib/ScrollToTop";
-import AddArticle from "./dashboard/AddArticle";
+import ScrollToTop from "./utils/ScrollToTop";
 import AddAuthor from "./dashboard/AddAuthor";
 import Board from "./components/AboutUS/BoardofTrustees/Board";
 import ComingSoon from "./utils/CoomingSoon/ComingSoon";
@@ -31,11 +30,12 @@ function App() {
   }, []);
 
   return (
-    <main>
-      <Navbar />
+    <Router>
 
       {/* Ensures the page scrolls to the top on route change */}
       <ScrollToTop />
+
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -44,6 +44,7 @@ function App() {
         <Route path="/news" element={<News />} />
 
         <Route path="dashboard" >
+          <Route path="" element={<Dashboard/>} />
           <Route path="login" element={<AdminLogin />} />
           <Route path="add-article" element={<Dashboard />} />
           <Route path="add-news" element={<AddNews />} />
@@ -62,8 +63,9 @@ function App() {
 
         <Route path="*" element={<ComingSoon />} />
       </Routes>
+
       <Footer />
-    </main>
+    </Router>
   );
 }
 

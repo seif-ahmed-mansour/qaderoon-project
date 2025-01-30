@@ -6,6 +6,7 @@ import "./articles.css";
 import { Link } from "react-router-dom";
 import Button from "../../../utils/Button";
 import Card from "../../../utils/Card/Card";
+import { isEmptyArray } from "../../../lib/utils";
 
 function Articles() {
   const [articles, setArticles] = useState([]);
@@ -18,14 +19,12 @@ function Articles() {
         const response = await axios.get(
           `${import.meta.env.VITE_HOST_SERVER}articles/`
         );
-        console.log(response);
 
         setArticles(response.data.data.slice(0, 3));
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-    // console.log(articles);
 
     fetchData();
   }, []);
@@ -44,7 +43,7 @@ function Articles() {
           مجموعة من المقالات المحدثة باستمرار
         </p>
         <div className="flex flex-wrap justify-between gap-15 m-5 md:justify-center text-center sm:justify-center">
-          {articles &&
+          {!isEmptyArray(articles) &&
             articles.map(({ _id, title, Img }) => (
               <Link
                 to={`/article/${_id}`}
