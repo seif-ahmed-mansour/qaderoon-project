@@ -19,6 +19,8 @@ import AddArticle from "./dashboard/AddArticle";
 import AddAuthor from "./dashboard/AddAuthor";
 import Board from "./components/AboutUS/BoardofTrustees/Board";
 import ComingSoon from "./utils/CoomingSoon/ComingSoon";
+import AdminLogin from "./dashboard/Login";
+import Dashboard from "./dashboard/Dashboard";
 
 function App() {
   // initialize AOS
@@ -35,22 +37,22 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/articles" element={<AllArticles/>}/>
+        <Route path="/articles" element={<AllArticles />} />
         <Route path="/article/:id" element={<ArticleDetails />} />
-        <Route path="/news" element={<News/>} />
-        <Route path="dashboard">
-            <Route path="add-article" element={<AddArticle />} />
-            <Route path="add-news" element={<AddNews />} />
-            <Route path="add-author" element={<AddAuthor />} />
+        <Route path="/news" element={<News />} />
+        <Route path="dashboard" >
+          <Route path="login" element={<AdminLogin />} />
+          <Route path="add-article" element={<Dashboard />} />
+          <Route path="add-news" element={<AddNews />} />
+          <Route path="add-author" element={<AddAuthor />} />
         </Route>
-
         {/* من نحن Section */}
-        <Route path="/about/institution" element={<Whowe/>}/>
-        <Route path="/about/speech" element={<Speech/>}/>
-        <Route path="/about/governorates" element={<Governorates/>}/>
-        <Route path="/about/success-partners" element={<SuccessPartners/>}/>
-        <Route path="/about/offices" element={<Offices/>}/>
-        <Route path="/about/board" element={<Board/>}/>
+        <Route path="/about/institution" element={<Whowe />} />
+        <Route path="/about/speech" element={<Speech />} />
+        <Route path="/about/governorates" element={<Governorates />} />
+        <Route path="/about/success-partners" element={<SuccessPartners />} />
+        <Route path="/about/offices" element={<Offices />} />
+        <Route path="/about/board" element={<Board />} />
 
 
         <Route path="*" element={<ComingSoon />} />
