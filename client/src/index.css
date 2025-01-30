@@ -38,7 +38,7 @@
   --color-secondary: #a21c34;
   --sb-track-color: #ffffff;
   --sb-thumb-color: var(--color-secondary);
-  --sb-size: 1rem;
+  --sb-size: 10px;
 }
 
 * {
