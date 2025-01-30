@@ -65,8 +65,7 @@ const AddArticle = () => {
   return (
     <div className="max-w-3xl w-full mx-auto my-10 p-6 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-red-600">Add Article</h2>
-      <form
-        onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <Label
             htmlFor="title"
@@ -92,7 +91,7 @@ const AddArticle = () => {
             onChange={(e) => setSelectedAuthor(e.target.value)}
             name="author"
             required={true}
-            defaultValue="اختر المؤلف"
+            defaultValue="اختر الكاتب"
             options={authors}
           />
         </div>
@@ -105,7 +104,6 @@ const AddArticle = () => {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             name="content"
-            label="Article Content"
             placeholder="محتوى المقال..."
             required={true}
           />

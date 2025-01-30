@@ -51,7 +51,7 @@ const AddAuthor = () => {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="اسم المؤلف"
+            placeholder="اسم الكاتب"
             required={true}
           />
         </div>
@@ -65,7 +65,7 @@ const AddAuthor = () => {
             onChange={(e) => setTitle(e.target.value)}
             name="title"
             label="Author Title"
-            placeholder="وظيفة المؤلف"
+            placeholder="وظيفة الكاتب"
             required={true}
           />
         </div>
