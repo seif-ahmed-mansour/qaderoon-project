@@ -13,7 +13,7 @@ const socialMediaLinks = [
     name: "LinkedIn",
     icon: <FaLinkedin />,
     link: "https://www.linkedin.com/company/qaderoon492",
-    color: "text-blue-600 hover:text-blue-800",
+    color: "text-gray-900 hover:text-gray-700",
   },
   {
     name: "Twitter",
@@ -25,25 +25,25 @@ const socialMediaLinks = [
     name: "YouTube",
     icon: <FaYoutube />,
     link: "https://www.youtube.com/@qaderoon492",
-    color: "text-red-600 hover:text-red-800",
+    color: "text-gray-900 hover:text-gray-700",
   },
   {
     name: "WhatsApp",
     icon: <FaWhatsapp />,
     link: "https://api.whatsapp.com/send?phone=201000820029&app=facebook&entry_point=page_cta",
-    color: "text-green-600 hover:text-green-800",
+    color: "text-gray-900 hover:text-gray-700",
   },
   {
     name: "Instagram",
     icon: <FaInstagram />,
     link: "https://www.instagram.com/qaderoon492/",
-    color: "text-pink-600 hover:text-pink-800",
+    color: "text-gray-900 hover:text-gray-700",
   },
   {
     name: "Facebook",
     icon: <FaFacebook />,
     link: "https://www.facebook.com/qaderoon492",
-    color: "text-blue-700 hover:text-blue-900",
+    color: "text-gray-900 hover:text-gray-700",
   },
 ];
 

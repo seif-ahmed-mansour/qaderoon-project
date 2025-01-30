@@ -17,54 +17,47 @@ function Speech() {
             className="rounded-xl shadow-md h-auto"
           />
         </div>
-        
+
         {/* Text Section */}
         <div className="w-full xl:w-2/3">
-            <p className="text-base md:text-xl text-gray-800 ">
-                في <span className="text-secondary">شباب قادرون</span>، نؤمن بأن 
-                <span className="text-secondary"> الابتكار </span> و 
-                <span className="text-secondary"> ريادة الأعمال </span> هما الأساس لتحقيق 
-                <span className="text-secondary"> تنمية اقتصادية واجتماعية مستدامة </span> 
-                في <span className="text-secondary"> مصر </span> و 
-                <span className="text-secondary"> الوطن العربي </span>. رؤيتنا ترتكز على بناء 
-                <span className="text-secondary"> مجتمع مزدهر </span> يعتمد على 
-                <span className="text-secondary"> تمكين الشباب </span> ودعمهم لتحويل أفكارهم إلى 
-                <span className="text-secondary"> مشاريع ريادية </span> تؤثر بشكل إيجابي وملموس في المجتمع.
-
-                نسعى جاهدين لبناء <span className="text-secondary"> قدرات الشباب </span> وتمكينهم من 
-                مواجهة <span className="text-secondary"> التحديات المتجددة </span> من خلال 
-                <span className="text-secondary"> برامج ومبادرات </span> تهدف إلى تعزيز مشاركتهم الفعالة في مختلف القطاعات.
-                نحن نعمل بتعاون وثيق مع <span className="text-secondary"> الجهات الحكومية والخاصة </span>، 
-                ومع شركائنا <span className="text-secondary"> الإقليميين والدوليين </span>، 
-                لتعزيز <span className="text-secondary"> مهاراتهم الريادية والإبداعية </span>، وإعدادهم ليكونوا 
-                <span className="text-secondary"> قادة </span> قادرين على بناء مستقبل أفضل لأنفسهم وللمجتمعات التي ينتمون إليها.
-
-                نؤمن بأن <span className="text-secondary"> تمكين المرأة </span> هو ركيزة أساسية في تحقيق 
-                <span className="text-secondary"> التنمية المستدامة </span>، ونسعى جاهدين لتسليط الضوء على دورها الحيوي في 
-                <span className="text-secondary"> تحفيز التغيير المجتمعي </span>. كما نولي اهتمامًا خاصًا بقضايا 
-                <span className="text-secondary"> البيئة والتكنولوجيا </span>، باعتبارهما من العوامل الأساسية للنمو والتقدم.
-
-                نعتبر أيضًا أن دعم <span className="text-secondary"> البحث العلمي </span> و 
-                <span className="text-secondary"> المشروعات الناشئة </span> و 
-                <span className="text-secondary"> الصناعة </span> هو جزء لا يتجزأ من استراتيجيتنا، حيث نعمل على تعزيز 
-                <span className="text-secondary"> الابتكار </span> في كافة القطاعات الاقتصادية لضمان 
-                <span className="text-secondary"> تقدم مستدام </span>.
-
-                نحن في <span className="text-secondary"> شباب قادرون </span> نعتبر أن 
-                <span className="text-secondary"> التنمية المستدامة </span> هي 
-                <span className="text-secondary"> مسؤولية مشتركة </span>، وتتطلب تكاتف الجهود بين جميع الأطراف.
-                ومن خلال <span className="text-secondary"> شراكاتنا الاستراتيجية </span> ودعم 
-                <span className="text-secondary"> الابتكار </span>، نواصل العمل نحو تحقيق 
-                <span className="text-secondary"> تنمية شاملة ومستدامة </span> تلبي تطلعات الشباب وتساهم في تلبية 
-                <span className="text-secondary"> احتياجات المجتمع </span>، بما يتماشى مع أهداف 
-                <span className="text-secondary"> الاستراتيجية الوطنية لمصر 2030 </span>.
-
-                <br />
-                <br />
-                <span className="font-bold text-secondary"> وائل محمد الشريف </span> <br />
-                <span className="font-bold text-secondary"> رئيس مجلس الأمناء </span> <br />
-                <span className="font-bold text-secondary"> رئيس مؤسسة شباب قادرون للتنمية المستدامة </span>
-            </p>
+          <p className="text-base md:text-xl text-gray-800 ">
+            في <span className="text-secondary font-semibold">شباب قادرون</span>
+            ، نؤمن بأن الابتكار وريادة الأعمال هما الأساس لتحقيق تنمية اقتصادية
+            واجتماعية مستدامة في مصر والوطن العربي. رؤيتنا ترتكز على بناء مجتمع
+            مزدهر يعتمد على تمكين الشباب ودعمهم لتحويل أفكارهم إلى مشاريع ريادية
+            مؤثرة. نسعى جاهدين لبناء قدرات الشباب وتمكينهم من مواجهة التحديات
+            المتجددة من خلال برامج ومبادرات تعزز مشاركتهم الفعالة. نحن نعمل
+            بتعاون وثيق مع الجهات الحكومية والخاصة، ومع شركائنا الإقليميين
+            والدوليين، لتعزيز مهاراتهم الريادية والإبداعية وإعدادهم ليكونوا قادة
+            قادرين على بناء مستقبل أفضل. نؤمن بأن{" "}
+            تمكين المرأة{" "}
+            هو ركيزة أساسية لتحقيق التنمية المستدامة، كما نولي اهتمامًا خاصًا
+            بقضايا البيئة والتكنولوجيا باعتبارهما عوامل رئيسية للنمو والتقدم.
+            دعم البحث العلمي والمشروعات الناشئة والصناعة هو جزء لا يتجزأ من
+            استراتيجيتنا، حيث نعمل على تعزيز الابتكار في كافة القطاعات
+            الاقتصادية لضمان تقدم مستدام. في{" "}
+            <span className="text-secondary font-semibold">شباب قادرون</span>،
+            نعتبر أن التنمية المستدامة مسؤولية مشتركة، وتتطلب تكاتف الجهود بين
+            جميع الأطراف. ومن خلال شراكاتنا الاستراتيجية ودعم الابتكار، نواصل
+            العمل لتحقيق تنمية شاملة تلبي تطلعات الشباب وتواكب أهداف{" "}
+            <span className="text-secondary font-semibold">
+            الاستراتيجية الوطنية لمصر 2030
+            </span>
+            .
+            <br />
+            <br />
+            <span className="font-bold text-secondary">
+              وائل محمد الشريف
+            </span>{" "}
+            <br />
+            <span className="font-bold text-secondary">
+              رئيس مجلس الأمناء
+            </span>{" "}
+            <br />
+            <span className="font-bold text-secondary">
+              رئيس مؤسسة شباب قادرون للتنمية المستدامة
+            </span>
+          </p>
         </div>
 
         {/* Image Section Desktop*/}
@@ -75,7 +68,6 @@ function Speech() {
             className="rounded-xl shadow-md h-auto"
           />
         </div>
-
       </div>
     </div>
   );

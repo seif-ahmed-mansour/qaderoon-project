@@ -9,7 +9,7 @@ const Cards = () => {
     },
     {
       title: "الاهداف",
-      icon: <FaHandshake className="text-black w-12 h-12" />,
+      icon: <FaHandshake className="text-white w-12 h-12" />,
       para: "نعمل علي نشر الوعي الوطني و تنمية قدرات الشباب و دعم البحث العلمي و التشجيع علي الابتكار وريادة الاعمال والمشاركة المجتمعية والتطوعية ودعم رؤية مصر 2030 للتنمية المستدامة",
     },
     {
@@ -29,17 +29,17 @@ const Cards = () => {
         return (
           <div
             data-aos="fade-up"
-            className="bg-white shadow-black/40 rounded-xl shadow-sm hover:shadow-md transform transition-all duration-300 hover:scale-105 cursor-pointer"
+            className="bg-whiet shadow-black/40 rounded-xl shadow-sm hover:shadow-md transform transition-all duration-300 hover:scale-105 cursor-pointer"
             key={object.title}>
             <div className="p-6">
               <div className="flex justify-center mb-6">
-                <div className="bg-red-100 p-4 rounded-full shadow-md transition-transform transform hover:scale-110">
+                <div className="bg-primary p-4 rounded-full shadow-md transition-transform transform hover:scale-110">
                   {/* Render the icon dynamically */}
                   {typeof object.icon === "string" ? (
                     <img
                       src={object.icon}
                       alt="icon"
-                      className="w-12 h-12 text-red-600"
+                      className="w-12 h-12 "
                     />
                   ) : (
                     object.icon
